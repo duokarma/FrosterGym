@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { PermissionProvider } from './contexts/PermissionContext';
 import { ToastProvider } from './components/ui/Toast';
@@ -61,7 +61,7 @@ import { SettingsScreen } from './pages/settings/SettingsScreen';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ToastProvider>
         <AuthProvider>
           <PermissionProvider>
@@ -172,7 +172,7 @@ export default function App() {
           </PermissionProvider>
         </AuthProvider>
       </ToastProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
