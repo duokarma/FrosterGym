@@ -39,7 +39,7 @@ export function PublicWebsite() {
               className="cursor-pointer z-50"
               onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
             >
-              <img src="/FrosterGym/logo.png" alt="Froaster Gym" className="h-20 md:h-24 object-contain mix-blend-multiply brightness-[1.8] contrast-125" />
+              <img src="/FrosterGym/logo.png" alt="Froaster Gym" className="h-20 w-20 md:h-24 md:w-24 rounded-full bg-white object-contain p-2 shadow-lg" />
             </div>
 
             {/* Desktop Menu */}
@@ -439,7 +439,7 @@ export function PublicWebsite() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-white/10 pb-16">
              {/* Brand Column */}
              <div className="md:col-span-5 pr-0 md:pr-12">
-                <img src="/FrosterGym/logo.png" alt="Froaster Gym" className="h-12 md:h-16 object-contain mix-blend-multiply brightness-[1.8] contrast-125 mb-4" />
+                <img src="/FrosterGym/logo.png" alt="Froaster Gym" className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-white object-contain p-2 shadow-lg mb-4" />
                 <div className="text-[#ff5722] text-xs font-bold uppercase tracking-widest mb-6">
                   Where fat meets its fate.
                 </div>
