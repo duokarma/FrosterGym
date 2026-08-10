@@ -168,7 +168,10 @@ export function PublicWebsite() {
                     <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-1">Session</div>
                     <div className="text-xl font-oswald text-white drop-shadow-md">Ladies Batch</div>
                   </div>
-                  <div className="text-lg font-medium text-[#d4af37] tracking-wider">10:00 AM – 12:00 PM</div>
+                  <div className="text-lg font-medium text-[#d4af37] tracking-wider text-right">
+                    <div>10:00 AM – 12:00 PM</div>
+                    <div>3:00 PM – 5:00 PM</div>
+                  </div>
                 </div>
 
                 <div className="flex justify-between items-end border-b border-[#d4af37]/10 pb-4 group-hover:border-[#d4af37]/30 transition-colors duration-300">
