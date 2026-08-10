@@ -87,7 +87,7 @@ export function PublicWebsite() {
         
         {/* Absolute Background Image */}
         <div className="absolute inset-0 z-0">
-          <div className="w-full h-full bg-[url('/hero-new-bg-2.jpg')] bg-cover bg-center transform scale-105" />
+          <div className="w-full h-full bg-[url('/FrosterGym/hero-new-bg-2.jpg')] bg-cover bg-center transform scale-105" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a]/90 via-[#0a0a0a]/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
         </div>
@@ -353,7 +353,7 @@ export function PublicWebsite() {
 
       {/* 7. Transformation */}
       <section className="py-40 bg-black relative flex items-center justify-center overflow-hidden border-y border-[#ff5722]/20">
-         <div className="absolute inset-0 bg-[url('/transformation_bg.png')] bg-cover bg-fixed bg-[center_top] opacity-40" />
+         <div className="absolute inset-0 bg-[url('/FrosterGym/transformation_bg.png')] bg-cover bg-fixed bg-[center_top] opacity-40" />
          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-black/50 to-[#0a0a0a]" />
          
          <div className="relative z-10 text-center flex flex-col items-center">
