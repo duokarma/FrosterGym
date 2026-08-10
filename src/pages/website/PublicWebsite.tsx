@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef, Suspense } from 'react';
-import { Menu, X, ArrowRight, MapPin, Phone, Dumbbell, HeartPulse, ClipboardList, Droplets, Users, Key, ShowerHead, Car, Medal } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Menu, X, ArrowRight, MapPin, Phone } from 'lucide-react';
 import EditorialLoader from '../../components/website/EditorialLoader';
 
 export function PublicWebsite() {
