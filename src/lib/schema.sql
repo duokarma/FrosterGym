@@ -26,14 +26,14 @@ ALTER TABLE public.memberships ENABLE ROW LEVEL SECURITY;
 -- We assume the user's gym_id can be looked up via public.profiles
 
 -- Function to get current user's gym_id
-CREATE OR REPLACE FUNCTION auth.gym_id() RETURNS UUID AS $$
+CREATE OR REPLACE FUNCTION public.get_gym_id() RETURNS UUID AS $$
   SELECT gym_id FROM public.profiles WHERE user_id = auth.uid() LIMIT 1;
 $$ LANGUAGE sql STABLE;
 
 -- Staff permissions policies
 CREATE POLICY "Staff permissions are viewable by users in the same gym" 
 ON public.staff_permissions FOR SELECT 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Owners can manage staff permissions" 
 ON public.staff_permissions FOR ALL 
@@ -47,16 +47,16 @@ USING (
 -- Gyms policies
 CREATE POLICY "Users can view their own gym" 
 ON public.gyms FOR SELECT 
-USING (id = auth.gym_id());
+USING (id = public.get_gym_id());
 
 CREATE POLICY "Owners can update their own gym" 
 ON public.gyms FOR UPDATE 
-USING (id = auth.gym_id() AND EXISTS (SELECT 1 FROM public.profiles WHERE user_id = auth.uid() AND role = 'owner'));
+USING (id = public.get_gym_id() AND EXISTS (SELECT 1 FROM public.profiles WHERE user_id = auth.uid() AND role = 'owner'));
 
 -- Profiles policies
 CREATE POLICY "Users can view profiles in their gym" 
 ON public.profiles FOR SELECT 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can update their own profile" 
 ON public.profiles FOR UPDATE 
@@ -65,50 +65,50 @@ USING (user_id = auth.uid());
 -- Members policies
 CREATE POLICY "Users can view members in their gym" 
 ON public.members FOR SELECT 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can insert members if they have permission" 
 ON public.members FOR INSERT 
-WITH CHECK (gym_id = auth.gym_id());
+WITH CHECK (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can update members if they have permission" 
 ON public.members FOR UPDATE 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can delete members if they have permission" 
 ON public.members FOR DELETE 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 -- Payments policies
 CREATE POLICY "Users can view payments in their gym" 
 ON public.payments FOR SELECT 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can insert payments if they have permission" 
 ON public.payments FOR INSERT 
-WITH CHECK (gym_id = auth.gym_id());
+WITH CHECK (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can update payments if they have permission" 
 ON public.payments FOR UPDATE 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can delete payments if they have permission" 
 ON public.payments FOR DELETE 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 -- Memberships policies
 CREATE POLICY "Users can view memberships in their gym" 
 ON public.memberships FOR SELECT 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can insert memberships if they have permission" 
 ON public.memberships FOR INSERT 
-WITH CHECK (gym_id = auth.gym_id());
+WITH CHECK (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can update memberships if they have permission" 
 ON public.memberships FOR UPDATE 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
 
 CREATE POLICY "Users can delete memberships if they have permission" 
 ON public.memberships FOR DELETE 
-USING (gym_id = auth.gym_id());
+USING (gym_id = public.get_gym_id());
