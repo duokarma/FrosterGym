@@ -244,11 +244,23 @@ export function PublicWebsite() {
 
           </div>
 
-          {/* Cards Container */}
-          <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl mx-auto gap-8">
-            <img src="/FrosterGym/plan-basic.jpg" alt="Basic Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-slate-500/20" />
-            <img src="/FrosterGym/plan-premium.jpg" alt="Premium Plan" className="w-full max-w-[350px] rounded-xl shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:scale-105 transition-transform duration-300 border-2 border-[#d4af37]" />
-            <img src="/FrosterGym/plan-standard.jpg" alt="Standard Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-[#ff5722]/20" />
+          <div 
+            className="flex overflow-x-auto lg:overflow-visible snap-x snap-mandatory gap-6 lg:gap-8 lg:justify-center items-center w-full max-w-6xl mx-auto px-4 lg:px-0 py-10 [&::-webkit-scrollbar]:hidden"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            
+            <div className="snap-center shrink-0 w-[85vw] lg:w-auto max-w-[350px] transition-all duration-500 hover:scale-105">
+              <img src="/FrosterGym/plan-basic.jpg" alt="Basic Plan" className="w-full rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-slate-500/20" />
+            </div>
+            
+            <div className="snap-center shrink-0 w-[85vw] lg:w-auto max-w-[350px] transition-all duration-500 hover:scale-105 relative lg:-mt-12 lg:z-10">
+              <img src="/FrosterGym/plan-premium.jpg" alt="Premium Plan" className="w-full rounded-2xl shadow-[0_20px_50px_rgba(212,175,55,0.15)] border-2 border-[#d4af37]" />
+            </div>
+            
+            <div className="snap-center shrink-0 w-[85vw] lg:w-auto max-w-[350px] transition-all duration-500 hover:scale-105">
+              <img src="/FrosterGym/plan-standard.jpg" alt="Standard Plan" className="w-full rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#689f38]/30" />
+            </div>
+            
           </div>
         </div>
       </section>
