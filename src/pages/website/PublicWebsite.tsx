@@ -39,7 +39,7 @@ export function PublicWebsite() {
               className="cursor-pointer z-50"
               onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
             >
-              <img src="/logo.png" alt="Froaster Gym" className="h-20 md:h-24 object-contain invert brightness-200" />
+              <img src="/logo.png" alt="Froaster Gym" className="h-20 md:h-24 object-contain mix-blend-multiply brightness-[1.8] contrast-125" />
             </div>
 
             {/* Desktop Menu */}
@@ -55,7 +55,7 @@ export function PublicWebsite() {
             <div className="hidden md:block">
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-[#ff5722] hover:bg-white hover:text-black text-white text-xs font-bold uppercase tracking-widest py-3 px-8 rounded-full transition-all duration-300"
+                className="bg-white hover:bg-gray-200 text-black text-xs font-bold uppercase tracking-widest py-3 px-8 rounded-full transition-all duration-300"
               >
                 Contact Us
               </button>
@@ -78,7 +78,7 @@ export function PublicWebsite() {
           <button onClick={() => scrollToSection('services')} className="text-2xl font-bebas uppercase tracking-widest text-white">Services</button>
           <button onClick={() => scrollToSection('memberships')} className="text-2xl font-bebas uppercase tracking-widest text-white">Memberships</button>
           <button onClick={() => scrollToSection('gallery')} className="text-2xl font-bebas uppercase tracking-widest text-white">Gallery</button>
-          <button onClick={() => scrollToSection('contact')} className="text-2xl font-bebas uppercase tracking-widest text-[#ff5722]">Contact Us</button>
+          <button onClick={() => scrollToSection('contact')} className="text-2xl font-bebas uppercase tracking-widest text-white hover:text-gray-300 transition-colors">Contact Us</button>
         </div>
       </nav>
 
@@ -112,36 +112,11 @@ export function PublicWebsite() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">LEGACY.</span>
             </h1>
             
-            <p className="text-gray-400 font-light text-base md:text-xl max-w-md leading-relaxed mb-12 lg:border-l-2 lg:border-white/20 lg:pl-6">
+            <p className="text-gray-200 font-bold text-lg md:text-2xl max-w-lg leading-relaxed mb-12 lg:border-l-2 lg:border-white/20 lg:pl-6">
               Where fat meets its fate. Train harder, move stronger, and become the version of yourself you were meant to be at Dahod's finest facility.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-5">
-              {/* Start Journey (Primary Button) */}
-              <button 
-                onClick={() => scrollToSection('memberships')}
-                className="relative group overflow-hidden bg-gradient-to-r from-[#ff5722] to-[#ff3d00] text-white text-xs font-bold uppercase tracking-[0.2em] py-4.5 md:py-[18px] px-10 rounded-full transition-all duration-500 shadow-[0_4px_20px_rgba(255,87,34,0.25)] hover:shadow-[0_4px_35px_rgba(255,87,34,0.5)] hover:-translate-y-[2px] flex items-center justify-center gap-3"
-              >
-                {/* Diagonal sliding sheen effect */}
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out skew-x-12" />
-                <span className="relative z-10 flex items-center gap-3">
-                  Start Journey
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
-                </span>
-              </button>
-
-              {/* WhatsApp Us (Secondary Button) */}
-              <a 
-                href="https://wa.me/918866445862" target="_blank" rel="noreferrer"
-                className="relative group overflow-hidden border border-white/20 hover:border-[#ff5722] text-white text-xs font-bold uppercase tracking-[0.2em] py-4.5 md:py-[18px] px-10 rounded-full transition-all duration-500 hover:-translate-y-[2px] flex items-center justify-center"
-              >
-                {/* Slide fill background on hover */}
-                <span className="absolute inset-0 bg-[#ff5722] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-0 rounded-full" />
-                <span className="relative z-10 transition-colors duration-500">
-                  WhatsApp Us
-                </span>
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -173,33 +148,34 @@ export function PublicWebsite() {
               </div>
             </div>
 
-            <div className="bg-[#111] p-10 rounded-2xl border border-white/5 relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#ff5722]/5 rounded-full blur-[80px] pointer-events-none" />
-              <h3 className="text-3xl font-bebas tracking-wide mb-8">Gym Timings</h3>
+            <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] p-10 rounded-2xl border border-[#d4af37]/20 shadow-[0_0_40px_rgba(212,175,55,0.05)] relative overflow-hidden group hover:border-[#d4af37]/40 transition-colors duration-500">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/10 rounded-full blur-[80px] pointer-events-none transition-opacity duration-500 group-hover:opacity-100 opacity-60" />
+              <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-white/5 rounded-full blur-[60px] pointer-events-none" />
+              <h3 className="text-3xl text-center font-bebas tracking-wide mb-8 text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37]">Ladies and Gents Batch Timings</h3>
               
-              <div className="space-y-6">
-                <div className="flex justify-between items-end border-b border-white/5 pb-4 group-hover:border-[#ff5722]/20 transition-colors">
+              <div className="space-y-6 relative z-10">
+                <div className="flex justify-between items-end border-b border-[#d4af37]/10 pb-4 group-hover:border-[#d4af37]/30 transition-colors duration-300">
                   <div>
-                    <div className="text-xs text-gray-500 uppercase tracking-widest mb-1">Session</div>
-                    <div className="text-xl font-oswald text-white">Morning</div>
+                    <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-1">Session</div>
+                    <div className="text-xl font-oswald text-white drop-shadow-md">Gents Batch</div>
                   </div>
-                  <div className="text-lg font-medium text-[#ff5722]">5:30 AM – 10:00 AM</div>
+                  <div className="text-lg font-medium text-[#d4af37] tracking-wider">5:30 AM – 10:00 AM</div>
                 </div>
                 
-                <div className="flex justify-between items-end border-b border-white/5 pb-4 group-hover:border-[#ff5722]/20 transition-colors">
+                <div className="flex justify-between items-end border-b border-[#d4af37]/10 pb-4 group-hover:border-[#d4af37]/30 transition-colors duration-300">
                   <div>
-                    <div className="text-xs text-gray-500 uppercase tracking-widest mb-1">Session</div>
-                    <div className="text-xl font-oswald text-white">Ladies Batch</div>
+                    <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-1">Session</div>
+                    <div className="text-xl font-oswald text-white drop-shadow-md">Ladies Batch</div>
                   </div>
-                  <div className="text-lg font-medium text-[#ff5722]">10:00 AM – 12:00 PM</div>
+                  <div className="text-lg font-medium text-[#d4af37] tracking-wider">10:00 AM – 12:00 PM</div>
                 </div>
 
-                <div className="flex justify-between items-end border-b border-white/5 pb-4 group-hover:border-[#ff5722]/20 transition-colors">
+                <div className="flex justify-between items-end border-b border-[#d4af37]/10 pb-4 group-hover:border-[#d4af37]/30 transition-colors duration-300">
                   <div>
-                    <div className="text-xs text-gray-500 uppercase tracking-widest mb-1">Session</div>
-                    <div className="text-xl font-oswald text-white">Evening</div>
+                    <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-1">Session</div>
+                    <div className="text-xl font-oswald text-white drop-shadow-md">Gents Batch</div>
                   </div>
-                  <div className="text-lg font-medium text-[#ff5722]">5:00 PM – 10:00 PM</div>
+                  <div className="text-lg font-medium text-[#d4af37] tracking-wider">5:00 PM – 10:00 PM</div>
                 </div>
               </div>
             </div>
@@ -222,7 +198,7 @@ export function PublicWebsite() {
                 AUTHENTIC TRAINING.
               </h2>
             </div>
-            <p className="text-gray-400 font-light max-w-sm text-sm">
+            <p className="text-gray-200 font-bold max-w-sm text-sm md:text-base">
               We focus purely on what works. No gimmicks. Just heavy weights, quality machines, and expert guidance.
             </p>
           </div>
@@ -264,161 +240,14 @@ export function PublicWebsite() {
             <div className="text-lg md:text-xl font-oswald text-[#ff5722] mb-6 uppercase tracking-[0.2em]">
                STRONGER BODY. STRONGER MIND. BETTER YOU.
             </div>
-            <p className="text-gray-500 text-sm font-light hidden lg:block animate-pulse">
-               Hover over the cards to view all plans
-            </p>
+
           </div>
 
           {/* Cards Container */}
-          <div className="flex flex-col lg:flex-row justify-center items-center group relative w-full max-w-5xl mx-auto gap-6 lg:gap-0 lg:min-h-[650px] perspective-[1000px]">
-            
-            {/* BASIC (Silver/Platinum Theme) - LEFT */}
-            <div className="w-full max-w-[320px] bg-[#0a0a0a] border-2 border-slate-500/20 flex flex-col rounded-xl overflow-hidden shadow-xl
-                            transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                            lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 lg:scale-90 lg:opacity-40 lg:-rotate-y-12 lg:z-10
-                            group-hover:lg:-translate-x-[155%] group-hover:lg:scale-100 group-hover:lg:opacity-100 group-hover:lg:rotate-y-0
-                            hover:!z-40 hover:!border-slate-400 hover:lg:scale-[1.05]">
-              <div className="absolute top-0 left-0 w-full h-1 bg-slate-500" />
-              <div className="p-5 border-b border-white/5">
-                <h3 className="text-2xl md:text-3xl font-bebas tracking-wide mb-1 text-white italic">BASIC PLAN</h3>
-                <div className="bg-slate-800 text-slate-300 text-[10px] font-bold uppercase tracking-widest py-1 px-3 inline-block mb-6 rounded">Without Training</div>
-                
-                <ul className="space-y-3">
-                  {[
-                    { d: '1 MONTH', p: '1100' },
-                    { d: '3 MONTH', p: '3000' },
-                    { d: '6 MONTH', p: '5500' },
-                    { d: '9 MONTH', p: '8500' },
-                    { d: '1 YEAR', p: '9500' },
-                  ].map((plan, i) => (
-                    <li key={i} className="flex justify-between items-center text-xs border border-white/5 p-2 rounded bg-black/50 hover:border-slate-500/20 transition-colors">
-                      <span className="text-gray-300 font-oswald tracking-wide flex items-center gap-2">
-                        <svg className="w-3 h-3 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        {plan.d}
-                      </span>
-                      <span className="font-bebas text-lg text-slate-300 tracking-wide">₹{plan.p}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="p-4 mt-auto">
-                <div className="text-center text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3 flex items-center justify-center gap-2">
-                  <span className="w-6 h-[1px] bg-slate-500/30" /> INCLUDES <span className="w-6 h-[1px] bg-slate-500/30" />
-                </div>
-                <div className="grid grid-cols-3 gap-y-3 gap-x-1 text-center text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-4 leading-tight">
-                  <div className="flex flex-col items-center gap-1"><Dumbbell className="w-4 h-4 text-slate-400 opacity-70"/> <span>Modern<br/>Equipment</span></div>
-                  <div className="flex flex-col items-center gap-1"><HeartPulse className="w-4 h-4 text-slate-400 opacity-70"/> <span>Cardio<br/>Zone</span></div>
-                  <div className="flex flex-col items-center gap-1"><ClipboardList className="w-4 h-4 text-slate-400 opacity-70"/> <span>Workout<br/>Floor</span></div>
-                  <div className="flex flex-col items-center gap-1"><Droplets className="w-4 h-4 text-slate-400 opacity-70"/> <span>Drinking<br/>Water</span></div>
-                  <div className="flex flex-col items-center gap-1 col-span-2"><Users className="w-4 h-4 text-slate-400 opacity-70"/> <span>Open Gym Access</span></div>
-                </div>
-                <a href="https://wa.me/918866445862" target="_blank" rel="noreferrer" className="block w-full py-3 text-center bg-slate-800 text-white hover:bg-slate-700 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded border border-slate-700/50">
-                  Enquire Now
-                </a>
-              </div>
-            </div>
-
-
-            {/* PREMIUM (Luxury Gold Theme) - CENTER */}
-            <div className="w-full max-w-[340px] bg-[#0a0a0a] border-2 border-[#d4af37] flex flex-col rounded-xl overflow-hidden shadow-[0_10px_40px_rgba(212,175,55,0.1)] relative
-                            transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                            lg:relative lg:z-30 lg:scale-100
-                            group-hover:lg:scale-[1.02] hover:!z-40 hover:!scale-[1.05] hover:shadow-[0_10px_50px_rgba(212,175,55,0.25)]">
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#d4af37]" />
-              <div className="p-6 border-b border-white/5">
-                <h3 className="text-3xl md:text-4xl font-bebas tracking-wide mb-1 text-white italic">PREMIUM</h3>
-                <div className="bg-[#d4af37] text-black text-[9px] font-bold uppercase tracking-widest py-1 px-3 inline-block mb-6 rounded">Personal Training + Diet Plan</div>
-                
-                <div className="grid grid-cols-3 gap-1 text-center mb-6 border-b border-white/5 pb-4">
-                  <div><div className="text-[#d4af37] font-bold text-[9px] uppercase">1-1 Coaching</div></div>
-                  <div className="border-x border-white/10"><div className="text-[#d4af37] font-bold text-[9px] uppercase">Custom Diet</div></div>
-                  <div><div className="text-[#d4af37] font-bold text-[9px] uppercase">100% Results</div></div>
-                </div>
-
-                <ul className="space-y-3">
-                  {[
-                    { d: '1 MONTH', p: '3999' },
-                    { d: '3 MONTHS', p: '7999' },
-                    { d: '6 MONTHS', p: '14,999' },
-                    { d: '9 MONTHS', p: '19,999' },
-                    { d: '1 YEAR', p: '25,999' },
-                  ].map((plan, i) => (
-                    <li key={i} className="flex justify-between items-center text-xs border border-white/5 p-2 rounded bg-black/50 hover:border-[#d4af37]/20 transition-colors">
-                      <span className="text-gray-300 font-oswald tracking-wide flex items-center gap-2">
-                         <svg className="w-3 h-3 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        {plan.d}
-                      </span>
-                      <span className="font-bebas text-xl text-[#d4af37] tracking-wide">₹{plan.p}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="p-5 mt-auto">
-                <div className="text-center text-[9px] font-bold uppercase tracking-widest text-[#d4af37] mb-3 flex items-center justify-center gap-2">
-                  <span className="w-6 h-[1px] bg-[#d4af37]/50" /> FACILITIES <span className="w-6 h-[1px] bg-[#d4af37]/50" />
-                </div>
-                <div className="grid grid-cols-3 gap-y-3 gap-x-1 text-center text-[8px] text-gray-400 font-bold uppercase tracking-wider mb-4 leading-tight">
-                  <div className="flex flex-col items-center gap-1"><Dumbbell className="w-4 h-4 text-[#d4af37] opacity-70"/> <span>Premium<br/>Equipment</span></div>
-                  <div className="flex flex-col items-center gap-1"><HeartPulse className="w-4 h-4 text-[#d4af37] opacity-70"/> <span>Cardio<br/>Zone</span></div>
-                  <div className="flex flex-col items-center gap-1"><Key className="w-4 h-4 text-[#d4af37] opacity-70"/> <span>Locker<br/>Room</span></div>
-                  <div className="flex flex-col items-center gap-1"><ShowerHead className="w-4 h-4 text-[#d4af37] opacity-70"/> <span>Clean<br/>Showers</span></div>
-                  <div className="flex flex-col items-center gap-1"><Droplets className="w-4 h-4 text-[#d4af37] opacity-70"/> <span>Drinking<br/>Water</span></div>
-                  <div className="flex flex-col items-center gap-1"><Car className="w-4 h-4 text-[#d4af37] opacity-70"/> <span>Parking<br/>Available</span></div>
-                </div>
-                <a href="https://wa.me/918866445862" target="_blank" rel="noreferrer" className="block w-full py-3 text-center bg-[#d4af37] text-black text-xs font-bold uppercase tracking-widest hover:bg-white hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300 rounded">
-                  Enquire Now
-                </a>
-              </div>
-            </div>
-
-
-            {/* STANDARD (Froaster Orange Theme) - RIGHT */}
-            <div className="w-full max-w-[320px] bg-[#0a0a0a] border-2 border-[#ff5722]/20 flex flex-col rounded-xl overflow-hidden shadow-xl
-                            transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]
-                            lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 lg:scale-90 lg:opacity-40 lg:rotate-y-12 lg:z-10
-                            group-hover:lg:translate-x-[55%] group-hover:lg:scale-100 group-hover:lg:opacity-100 group-hover:lg:rotate-y-0
-                            hover:!z-40 hover:!border-[#ff5722] hover:lg:scale-[1.05]">
-              <div className="absolute top-0 left-0 w-full h-1 bg-[#ff5722]" />
-              <div className="p-5 border-b border-white/5">
-                <h3 className="text-2xl md:text-3xl font-bebas tracking-wide mb-1 text-white italic">STANDARD PLAN</h3>
-                <div className="bg-[#ff5722] text-white text-[10px] font-bold uppercase tracking-widest py-1 px-3 inline-block mb-6 rounded">With Training</div>
-                
-                <ul className="space-y-3">
-                  {[
-                    { d: '1 MONTH', p: '1200' },
-                    { d: '3 MONTHS', p: '3300' },
-                    { d: '6 MONTHS', p: '6000' },
-                    { d: '9 MONTHS', p: '9000' },
-                    { d: '1 YEAR', p: '10,500' },
-                  ].map((plan, i) => (
-                    <li key={i} className="flex justify-between items-center text-xs border border-white/5 p-2 rounded bg-black/50 hover:border-[#ff5722]/20 transition-colors">
-                      <span className="text-gray-300 font-oswald tracking-wide flex items-center gap-2">
-                         <svg className="w-3 h-3 text-[#ff5722]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                        {plan.d}
-                      </span>
-                      <span className="font-bebas text-lg text-[#ff5722] tracking-wide">₹{plan.p}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="p-4 mt-auto bg-[#0a0a0a]">
-                <div className="text-center text-[10px] font-bold uppercase tracking-widest text-[#ff5722] mb-3 flex items-center justify-center gap-2">
-                  <span className="w-6 h-[1px] bg-[#ff5722]/30" /> INCLUDES <span className="w-6 h-[1px] bg-[#ff5722]/30" />
-                </div>
-                <div className="grid grid-cols-3 gap-y-3 gap-x-1 text-center text-[8px] text-gray-400 font-bold uppercase tracking-wider mb-4 leading-tight">
-                  <div className="flex flex-col items-center gap-1"><Dumbbell className="w-4 h-4 text-[#ff5722] opacity-70"/> <span>Modern<br/>Equipment</span></div>
-                  <div className="flex flex-col items-center gap-1"><Medal className="w-4 h-4 text-[#ff5722] opacity-70"/> <span>Certified<br/>Trainers</span></div>
-                  <div className="flex flex-col items-center gap-1"><HeartPulse className="w-4 h-4 text-[#ff5722] opacity-70"/> <span>Cardio<br/>Zone</span></div>
-                  <div className="flex flex-col items-center gap-1"><ClipboardList className="w-4 h-4 text-[#ff5722] opacity-70"/> <span>Workout<br/>Plan</span></div>
-                  <div className="flex flex-col items-center gap-1"><Users className="w-4 h-4 text-[#ff5722] opacity-70"/> <span>Open Gym<br/>Access</span></div>
-                  <div className="flex flex-col items-center gap-1"><Droplets className="w-4 h-4 text-[#ff5722] opacity-70"/> <span>Drinking<br/>Water</span></div>
-                </div>
-                <a href="https://wa.me/918866445862" target="_blank" rel="noreferrer" className="block w-full py-3 text-center bg-[#ff5722] hover:bg-[#ff3d00] text-white text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded">
-                  WhatsApp Us
-                </a>
-              </div>
-            </div>
-
+          <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl mx-auto gap-8">
+            <img src="/plan-basic.jpg" alt="Basic Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-slate-500/20" />
+            <img src="/plan-premium.jpg" alt="Premium Plan" className="w-full max-w-[350px] rounded-xl shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:scale-105 transition-transform duration-300 border-2 border-[#d4af37]" />
+            <img src="/plan-standard.jpg" alt="Standard Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-[#ff5722]/20" />
           </div>
         </div>
       </section>
@@ -436,16 +265,86 @@ export function PublicWebsite() {
              </div>
           </div>
 
-          {/* Masonry / Editorial Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px]">
-             <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-black">
-                <img src="/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 hover:scale-105" alt="Reception Area" />
-             </div>
-             <div className="relative group overflow-hidden bg-black">
-                <img src="/gallery2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 hover:scale-105" alt="Gym Floor View 1" />
-             </div>
-             <div className="relative group overflow-hidden bg-black">
-                <img src="/gallery3.png" className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 hover:scale-105" alt="Gym Floor View 2" />
+          {/* Scrolling Marquee Gallery */}
+          <div className="relative w-full overflow-hidden flex -mx-6 md:-mx-12 px-6 md:px-12 pb-10">
+             {/* Gradient fade edges */}
+             <div className="absolute top-0 left-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-20 pointer-events-none" />
+             <div className="absolute top-0 right-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-20 pointer-events-none" />
+             
+             <div className="flex gap-4 animate-scroll-marquee w-max">
+
+               <div key={0} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Reception Area" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Reception Area</span>
+                  </div>
+               </div>
+               <div key={1} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/gallery2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 1" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 1</span>
+                  </div>
+               </div>
+               <div key={2} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/gallery3.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 2" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 2</span>
+                  </div>
+               </div>
+               <div key={3} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/hero-new-bg-2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Heavy Weights" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Heavy Weights</span>
+                  </div>
+               </div>
+               <div key={4} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/hero_fire_bg.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Strength Training" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Strength Training</span>
+                  </div>
+               </div>
+               <div key={5} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/transformation_bg.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Cardio Section" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Cardio Section</span>
+                  </div>
+               </div>
+               <div key={6} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Reception Area" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Reception Area</span>
+                  </div>
+               </div>
+               <div key={7} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/gallery2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 1" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 1</span>
+                  </div>
+               </div>
+               <div key={8} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/gallery3.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 2" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 2</span>
+                  </div>
+               </div>
+               <div key={9} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/hero-new-bg-2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Heavy Weights" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Heavy Weights</span>
+                  </div>
+               </div>
+               <div key={10} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/hero_fire_bg.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Strength Training" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Strength Training</span>
+                  </div>
+               </div>
+               <div key={11} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
+                  <img src="/transformation_bg.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Cardio Section" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                     <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Cardio Section</span>
+                  </div>
+               </div>
              </div>
           </div>
 
@@ -479,51 +378,63 @@ export function PublicWebsite() {
                 Your transformation starts with the first step. Visit us or reach out today.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-16">
-                 <a href="tel:9409478823" className="bg-white text-black hover:bg-[#ff5722] hover:text-white text-xs font-bold uppercase tracking-widest py-5 px-10 text-center transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                 <a href="tel:+918866445862" className="flex-1 bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] border border-[#d4af37]/30 text-white hover:border-[#d4af37] text-xs font-bold uppercase tracking-widest py-3 px-6 text-center rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all duration-300">
                    Call Now
                  </a>
-                 <a href="https://wa.me/919409478823" target="_blank" rel="noreferrer" className="bg-[#ff5722] text-white hover:bg-white hover:text-black text-xs font-bold uppercase tracking-widest py-5 px-10 text-center transition-colors">
+                 <a href="https://wa.me/918866445862" target="_blank" rel="noreferrer" className="flex-1 bg-gradient-to-r from-[#d4af37] to-[#b38b22] text-black hover:from-[#e3c153] hover:to-[#c49b33] text-xs font-bold uppercase tracking-widest py-3 px-6 text-center rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all duration-300">
                    WhatsApp Us
                  </a>
               </div>
 
-              <div className="space-y-8">
-                 <div className="flex items-start gap-4">
-                    <Phone className="text-[#ff5722] w-6 h-6 mt-1" />
+              <div className="flex flex-col lg:flex-row flex-wrap items-start lg:items-center justify-center gap-6 p-4 lg:p-6 rounded-2xl border border-[#d4af37]/20 bg-gradient-to-br from-[#111] to-[#0a0a0a] shadow-[0_0_30px_rgba(212,175,55,0.05)] w-full">
+                 
+                 {/* Phone */}
+                 <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-[#d4af37] to-[#b38b22] text-black w-10 h-10 rounded-lg flex items-center justify-center shrink-0 shadow-lg">
+                       <Phone className="w-5 h-5" fill="currentColor" />
+                    </div>
                     <div>
-                       <div className="text-xs uppercase tracking-widest text-gray-500 mb-1">Phone / WhatsApp</div>
-                       <div className="text-xl font-oswald text-white tracking-wide">94094 78823</div>
+                       <div className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold mb-0.5 whitespace-nowrap">Call / WhatsApp</div>
+                       <div className="text-sm font-oswald text-white tracking-wide whitespace-nowrap">+91 88664 45862</div>
                     </div>
                  </div>
+
+                 <div className="hidden lg:block w-px h-8 bg-[#d4af37]/20"></div>
                  
-                 <div className="flex items-start gap-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-[#ff5722] w-6 h-6 mt-1"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                 {/* Location */}
+                 <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-[#d4af37] to-[#b38b22] text-black w-10 h-10 rounded-lg flex items-center justify-center shrink-0 shadow-lg">
+                       <MapPin className="w-5 h-5" fill="currentColor" />
+                    </div>
                     <div>
-                       <div className="text-xs uppercase tracking-widest text-gray-500 mb-1">Instagram</div>
-                       <a href="https://www.instagram.com/froaster_fitness/" target="_blank" rel="noreferrer" className="text-xl font-oswald text-white tracking-wide hover:text-[#ff5722] transition-colors">
+                       <div className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold mb-0.5 whitespace-nowrap">Near Dudhimati River Bridge,</div>
+                       <div className="text-sm font-oswald text-white tracking-wide whitespace-nowrap">Dahod - 389151, Gujarat</div>
+                    </div>
+                 </div>
+
+                 <div className="hidden lg:block w-px h-8 bg-[#d4af37]/20"></div>
+
+                 {/* Instagram */}
+                 <div className="flex items-center gap-3">
+                    <div className="bg-gradient-to-br from-[#d4af37] to-[#b38b22] text-black w-10 h-10 rounded-lg flex items-center justify-center shrink-0 shadow-lg">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </div>
+                    <div>
+                       <div className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold mb-0.5 whitespace-nowrap">Follow Us</div>
+                       <a href="https://www.instagram.com/froaster_fitness/" target="_blank" rel="noreferrer" className="text-sm font-oswald text-white tracking-wide hover:text-[#d4af37] transition-colors whitespace-nowrap">
                          @froaster_fitness
                        </a>
                     </div>
                  </div>
 
-                 <div className="flex items-start gap-4">
-                    <MapPin className="text-[#ff5722] w-6 h-6 mt-1" />
-                    <div>
-                       <div className="text-xs uppercase tracking-widest text-gray-500 mb-1">Location</div>
-                       <div className="text-lg font-light text-white leading-relaxed max-w-xs">
-                         Froaster Gym<br/>
-                         Dudhimati River Bridge, Near Road, Desaiwad, Dahod, Gujarat 389151
-                       </div>
-                    </div>
-                 </div>
               </div>
            </div>
 
            {/* Google Maps Embed */}
            <div className="relative h-[500px] lg:h-auto bg-[#111] p-2 border border-white/5 grayscale hover:grayscale-0 transition-all duration-700">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117540.35928822997!2d74.19539343361111!3d22.842797619280665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3960a5e2f0a174c1%3A0xc3f58a361e6fbfa4!2sDahod%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=Froaster%20Fitness,%20Govindnagar,%20Dahod,%20Gujarat&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -556,7 +467,7 @@ export function PublicWebsite() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-white/10 pb-16">
              {/* Brand Column */}
              <div className="md:col-span-5 pr-0 md:pr-12">
-                <img src="/logo.png" alt="Froaster Gym" className="h-12 md:h-16 object-contain invert brightness-200 mb-4" />
+                <img src="/logo.png" alt="Froaster Gym" className="h-12 md:h-16 object-contain mix-blend-multiply brightness-[1.8] contrast-125 mb-4" />
                 <div className="text-[#ff5722] text-xs font-bold uppercase tracking-widest mb-6">
                   Where fat meets its fate.
                 </div>
