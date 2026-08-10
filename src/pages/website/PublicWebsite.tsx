@@ -39,7 +39,7 @@ export function PublicWebsite() {
               className="cursor-pointer z-50"
               onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
             >
-              <img src="/logo.png" alt="Froaster Gym" className="h-20 md:h-24 object-contain mix-blend-multiply brightness-[1.8] contrast-125" />
+              <img src="/FrosterGym/logo.png" alt="Froaster Gym" className="h-20 md:h-24 object-contain mix-blend-multiply brightness-[1.8] contrast-125" />
             </div>
 
             {/* Desktop Menu */}
@@ -245,9 +245,9 @@ export function PublicWebsite() {
 
           {/* Cards Container */}
           <div className="flex flex-col lg:flex-row justify-center items-center w-full max-w-6xl mx-auto gap-8">
-            <img src="/plan-basic.jpg" alt="Basic Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-slate-500/20" />
-            <img src="/plan-premium.jpg" alt="Premium Plan" className="w-full max-w-[350px] rounded-xl shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:scale-105 transition-transform duration-300 border-2 border-[#d4af37]" />
-            <img src="/plan-standard.jpg" alt="Standard Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-[#ff5722]/20" />
+            <img src="/FrosterGym/plan-basic.jpg" alt="Basic Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-slate-500/20" />
+            <img src="/FrosterGym/plan-premium.jpg" alt="Premium Plan" className="w-full max-w-[350px] rounded-xl shadow-[0_10px_40px_rgba(212,175,55,0.2)] hover:scale-105 transition-transform duration-300 border-2 border-[#d4af37]" />
+            <img src="/FrosterGym/plan-standard.jpg" alt="Standard Plan" className="w-full max-w-[350px] rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-[#ff5722]/20" />
           </div>
         </div>
       </section>
@@ -274,73 +274,73 @@ export function PublicWebsite() {
              <div className="flex gap-4 animate-scroll-marquee w-max">
 
                <div key={0} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Reception Area" loading="lazy" />
+                  <img src="/FrosterGym/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Reception Area" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Reception Area</span>
                   </div>
                </div>
                <div key={1} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/gallery2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 1" loading="lazy" />
+                  <img src="/FrosterGym/gallery2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 1" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 1</span>
                   </div>
                </div>
                <div key={2} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/gallery3.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 2" loading="lazy" />
+                  <img src="/FrosterGym/gallery3.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 2" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 2</span>
                   </div>
                </div>
                <div key={3} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/hero-new-bg-2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Heavy Weights" loading="lazy" />
+                  <img src="/FrosterGym/hero-new-bg-2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Heavy Weights" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Heavy Weights</span>
                   </div>
                </div>
                <div key={4} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/hero_fire_bg.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Strength Training" loading="lazy" />
+                  <img src="/FrosterGym/hero_fire_bg.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Strength Training" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Strength Training</span>
                   </div>
                </div>
                <div key={5} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/transformation_bg.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Cardio Section" loading="lazy" />
+                  <img src="/FrosterGym/transformation_bg.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Cardio Section" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Cardio Section</span>
                   </div>
                </div>
                <div key={6} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Reception Area" loading="lazy" />
+                  <img src="/FrosterGym/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Reception Area" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Reception Area</span>
                   </div>
                </div>
                <div key={7} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/gallery2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 1" loading="lazy" />
+                  <img src="/FrosterGym/gallery2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 1" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 1</span>
                   </div>
                </div>
                <div key={8} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/gallery3.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 2" loading="lazy" />
+                  <img src="/FrosterGym/gallery3.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Gym Floor View 2" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Gym Floor View 2</span>
                   </div>
                </div>
                <div key={9} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/hero-new-bg-2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Heavy Weights" loading="lazy" />
+                  <img src="/FrosterGym/hero-new-bg-2.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Heavy Weights" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Heavy Weights</span>
                   </div>
                </div>
                <div key={10} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/hero_fire_bg.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Strength Training" loading="lazy" />
+                  <img src="/FrosterGym/hero_fire_bg.jpg" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Strength Training" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Strength Training</span>
                   </div>
                </div>
                <div key={11} className="relative group overflow-hidden bg-black flex-shrink-0 w-[280px] h-[350px] md:w-[400px] md:h-[500px] rounded-xl border border-white/5">
-                  <img src="/transformation_bg.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Cardio Section" loading="lazy" />
+                  <img src="/FrosterGym/transformation_bg.png" className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0" alt="Cardio Section" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                      <span className="text-[#ff5722] font-bebas text-xl tracking-wider">Cardio Section</span>
                   </div>
@@ -467,7 +467,7 @@ export function PublicWebsite() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-white/10 pb-16">
              {/* Brand Column */}
              <div className="md:col-span-5 pr-0 md:pr-12">
-                <img src="/logo.png" alt="Froaster Gym" className="h-12 md:h-16 object-contain mix-blend-multiply brightness-[1.8] contrast-125 mb-4" />
+                <img src="/FrosterGym/logo.png" alt="Froaster Gym" className="h-12 md:h-16 object-contain mix-blend-multiply brightness-[1.8] contrast-125 mb-4" />
                 <div className="text-[#ff5722] text-xs font-bold uppercase tracking-widest mb-6">
                   Where fat meets its fate.
                 </div>
