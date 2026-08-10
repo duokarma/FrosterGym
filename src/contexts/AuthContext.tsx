@@ -1,0 +1,189 @@
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import type { Session, User } from '@supabase/supabase-js';
+import { supabase, supabaseConfigured } from '../lib/supabase';
+import type { Profile, Gym } from '../lib/database.types';
+
+interface AuthContextType {
+  session: Session | null;
+  user: User | null;
+  profile: Profile | null;
+  gym: Gym | null;
+  loading: boolean;
+  isDemo: boolean;
+  signIn: (email: string, password: string) => Promise<{ error: Error | null }>;
+  signUp: (email: string, password: string, fullName: string) => Promise<{ error: Error | null }>;
+  signOut: () => Promise<void>;
+  refreshProfile: () => Promise<void>;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export function useAuth() {
+  const ctx = useContext(AuthContext);
+  if (!ctx) throw new Error('useAuth must be used within AuthProvider');
+  return ctx;
+}
+
+// Demo data used when Supabase is not configured
+const DEMO_PROFILE: Profile = {
+  id: 'demo-profile-id',
+  user_id: 'demo-user-id',
+  gym_id: 'demo-gym-id',
+  full_name: 'Froster Admin',
+  email: 'admin@frostergym.com',
+  phone: '+91 98765 43210',
+  avatar_url: null,
+  role: 'owner',
+  is_active: true,
+  created_at: new Date().toISOString(),
+  updated_at: new Date().toISOString(),
+};
+
+const DEMO_GYM: Gym = {
+  id: 'demo-gym-id',
+  name: 'Froster Gym',
+  slug: 'froster-gym',
+  owner_id: 'demo-user-id',
+  logo_url: null,
+  phone: '+91 98765 43210',
+  email: 'info@frostergym.com',
+  address: null,
+  settings: {},
+  created_at: new Date().toISOString(),
+  updated_at: new Date().toISOString(),
+};
+
+export function AuthProvider({ children }: { children: React.ReactNode }) {
+  const [session, setSession] = useState<Session | null>(null);
+  const [user, setUser] = useState<User | null>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [gym, setGym] = useState<Gym | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [isDemo, setIsDemo] = useState(false);
+
+  const fetchProfile = async (userId: string) => {
+    try {
+      const { data: profileData, error: profileError } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('user_id', userId)
+        .single();
+
+      if (profileError) {
+        console.error('Profile fetch error:', profileError);
+        return;
+      }
+
+      const typedProfile = profileData as unknown as Profile;
+      setProfile(typedProfile);
+
+      if (typedProfile?.gym_id) {
+        const { data: gymData, error: gymError } = await supabase
+          .from('gyms')
+          .select('*')
+          .eq('id', typedProfile.gym_id)
+          .single();
+
+        if (!gymError && gymData) {
+          setGym(gymData as unknown as Gym);
+        }
+      }
+    } catch (err) {
+      console.error('Error fetching profile:', err);
+    }
+  };
+
+  const refreshProfile = async () => {
+    if (user) {
+      await fetchProfile(user.id);
+    }
+  };
+
+  // Enter demo mode — used when Supabase is not configured
+  const enterDemoMode = () => {
+    setIsDemo(true);
+    setProfile(DEMO_PROFILE);
+    setGym(DEMO_GYM);
+    setSession({ access_token: 'demo', refresh_token: 'demo' } as Session);
+    setUser({ id: 'demo-user-id', email: 'admin@frostergym.com' } as User);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    if (!supabaseConfigured) {
+      // Auto-enter demo mode when Supabase isn't set up
+      enterDemoMode();
+      return;
+    }
+
+    supabase.auth.getSession().then(({ data: { session: currentSession } }) => {
+      setSession(currentSession);
+      setUser(currentSession?.user ?? null);
+      if (currentSession?.user) {
+        fetchProfile(currentSession.user.id).finally(() => setLoading(false));
+      } else {
+        setLoading(false);
+      }
+    });
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, newSession) => {
+      setSession(newSession);
+      setUser(newSession?.user ?? null);
+      if (newSession?.user) {
+        fetchProfile(newSession.user.id);
+      } else {
+        setProfile(null);
+        setGym(null);
+      }
+    });
+
+    return () => subscription.unsubscribe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const signIn = async (email: string, password: string) => {
+    if (!supabaseConfigured) {
+      enterDemoMode();
+      return { error: null };
+    }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    return { error: error as Error | null };
+  };
+
+  const signUp = async (email: string, password: string, fullName: string) => {
+    if (!supabaseConfigured) {
+      enterDemoMode();
+      return { error: null };
+    }
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: { full_name: fullName } },
+    });
+    return { error: error as Error | null };
+  };
+
+  const signOut = async () => {
+    if (!supabaseConfigured) {
+      setIsDemo(false);
+      setSession(null);
+      setUser(null);
+      setProfile(null);
+      setGym(null);
+      return;
+    }
+    await supabase.auth.signOut();
+    setProfile(null);
+    setGym(null);
+  };
+
+  return (
+    <AuthContext.Provider
+      value={{ session, user, profile, gym, loading, isDemo, signIn, signUp, signOut, refreshProfile }}
+    >
+      {children}
+    </AuthContext.Provider>
+  );
+}
