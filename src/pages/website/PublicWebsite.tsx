@@ -71,16 +71,17 @@ export function PublicWebsite() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        <div className={`fixed inset-0 bg-[#0a0a0a] z-40 transition-all duration-500 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 ${isMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-full opacity-0 pointer-events-none'}`}>
-          <button onClick={() => { window.scrollTo({top: 0, behavior: 'smooth'}); setIsMenuOpen(false); }} className="text-2xl font-bebas uppercase tracking-widest text-white">Home</button>
-          <button onClick={() => scrollToSection('about')} className="text-2xl font-bebas uppercase tracking-widest text-white">About</button>
-          <button onClick={() => scrollToSection('services')} className="text-2xl font-bebas uppercase tracking-widest text-white">Services</button>
-          <button onClick={() => scrollToSection('memberships')} className="text-2xl font-bebas uppercase tracking-widest text-white">Memberships</button>
-          <button onClick={() => scrollToSection('gallery')} className="text-2xl font-bebas uppercase tracking-widest text-white">Gallery</button>
-          <button onClick={() => scrollToSection('contact')} className="text-2xl font-bebas uppercase tracking-widest text-white hover:text-gray-300 transition-colors">Contact Us</button>
-        </div>
       </nav>
+
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 bg-[#0a0a0a] z-40 transition-all duration-500 ease-in-out md:hidden flex flex-col justify-center items-center gap-8 ${isMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-full opacity-0 pointer-events-none'}`}>
+        <button onClick={() => { window.scrollTo({top: 0, behavior: 'smooth'}); setIsMenuOpen(false); }} className="text-2xl font-bebas uppercase tracking-widest text-white">Home</button>
+        <button onClick={() => scrollToSection('about')} className="text-2xl font-bebas uppercase tracking-widest text-white">About</button>
+        <button onClick={() => scrollToSection('services')} className="text-2xl font-bebas uppercase tracking-widest text-white">Services</button>
+        <button onClick={() => scrollToSection('memberships')} className="text-2xl font-bebas uppercase tracking-widest text-white">Memberships</button>
+        <button onClick={() => scrollToSection('gallery')} className="text-2xl font-bebas uppercase tracking-widest text-white">Gallery</button>
+        <button onClick={() => scrollToSection('contact')} className="text-2xl font-bebas uppercase tracking-widest text-white hover:text-gray-300 transition-colors">Contact Us</button>
+      </div>
 
       {/* 2. Hero Section - Redesigned */}
       <section className="relative min-h-[100svh] w-full flex items-center overflow-hidden bg-[#0a0a0a]">
