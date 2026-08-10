@@ -152,34 +152,41 @@ export function PublicWebsite() {
             <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] p-10 rounded-2xl border border-[#d4af37]/20 shadow-[0_0_40px_rgba(212,175,55,0.05)] relative overflow-hidden group hover:border-[#d4af37]/40 transition-colors duration-500">
               <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/10 rounded-full blur-[80px] pointer-events-none transition-opacity duration-500 group-hover:opacity-100 opacity-60" />
               <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-white/5 rounded-full blur-[60px] pointer-events-none" />
-              <h3 className="text-3xl text-center font-bebas tracking-wide mb-8 text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37]">Ladies and Gents Batch Timings</h3>
+              <h3 className="text-3xl text-center font-bebas tracking-wide mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37]">Batch Timings</h3>
               
-              <div className="space-y-6 relative z-10">
-                <div className="flex justify-between items-end border-b border-[#d4af37]/10 pb-4 group-hover:border-[#d4af37]/30 transition-colors duration-300">
-                  <div>
-                    <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-1">Session</div>
-                    <div className="text-xl font-oswald text-white drop-shadow-md">Gents Batch</div>
-                  </div>
-                  <div className="text-lg font-medium text-[#d4af37] tracking-wider">5:30 AM – 10:00 AM</div>
-                </div>
-                
-                <div className="flex justify-between items-end border-b border-[#d4af37]/10 pb-4 group-hover:border-[#d4af37]/30 transition-colors duration-300">
-                  <div>
-                    <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-1">Session</div>
-                    <div className="text-xl font-oswald text-white drop-shadow-md">Ladies Batch</div>
-                  </div>
-                  <div className="text-lg font-medium text-[#d4af37] tracking-wider text-right">
-                    <div>10:00 AM – 12:00 PM</div>
-                    <div>3:00 PM – 5:00 PM</div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                {/* Gents Category */}
+                <div className="bg-[#111] border border-[#d4af37]/20 rounded-2xl p-8 hover:border-[#d4af37]/50 transition-colors duration-300 shadow-lg text-center">
+                  <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-2">Category</div>
+                  <div className="text-2xl font-oswald text-white drop-shadow-md mb-6 pb-4 border-b border-[#d4af37]/10">Gents Batch</div>
+                  
+                  <div className="space-y-4">
+                    <div className="text-lg font-medium text-[#d4af37] tracking-wider">
+                      <span className="text-white/50 text-sm block mb-1">Morning</span>
+                      5:30 AM – 10:00 AM
+                    </div>
+                    <div className="text-lg font-medium text-[#d4af37] tracking-wider">
+                      <span className="text-white/50 text-sm block mb-1">Evening</span>
+                      5:00 PM – 10:00 PM
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex justify-between items-end border-b border-[#d4af37]/10 pb-4 group-hover:border-[#d4af37]/30 transition-colors duration-300">
-                  <div>
-                    <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-1">Session</div>
-                    <div className="text-xl font-oswald text-white drop-shadow-md">Gents Batch</div>
+                {/* Ladies Category */}
+                <div className="bg-[#111] border border-[#d4af37]/20 rounded-2xl p-8 hover:border-[#d4af37]/50 transition-colors duration-300 shadow-lg text-center">
+                  <div className="text-xs text-[#d4af37]/60 uppercase tracking-widest mb-2">Category</div>
+                  <div className="text-2xl font-oswald text-white drop-shadow-md mb-6 pb-4 border-b border-[#d4af37]/10">Ladies Batch</div>
+                  
+                  <div className="space-y-4">
+                    <div className="text-lg font-medium text-[#d4af37] tracking-wider">
+                      <span className="text-white/50 text-sm block mb-1">Morning</span>
+                      10:00 AM – 12:00 PM
+                    </div>
+                    <div className="text-lg font-medium text-[#d4af37] tracking-wider">
+                      <span className="text-white/50 text-sm block mb-1">Afternoon</span>
+                      3:00 PM – 5:00 PM
+                    </div>
                   </div>
-                  <div className="text-lg font-medium text-[#d4af37] tracking-wider">5:00 PM – 10:00 PM</div>
                 </div>
               </div>
             </div>
