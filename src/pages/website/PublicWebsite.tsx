@@ -6,6 +6,7 @@ export function PublicWebsite() {
   const [isLoading, setIsLoading] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activePlan, setActivePlan] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -254,23 +255,74 @@ export function PublicWebsite() {
 
           </div>
 
-          <div 
-            className="flex overflow-x-auto lg:overflow-visible snap-x snap-mandatory gap-6 lg:gap-8 lg:justify-center items-center w-full max-w-6xl mx-auto px-4 lg:px-0 py-10 [&::-webkit-scrollbar]:hidden"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            
-            <div className="snap-center shrink-0 w-[85vw] lg:w-auto max-w-[350px] transition-all duration-500 hover:scale-105">
+          {/* Desktop Layout (Hidden on Mobile) */}
+          <div className="hidden lg:flex justify-center items-center w-full max-w-6xl mx-auto gap-8 px-4 py-10">
+            <div className="w-full max-w-[350px] transition-all duration-500 hover:scale-105">
               <img src="/FrosterGym/plan-basic.jpg" alt="Basic Plan" className="w-full rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-slate-500/20" />
             </div>
-            
-            <div className="snap-center shrink-0 w-[85vw] lg:w-auto max-w-[350px] transition-all duration-500 hover:scale-105 relative lg:-mt-12 lg:z-10">
+            <div className="w-full max-w-[350px] transition-all duration-500 hover:scale-105 relative -mt-12 z-10">
               <img src="/FrosterGym/plan-premium.jpg" alt="Premium Plan" className="w-full rounded-2xl shadow-[0_20px_50px_rgba(212,175,55,0.15)] border-2 border-[#d4af37]" />
             </div>
-            
-            <div className="snap-center shrink-0 w-[85vw] lg:w-auto max-w-[350px] transition-all duration-500 hover:scale-105">
+            <div className="w-full max-w-[350px] transition-all duration-500 hover:scale-105">
               <img src="/FrosterGym/plan-standard.jpg" alt="Standard Plan" className="w-full rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border border-[#689f38]/30" />
             </div>
-            
+          </div>
+
+          {/* Mobile 3D Stacked Layout */}
+          <div className="lg:hidden relative w-full flex justify-center mt-10 perspective-[1000px]">
+             {/* Placeholder to give container height */}
+             <div className="w-[75%] max-w-[320px] opacity-0 pointer-events-none">
+                <img src="/FrosterGym/plan-premium.jpg" className="w-full" alt="Placeholder" />
+             </div>
+             
+             {[
+               { id: 0, src: "/FrosterGym/plan-basic.jpg", alt: "Basic Plan", border: "border-slate-500/20" },
+               { id: 1, src: "/FrosterGym/plan-premium.jpg", alt: "Premium Plan", border: "border-[#d4af37] border-2" },
+               { id: 2, src: "/FrosterGym/plan-standard.jpg", alt: "Standard Plan", border: "border-[#689f38]/30" }
+             ].map((plan, index) => {
+                const isActive = activePlan === index;
+                const isPrev = activePlan === (index + 1) % 3;
+                const isNext = activePlan === (index + 2) % 3;
+                
+                let transform = '';
+                let zIndex = 10;
+                let opacity = 1;
+                
+                if (isActive) {
+                  transform = 'scale(1) translateZ(0px) translateX(0%)';
+                  zIndex = 30;
+                  opacity = 1;
+                } else if (isPrev) {
+                  transform = 'scale(0.85) translateZ(-100px) translateX(-40%) rotateY(15deg)';
+                  zIndex = 20;
+                  opacity = 0.5;
+                } else if (isNext) {
+                  transform = 'scale(0.85) translateZ(-100px) translateX(40%) rotateY(-15deg)';
+                  zIndex = 20;
+                  opacity = 0.5;
+                }
+
+                return (
+                  <div 
+                    key={plan.id}
+                    onClick={() => setActivePlan(index)}
+                    className="absolute top-0 transition-all duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)] cursor-pointer"
+                    style={{ 
+                      transform,
+                      zIndex,
+                      opacity,
+                      width: '75%',
+                      maxWidth: '320px',
+                    }}
+                  >
+                    <img 
+                      src={plan.src} 
+                      alt={plan.alt} 
+                      className={`w-full rounded-2xl shadow-2xl border ${plan.border} transition-all duration-700 ${!isActive ? 'blur-[3px] grayscale-[30%]' : 'grayscale-0 blur-0'}`}
+                    />
+                  </div>
+                )
+             })}
           </div>
         </div>
       </section>
@@ -375,7 +427,7 @@ export function PublicWebsite() {
       </section>
 
       {/* 7. Transformation */}
-      <section className="py-40 bg-black relative flex items-center justify-center overflow-hidden border-y border-[#ff5722]/20">
+      <section className="py-40 bg-black relative flex items-center justify-center overflow-hidden">
          <div className="absolute inset-0 bg-[url('/FrosterGym/transformation_bg.png')] bg-cover bg-fixed bg-[center_top] opacity-40" />
          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-black/50 to-[#0a0a0a]" />
          
