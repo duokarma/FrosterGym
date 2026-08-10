@@ -388,48 +388,7 @@ export function PublicWebsite() {
                  </a>
               </div>
 
-              <div className="flex flex-col lg:flex-row flex-wrap items-start lg:items-center justify-center gap-6 p-4 lg:p-6 rounded-2xl border border-[#d4af37]/20 bg-gradient-to-br from-[#111] to-[#0a0a0a] shadow-[0_0_30px_rgba(212,175,55,0.05)] w-full">
-                 
-                 {/* Phone */}
-                 <div className="flex items-center gap-3">
-                    <div className="bg-gradient-to-br from-[#d4af37] to-[#b38b22] text-black w-10 h-10 rounded-lg flex items-center justify-center shrink-0 shadow-lg">
-                       <Phone className="w-5 h-5" fill="currentColor" />
-                    </div>
-                    <div>
-                       <div className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold mb-0.5 whitespace-nowrap">Call / WhatsApp</div>
-                       <div className="text-sm font-oswald text-white tracking-wide whitespace-nowrap">+91 88664 45862</div>
-                    </div>
-                 </div>
 
-                 <div className="hidden lg:block w-px h-8 bg-[#d4af37]/20"></div>
-                 
-                 {/* Location */}
-                 <div className="flex items-center gap-3">
-                    <div className="bg-gradient-to-br from-[#d4af37] to-[#b38b22] text-black w-10 h-10 rounded-lg flex items-center justify-center shrink-0 shadow-lg">
-                       <MapPin className="w-5 h-5" fill="currentColor" />
-                    </div>
-                    <div>
-                       <div className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold mb-0.5 whitespace-nowrap">Near Dudhimati River Bridge,</div>
-                       <div className="text-sm font-oswald text-white tracking-wide whitespace-nowrap">Dahod - 389151, Gujarat</div>
-                    </div>
-                 </div>
-
-                 <div className="hidden lg:block w-px h-8 bg-[#d4af37]/20"></div>
-
-                 {/* Instagram */}
-                 <div className="flex items-center gap-3">
-                    <div className="bg-gradient-to-br from-[#d4af37] to-[#b38b22] text-black w-10 h-10 rounded-lg flex items-center justify-center shrink-0 shadow-lg">
-                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </div>
-                    <div>
-                       <div className="text-[10px] uppercase tracking-wider text-[#d4af37] font-semibold mb-0.5 whitespace-nowrap">Follow Us</div>
-                       <a href="https://www.instagram.com/froaster_fitness/" target="_blank" rel="noreferrer" className="text-sm font-oswald text-white tracking-wide hover:text-[#d4af37] transition-colors whitespace-nowrap">
-                         @froaster_fitness
-                       </a>
-                    </div>
-                 </div>
-
-              </div>
            </div>
 
            {/* Google Maps Embed */}
