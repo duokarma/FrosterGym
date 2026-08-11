@@ -40,6 +40,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <button
+      type={props.type || 'button'}
       className={`
         inline-flex items-center justify-center font-semibold rounded-2xl
         transition-all duration-300 ease-out active:scale-95
