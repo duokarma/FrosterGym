@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { Mail, Lock, Eye, EyeOff, Dumbbell } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, Dumbbell, Sparkles, SlidersHorizontal, User, Calendar, Quote, ArrowRight } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { Input } from '../components/ui/Input';
-import { Button } from '../components/ui/Button';
 import { useToast } from '../components/ui/Toast';
 
 export function Login() {
@@ -34,65 +32,183 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex flex-col">
-      {/* Top Brand Area */}
-      <div className="flex-1 flex flex-col items-center justify-center px-6 pt-16 pb-8">
-        <div className="w-16 h-16 rounded-2xl bg-cyan-500 flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
-          <Dumbbell className="w-8 h-8 text-white" />
-        </div>
-        <h1 className="text-3xl font-bold text-white tracking-tight">Froster Gym</h1>
-        <p className="text-zinc-500 mt-2 text-center">
-          Admin Login
-        </p>
+    <div className="min-h-screen w-full relative flex bg-black font-sans overflow-hidden">
+      
+      {/* Luxurious Background with Gradient Fade */}
+      <div className="absolute inset-0 z-0">
+         <div className="absolute inset-0 bg-[url('/FrosterGym/login-bg.jpg')] bg-cover bg-center lg:bg-right opacity-80" />
+         <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black via-black/90 to-transparent lg:to-black/30" />
       </div>
 
-      {/* Form Area */}
-      <div className="px-6 pb-8 w-full max-w-md mx-auto">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <Input
-            label="Email"
-            type="email"
-            placeholder="admin@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            icon={<Mail className="w-5 h-5" />}
-            inputMode="email"
-            autoComplete="email"
-            required
-          />
-          <Input
-            label="Password"
-            type={showPassword ? 'text' : 'password'}
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            icon={<Lock className="w-5 h-5" />}
-            rightIcon={
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className="p-1 text-zinc-400 hover:text-zinc-200"
-                tabIndex={-1}
-              >
-                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              </button>
-            }
-            autoComplete="current-password"
-            required
-            minLength={6}
-          />
-          <div className="pt-2">
-            <Button type="submit" fullWidth size="lg" loading={loading}>
-              Sign In
-            </Button>
-          </div>
-        </form>
+      {/* Left Column: Pitch & Branding (Hidden on mobile, visible on lg screens) */}
+      <div className="hidden lg:flex w-1/2 relative z-10 flex-col justify-center px-12 xl:px-24">
+         
+         <div className="border border-zinc-800/80 rounded-full px-4 py-1.5 inline-flex items-center gap-2 text-xs font-medium text-zinc-300 w-fit mb-12 bg-zinc-950/50 backdrop-blur-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#E5D3B3]" />
+            Welcome Back
+         </div>
+
+         <div className="mb-4">
+            <h1 className="text-3xl text-zinc-300 font-light tracking-wide">
+               Welcome to
+            </h1>
+            <h2 className="text-6xl xl:text-7xl font-serif text-[#E5D3B3] tracking-wider mt-2">
+               FROSTER GYM
+            </h2>
+         </div>
+         
+         <p className="text-zinc-400 text-lg mb-16 max-w-md">
+            Manage your gym. Elevate every workout.
+         </p>
+
+         <div className="space-y-8 mb-16">
+            <div className="flex items-start gap-5">
+               <div className="w-12 h-12 rounded-xl border border-zinc-800/80 bg-zinc-950/50 flex items-center justify-center shrink-0">
+                  <SlidersHorizontal className="w-5 h-5 text-zinc-300" />
+               </div>
+               <div>
+                  <h3 className="text-white font-medium mb-1">Smart Dashboard</h3>
+                  <p className="text-zinc-500 text-sm">Real-time insights at a glance</p>
+               </div>
+            </div>
+
+            <div className="flex items-start gap-5">
+               <div className="w-12 h-12 rounded-xl border border-zinc-800/80 bg-zinc-950/50 flex items-center justify-center shrink-0">
+                  <User className="w-5 h-5 text-zinc-300" />
+               </div>
+               <div>
+                  <h3 className="text-white font-medium mb-1">Member First</h3>
+                  <p className="text-zinc-500 text-sm">Build stronger fitness communities</p>
+               </div>
+            </div>
+
+            <div className="flex items-start gap-5">
+               <div className="w-12 h-12 rounded-xl border border-zinc-800/80 bg-zinc-950/50 flex items-center justify-center shrink-0">
+                  <Calendar className="w-5 h-5 text-zinc-300" />
+               </div>
+               <div>
+                  <h3 className="text-white font-medium mb-1">Grow Your Business</h3>
+                  <p className="text-zinc-500 text-sm">Data-driven decisions that matter</p>
+               </div>
+            </div>
+         </div>
+
+         <div className="border border-zinc-800/60 rounded-[2rem] p-8 relative bg-zinc-950/40 backdrop-blur-sm max-w-lg">
+            <Quote className="w-6 h-6 text-zinc-700 absolute top-6 left-6" />
+            <Quote className="w-6 h-6 text-zinc-700 absolute bottom-6 right-6 rotate-180" />
+            <div className="px-8 py-2">
+               <p className="text-zinc-200 text-lg font-medium leading-relaxed mb-4">
+                  Excellence is not an act, <br/>but a habit.
+               </p>
+               <p className="text-zinc-600 text-sm">
+                  — Aristotle
+               </p>
+            </div>
+         </div>
+
       </div>
 
-      {/* Footer */}
-      <div className="px-6 pb-8 text-center">
-        <p className="text-xs text-zinc-600">Powered by Froster Gym Management</p>
+      {/* Right Column: Login Card */}
+      <div className="w-full lg:w-1/2 relative z-10 flex flex-col items-center justify-center p-6 lg:p-12">
+         
+         {/* Mobile Logo Header (Hidden on Desktop) */}
+         <div className="lg:hidden mb-10 text-center">
+             <h1 className="text-4xl font-serif text-[#E5D3B3] tracking-wider">
+               FROSTER GYM
+            </h1>
+         </div>
+
+         <div className="bg-[#0a0a0a]/80 backdrop-blur-2xl border border-zinc-800/60 rounded-[2.5rem] p-8 md:p-12 w-full max-w-[460px] shadow-2xl">
+            
+            <div className="w-16 h-16 bg-[#E5D3B3] rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(229,211,179,0.15)]">
+               <Dumbbell className="w-8 h-8 text-black" />
+            </div>
+            
+            <h2 className="text-2xl text-white font-bold text-center mb-1">
+               FROSTER GYM
+            </h2>
+            <p className="text-[10px] font-bold tracking-[0.3em] text-zinc-500 text-center uppercase mb-10">
+               EXCLUSIVE ACCESS
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+               <div>
+                  <label className="block text-[11px] font-bold tracking-wider text-zinc-400 uppercase mb-2 ml-1">
+                     Email Address
+                  </label>
+                  <div className="relative group">
+                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-zinc-500 group-focus-within:text-[#E5D3B3] transition-colors">
+                        <Mail className="h-5 w-5" />
+                     </div>
+                     <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email"
+                        className="block w-full pl-11 pr-4 py-3.5 bg-zinc-900/50 border border-zinc-800 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#E5D3B3] focus:ring-1 focus:ring-[#E5D3B3] transition-all text-sm"
+                        required
+                     />
+                  </div>
+               </div>
+
+               <div>
+                  <label className="block text-[11px] font-bold tracking-wider text-zinc-400 uppercase mb-2 ml-1">
+                     Password
+                  </label>
+                  <div className="relative group">
+                     <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-zinc-500 group-focus-within:text-[#E5D3B3] transition-colors">
+                        <Lock className="h-5 w-5" />
+                     </div>
+                     <input
+                        type={showPassword ? 'text' : 'password'}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Enter your password"
+                        className="block w-full pl-11 pr-12 py-3.5 bg-zinc-900/50 border border-zinc-800 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#E5D3B3] focus:ring-1 focus:ring-[#E5D3B3] transition-all text-sm"
+                        required
+                     />
+                     <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute inset-y-0 right-0 pr-4 flex items-center text-zinc-500 hover:text-zinc-300 transition-colors"
+                        tabIndex={-1}
+                     >
+                        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                     </button>
+                  </div>
+               </div>
+
+               <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-[#E5D3B3] hover:bg-[#d4c1a0] text-black font-bold text-sm py-4 rounded-xl flex items-center justify-center gap-2 transition-all mt-8 active:scale-[0.98] disabled:opacity-70"
+               >
+                  {loading ? 'SIGNING IN...' : 'SIGN IN'}
+                  {!loading && <ArrowRight className="w-4 h-4" />}
+               </button>
+            </form>
+
+            <p className="text-[10px] font-bold tracking-widest text-zinc-600 text-center uppercase mt-8">
+               DATA IS SECURED
+            </p>
+
+         </div>
       </div>
+
+      {/* Footer Bar */}
+      <div className="absolute bottom-6 w-full flex justify-center z-20 px-6">
+         <div className="bg-zinc-950/80 backdrop-blur-md border border-zinc-800/80 rounded-full px-6 py-3 flex flex-wrap items-center justify-center gap-4 text-[11px] text-zinc-400">
+            <div className="flex items-center gap-2">
+               <Lock className="w-3 h-3 text-zinc-500" />
+               © 2026 Froster Gym. All rights reserved.
+            </div>
+            <div className="hidden sm:block w-px h-3 bg-zinc-700"></div>
+            <div className="font-medium text-zinc-300">
+               Powered by Duokarma
+            </div>
+         </div>
+      </div>
+
     </div>
   );
 }
