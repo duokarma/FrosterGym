@@ -91,7 +91,7 @@ export function EnquiriesList() {
           </div>
           <p className="text-slate-400 text-sm mt-1">Manage leads and conversions</p>
         </div>
-        <Button onClick={() => navigate('/enquiries/add')} className="hidden sm:flex">
+        <Button onClick={() => navigate('/app/enquiries/add')} className="hidden sm:flex">
           <Plus className="w-5 h-5 mr-2" />
           Add Enquiry
         </Button>
@@ -206,7 +206,7 @@ export function EnquiriesList() {
       <div className="fixed bottom-6 right-4 sm:hidden z-40">
         <Button 
           className="w-14 h-14 rounded-full shadow-xl shadow-[#D4AF37]/30 flex items-center justify-center p-0 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] hover:from-[#E5D3B3] hover:to-[#E5D3B3]"
-          onClick={() => navigate('/enquiries/add')}
+          onClick={() => navigate('/app/enquiries/add')}
         >
           <Plus className="w-6 h-6" />
         </Button>

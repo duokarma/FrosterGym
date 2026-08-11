@@ -45,7 +45,7 @@ export function AddDietPlan() {
       toast('error', 'Failed to create diet plan');
     } else {
       toast('success', 'Diet Plan Saved!');
-      navigate('/diet-plans');
+      navigate('/app/diet-plans');
     }
   };
 

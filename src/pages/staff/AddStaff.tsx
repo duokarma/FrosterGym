@@ -34,7 +34,7 @@ const AddStaff: React.FC = () => {
     setIsSubmitting(false);
     
     if (!error) {
-      navigate('/staff');
+      navigate('/app/staff');
     } else {
       alert('Error creating staff: ' + (error as any).message);
     }

@@ -49,7 +49,7 @@ export function AddExpense() {
       toast('error', 'Failed to add expense');
     } else {
       toast('success', 'Expense Logged!');
-      navigate('/expenses');
+      navigate('/app/expenses');
     }
   };
 

@@ -38,7 +38,7 @@ export function DietPlansList() {
           <h1 className="text-2xl font-bold text-white">Diet Plans</h1>
           <p className="text-zinc-400 text-sm">Manage nutrition templates</p>
         </div>
-        <Button onClick={() => navigate('/diet-plans/add')}>
+        <Button onClick={() => navigate('/app/diet-plans/add')}>
           <Plus className="w-5 h-5 mr-2" />
           Add Diet
         </Button>

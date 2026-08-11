@@ -31,7 +31,7 @@ export function ExpensesList() {
           <h1 className="text-2xl font-bold text-white">Expenses</h1>
           <p className="text-zinc-400 text-sm">Track your outgoings</p>
         </div>
-        <Button onClick={() => navigate('/expenses/add')}>
+        <Button onClick={() => navigate('/app/expenses/add')}>
           <Plus className="w-5 h-5 mr-2" />
           Add Expense
         </Button>

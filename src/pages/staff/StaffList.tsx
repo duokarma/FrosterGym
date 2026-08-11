@@ -23,7 +23,7 @@ const StaffList: React.FC = () => {
     <div className="staff-page-container">
       <div className="staff-header">
         <h1>Staff Directory</h1>
-        <Link to="/staff/add" className="btn-primary">+ Add Staff</Link>
+        <Link to="/app/staff/add" className="btn-primary">+ Add Staff</Link>
       </div>
 
       {loading ? (

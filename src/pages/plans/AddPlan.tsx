@@ -12,7 +12,7 @@ export function AddPlan() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast('success', 'Plan created successfully! (Demo)');
-    navigate('/memberships');
+    navigate('/app/memberships');
   };
 
   return (

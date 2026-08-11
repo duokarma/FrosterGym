@@ -79,12 +79,12 @@ export function Dashboard() {
   }
 
   const quickActions = [
-    { label: 'Add Member', icon: <UserPlus className="w-5 h-5" />, path: '/members/add', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
-    { label: 'Payment', icon: <IndianRupee className="w-5 h-5" />, path: '/payments', color: 'text-emerald-400 bg-emerald-500/10' },
-    { label: 'Attendance', icon: <CalendarCheck className="w-5 h-5" />, path: '/attendance', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
-    { label: 'Expense', icon: <Receipt className="w-5 h-5" />, path: '/expenses/add', color: 'text-red-400 bg-red-500/10' },
-    { label: 'Enquiry', icon: <Search className="w-5 h-5" />, path: '/enquiries/add', color: 'text-amber-400 bg-amber-500/10' },
-    { label: 'Renew', icon: <Zap className="w-5 h-5" />, path: '/members', color: 'text-purple-400 bg-purple-500/10' },
+    { label: 'Add Member', icon: <UserPlus className="w-5 h-5" />, path: '/app/members/add', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
+    { label: 'Payment', icon: <IndianRupee className="w-5 h-5" />, path: '/app/payments', color: 'text-emerald-400 bg-emerald-500/10' },
+    { label: 'Attendance', icon: <CalendarCheck className="w-5 h-5" />, path: '/app/attendance', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
+    { label: 'Expense', icon: <Receipt className="w-5 h-5" />, path: '/app/expenses/add', color: 'text-red-400 bg-red-500/10' },
+    { label: 'Enquiry', icon: <Search className="w-5 h-5" />, path: '/app/enquiries/add', color: 'text-amber-400 bg-amber-500/10' },
+    { label: 'Renew', icon: <Zap className="w-5 h-5" />, path: '/app/members', color: 'text-purple-400 bg-purple-500/10' },
   ];
 
   const statCards = [
@@ -134,7 +134,7 @@ export function Dashboard() {
 
       {/* ─── Revenue At Risk ─── */}
       {stats.revenueAtRisk > 0 && (
-        <Card className="mb-4 !p-4 cursor-pointer hover:border-amber-500/30 transition-colors" onClick={() => navigate('/members?filter=expiring_7')}>
+        <Card className="mb-4 !p-4 cursor-pointer hover:border-amber-500/30 transition-colors" onClick={() => navigate('/app/members?filter=expiring_7')}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
@@ -183,7 +183,7 @@ export function Dashboard() {
             <AlertCircle className="w-4 h-4 text-amber-400" />
             <h2 className="text-base font-semibold text-white">Expiry Alerts</h2>
           </div>
-          <button onClick={() => navigate('/members?filter=expiring_7')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
+          <button onClick={() => navigate('/app/members?filter=expiring_7')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
         </div>
 
         {expiryAlerts.length === 0 ? (
@@ -265,7 +265,7 @@ export function Dashboard() {
             <CreditCard className="w-4 h-4 text-red-400" />
             <h2 className="text-base font-semibold text-white">Payment Due</h2>
           </div>
-          <button onClick={() => navigate('/members?filter=due')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
+          <button onClick={() => navigate('/app/members?filter=due')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
         </div>
         {paymentsDue.length === 0 ? (
           <Card>
@@ -330,7 +330,7 @@ export function Dashboard() {
       <div className="fixed bottom-24 right-4 sm:hidden z-40">
         <Button
           className="w-14 h-14 rounded-full shadow-xl shadow-[#D4AF37]/30 flex items-center justify-center !p-0"
-          onClick={() => navigate('/members/add')}
+          onClick={() => navigate('/app/members/add')}
         >
           <Plus className="w-6 h-6" />
         </Button>

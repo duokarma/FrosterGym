@@ -23,7 +23,7 @@ export function PlansList() {
           <h1 className="text-2xl font-bold text-white">Membership Plans</h1>
           <p className="text-zinc-400 text-sm">Manage your gym's pricing packages</p>
         </div>
-        <Button onClick={() => navigate('/memberships/add')}>
+        <Button onClick={() => navigate('/app/memberships/add')}>
           <Plus className="w-5 h-5 mr-2" />
           Add Plan
         </Button>

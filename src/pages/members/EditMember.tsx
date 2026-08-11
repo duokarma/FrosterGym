@@ -39,7 +39,7 @@ export function EditMember() {
       const { data, error } = await fetchMemberById(gym.id, id);
       if (error || !data) {
         toast('error', 'Failed to load member');
-        navigate('/members');
+        navigate('/app/members');
       } else {
         setMember(data);
         setFormData({
