@@ -136,7 +136,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 overflow-y-auto p-3 space-y-1">
+      <nav className="flex-1 overflow-y-auto overscroll-contain p-3 space-y-1">
         {coreNav.map(item => <NavLink key={item.path} item={item} />)}
         <NavSection title="Management" items={managementNav} />
         <NavSection title="Marketing" items={analyticsNav} />

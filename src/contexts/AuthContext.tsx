@@ -106,13 +106,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setGym(DEMO_GYM);
     setSession({ access_token: 'demo', refresh_token: 'demo' } as Session);
     setUser({ id: 'demo-user-id', email: 'admin@frostergym.com' } as User);
+    localStorage.setItem('demo_auth', 'true');
     setLoading(false);
   };
 
   useEffect(() => {
     if (!supabaseConfigured) {
-      // Auto-enter demo mode when Supabase isn't set up
-      enterDemoMode();
+      // Check if user previously logged into demo mode
+      if (localStorage.getItem('demo_auth') === 'true') {
+        enterDemoMode();
+      } else {
+        setLoading(false);
+      }
       return;
     }
 
@@ -166,6 +171,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = async () => {
     if (!supabaseConfigured) {
+      localStorage.removeItem('demo_auth');
       setIsDemo(false);
       setSession(null);
       setUser(null);

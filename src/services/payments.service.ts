@@ -31,11 +31,7 @@ export interface RecordPaymentInput {
   type: 'membership' | 'renewal' | 'pt' | 'service' | 'other';
 }
 
-const DEMO_PAYMENTS: Payment[] = [
-  { id: 'pay-1', gym_id: 'demo-gym', member_id: 'mem-1', membership_id: 'ms-1', amount: 1500, payment_date: '2026-08-10', payment_method: 'upi', status: 'completed', reference_number: 'UPI12345', notes: null, processed_by: null, type: 'membership', member_name: 'Rahul Sharma', member_phone: '+919876543210', created_at: '2026-08-10T08:00:00Z' },
-  { id: 'pay-2', gym_id: 'demo-gym', member_id: 'mem-2', membership_id: 'ms-2', amount: 4000, payment_date: '2026-08-09', payment_method: 'card', status: 'completed', reference_number: 'TXN889', notes: null, processed_by: null, type: 'renewal', member_name: 'Priya Patel', member_phone: '+919876543211', created_at: '2026-08-09T10:00:00Z' },
-  // ... more could be added, keeping it brief for demo
-];
+const DEMO_PAYMENTS: Payment[] = [];
 
 export const fetchPayments = async (gymId: string, options?: { search?: string; dateFrom?: string; dateTo?: string; method?: string; type?: string; page?: number; pageSize?: number }): Promise<PaginatedResult<Payment>> => {
   if (isDemo()) {

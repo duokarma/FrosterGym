@@ -41,12 +41,7 @@ export interface FreezeInput {
   reason: string;
 }
 
-const DEMO_PLANS: MembershipPlan[] = [
-  { id: 'plan-1', gym_id: 'demo-gym', name: '1 Month', duration_months: 1, duration_days: 0, price: 1500, description: 'Monthly rolling plan', status: 'active', created_at: '2026-01-01T00:00:00Z' },
-  { id: 'plan-2', gym_id: 'demo-gym', name: '3 Months', duration_months: 3, duration_days: 0, price: 4000, description: 'Quarterly plan', status: 'active', created_at: '2026-01-01T00:00:00Z' },
-  { id: 'plan-3', gym_id: 'demo-gym', name: '6 Months', duration_months: 6, duration_days: 0, price: 7000, description: 'Half-yearly plan', status: 'active', created_at: '2026-01-01T00:00:00Z' },
-  { id: 'plan-4', gym_id: 'demo-gym', name: '12 Months', duration_months: 12, duration_days: 0, price: 12000, description: 'Annual plan', status: 'active', created_at: '2026-01-01T00:00:00Z' },
-];
+const DEMO_PLANS: MembershipPlan[] = [];
 
 export const fetchPlans = async (gymId: string): Promise<MembershipPlan[]> => {
   if (isDemo()) {
