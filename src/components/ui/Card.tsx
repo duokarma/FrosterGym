@@ -10,8 +10,8 @@ interface CardProps {
 export function Card({ children, className = '', variant = 'default', onClick }: CardProps) {
   const baseClasses = 'rounded-3xl transition-all duration-300 relative overflow-hidden';
   const variantClasses = {
-    default: 'bg-zinc-900/80 backdrop-blur-xl border border-white/5 p-5 shadow-2xl shadow-black/40',
-    stat: 'bg-gradient-to-br from-zinc-900/90 to-[#0a0a0a]/80 backdrop-blur-xl border border-white/5 p-5 shadow-2xl shadow-black/40 group hover:border-[#D4AF37]/20',
+    default: 'bg-[#11110F] border border-[rgba(255,255,255,0.08)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]',
+    stat: 'bg-[#11110F] border border-[rgba(255,255,255,0.08)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] group hover:border-[#C9A24D]/30 hover:bg-[#171613]',
   };
 
   return (
@@ -34,19 +34,19 @@ interface StatCardProps {
   iconBg?: string;
 }
 
-export function StatCard({ label, value, icon, trend, iconBg = 'bg-[#D4AF37]/10 text-[#E5D3B3]' }: StatCardProps) {
+export function StatCard({ label, value, icon, trend, iconBg = 'text-[#A7A39A]' }: StatCardProps) {
   return (
     <Card variant="stat">
       <div className="flex items-start justify-between mb-3">
-        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform duration-300 ${iconBg}`}>
+        <div className={`flex items-center justify-center transition-transform duration-300 ${iconBg}`}>
           {icon}
         </div>
         {trend && (
           <span
             className={`text-xs font-medium px-2 py-0.5 rounded-full ${
               trend.positive
-                ? 'bg-emerald-500/10 text-emerald-400'
-                : 'bg-red-500/10 text-red-400'
+                ? 'bg-[#4D6B5A]/20 text-[#4D6B5A]'
+                : 'bg-[#8B4B4B]/20 text-[#8B4B4B]'
             }`}
           >
             {trend.value}
@@ -54,8 +54,8 @@ export function StatCard({ label, value, icon, trend, iconBg = 'bg-[#D4AF37]/10 
         )}
       </div>
       <div className="mt-4">
-        <p className="text-3xl font-black text-white tracking-tight drop-shadow-sm">{value}</p>
-        <p className="text-sm font-medium text-slate-400 mt-1">{label}</p>
+        <p className="text-3xl font-black text-[#F4F1E8] tracking-tight">{value}</p>
+        <p className="text-sm font-medium text-[#706D66] mt-1">{label}</p>
       </div>
       
       {/* Subtle shine effect */}

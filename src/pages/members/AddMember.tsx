@@ -145,7 +145,7 @@ export function AddMember() {
   };
 
   if (initialLoading) {
-    return <div className="p-8 text-center text-zinc-400">Loading...</div>;
+    return <div className="p-8 text-center text-[#A7A39A]">Loading...</div>;
   }
 
   return (
@@ -157,10 +157,10 @@ export function AddMember() {
         {/* Photo Upload Area (UI Only for now) */}
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <div className="w-24 h-24 rounded-full bg-zinc-900/50 backdrop-blur-xl border-2 border-dashed border-zinc-700 flex items-center justify-center">
+            <div className="w-24 h-24 rounded-full bg-[#11110F] backdrop-blur-xl border-2 border-dashed border-[rgba(255,255,255,0.12)] flex items-center justify-center">
               <Camera className="w-8 h-8 text-zinc-600" />
             </div>
-            <button type="button" className="absolute bottom-0 right-0 w-8 h-8 bg-[#D4AF37] rounded-full flex items-center justify-center border-2 border-zinc-950 text-white shadow-lg">
+            <button type="button" className="absolute bottom-0 right-0 w-8 h-8 bg-[#C9A24D] rounded-full flex items-center justify-center border-2 border-zinc-950 text-[#F4F1E8] shadow-lg">
               <Plus className="w-4 h-4" />
             </button>
           </div>
@@ -168,7 +168,7 @@ export function AddMember() {
 
         {/* Section 1: Personal Details */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Personal Details</h2>
+          <h2 className="text-sm font-semibold text-[#E2C46B] uppercase tracking-wider mb-2">Personal Details</h2>
           
           <Input 
             label="Full Name" 
@@ -191,7 +191,7 @@ export function AddMember() {
             <div className="space-y-1.5">
               <label className="block text-sm font-medium text-zinc-300">Gender</label>
               <select 
-                className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+                className="w-full h-[44px] bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl px-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                 value={gender}
                 onChange={e => setGender(e.target.value)}
               >
@@ -215,10 +215,10 @@ export function AddMember() {
               <label className="block text-sm font-medium text-zinc-300">Blood Group</label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Droplet className="w-5 h-5 text-zinc-500" />
+                  <Droplet className="w-5 h-5 text-[#706D66]" />
                 </div>
                 <select 
-                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+                  className="w-full h-[44px] bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl pl-10 pr-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                   value={bloodGroup}
                   onChange={e => setBloodGroup(e.target.value)}
                 >
@@ -239,7 +239,7 @@ export function AddMember() {
 
         {/* Section 2: Contact Details */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Contact Details</h2>
+          <h2 className="text-sm font-semibold text-[#E2C46B] uppercase tracking-wider mb-2">Contact Details</h2>
           
           <Input 
             label="Phone Number" 
@@ -271,7 +271,7 @@ export function AddMember() {
         
         {/* Section 3: Extra Info */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Other Info</h2>
+          <h2 className="text-sm font-semibold text-[#E2C46B] uppercase tracking-wider mb-2">Other Info</h2>
           <div className="grid grid-cols-2 gap-4">
              <Input 
                 label="Fitness Goal" 
@@ -292,12 +292,12 @@ export function AddMember() {
 
         {/* Section 4: Membership & Payment */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Membership & Payment</h2>
+          <h2 className="text-sm font-semibold text-[#E2C46B] uppercase tracking-wider mb-2">Membership & Payment</h2>
           
           <div className="space-y-1.5">
             <label className="block text-sm font-medium text-zinc-300">Select Plan</label>
             <select 
-              className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+              className="w-full h-[44px] bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl px-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
               value={planId}
               onChange={e => setPlanId(e.target.value)}
             >
@@ -324,14 +324,14 @@ export function AddMember() {
                   <div className="relative">
                     <input 
                       type="number" 
-                      className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-4 pr-12 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
+                      className="w-full h-[44px] bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl pl-4 pr-12 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
                       value={discountValue}
                       onChange={e => setDiscountValue(Number(e.target.value))}
                       min={0}
                     />
                     <button 
                       type="button"
-                      className="absolute right-2 top-1.5 bottom-1.5 px-2 bg-zinc-800/80 rounded-lg text-xs font-semibold text-zinc-300 hover:text-white transition-colors"
+                      className="absolute right-2 top-1.5 bottom-1.5 px-2 bg-[#171613]/80 rounded-lg text-xs font-semibold text-zinc-300 hover:text-[#F4F1E8] transition-colors"
                       onClick={() => setDiscountType(t => t === 'fixed' ? 'percentage' : 'fixed')}
                     >
                       {discountType === 'fixed' ? '₹' : '%'}
@@ -350,22 +350,22 @@ export function AddMember() {
               </div>
 
               {/* Payment Summary Box */}
-              <div className="bg-zinc-950/50 border border-zinc-800/50 rounded-2xl p-4 space-y-2 mt-2">
-                <div className="flex justify-between text-sm text-zinc-400">
+              <div className="bg-[#0B0B0A]/50 border border-[rgba(255,255,255,0.08)]/50 rounded-2xl p-4 space-y-2 mt-2">
+                <div className="flex justify-between text-sm text-[#A7A39A]">
                   <span>Plan Amount</span>
                   <span>₹{planAmount}</span>
                 </div>
                 {discountAmount > 0 && (
-                  <div className="flex justify-between text-sm text-emerald-400">
+                  <div className="flex justify-between text-sm text-[#4D6B5A]">
                     <span>Discount ({discountType === 'percentage' ? `${discountValue}%` : 'Fixed'})</span>
                     <span>-₹{discountAmount.toFixed(2)}</span>
                   </div>
                 )}
-                <div className="flex justify-between text-base font-semibold text-white pt-2 border-t border-zinc-800/50">
+                <div className="flex justify-between text-base font-semibold text-[#F4F1E8] pt-2 border-t border-[rgba(255,255,255,0.08)]/50">
                   <span>Final Amount</span>
                   <span>₹{finalAmount.toFixed(2)}</span>
                 </div>
-                <div className="flex justify-between text-sm font-medium text-amber-400 pt-1">
+                <div className="flex justify-between text-sm font-medium text-[#8E7135] pt-1">
                   <span>Due Amount</span>
                   <span>₹{dueAmount.toFixed(2)}</span>
                 </div>
@@ -381,8 +381,8 @@ export function AddMember() {
                       onClick={() => setPaymentMethod(method)}
                       className={`px-4 py-2 rounded-xl text-sm font-medium capitalize flex-1 border transition-all ${
                         paymentMethod === method 
-                        ? 'bg-[#D4AF37]/10 border-[#D4AF37]/50 text-[#E5D3B3] shadow-sm shadow-[#D4AF37]/20' 
-                        : 'bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:bg-zinc-800'
+                        ? 'bg-[#C9A24D]/10 border-[#D4AF37]/50 text-[#E2C46B] shadow-sm shadow-[#D4AF37]/20' 
+                        : 'bg-[#11110F] border-[rgba(255,255,255,0.08)] text-[#A7A39A] hover:bg-[#171613]'
                       }`}
                     >
                       {method}

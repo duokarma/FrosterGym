@@ -87,7 +87,7 @@ export default function EditorialLoader({ onComplete }: { onComplete: () => void
       <div className="relative z-10 flex flex-col items-center text-center">
         <h1 
           ref={brandRef}
-          className="text-white font-bebas text-5xl md:text-7xl lg:text-8xl tracking-widest mb-3"
+          className="text-[#F4F1E8] font-bebas text-5xl md:text-7xl lg:text-8xl tracking-widest mb-3"
           style={{ textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
         >
           FROASTER
@@ -95,7 +95,7 @@ export default function EditorialLoader({ onComplete }: { onComplete: () => void
         
         <p 
           ref={taglineRef}
-          className="text-gray-400 font-oswald text-[10px] md:text-xs uppercase tracking-[0.3em] font-light"
+          className="text-[#A7A39A] font-oswald text-[10px] md:text-xs uppercase tracking-[0.3em] font-light"
         >
           Where fat meets its fate.
         </p>

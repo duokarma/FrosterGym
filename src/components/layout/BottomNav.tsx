@@ -71,7 +71,7 @@ export function BottomNav() {
 
   return (
     <>
-      <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#0a0a0a]/80 backdrop-blur-xl border-t border-white/5 lg:hidden">
+      <nav className="fixed bottom-0 left-0 right-0 z-30 bg-[#0B0B0A]/80 backdrop-blur-xl border-t border-[rgba(255,255,255,0.04)] lg:hidden">
         <div className="flex items-center justify-around h-16 pb-safe">
           {tabs.map((tab) => {
             const isActive =
@@ -84,7 +84,7 @@ export function BottomNav() {
                 key={tab.label}
                 onClick={() => handleTabClick(tab.path)}
                 className={`flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] py-1 transition-colors duration-150 ${
-                  isActive ? 'text-[#E5D3B3]' : 'text-slate-500'
+                  isActive ? 'text-[#E2C46B]' : 'text-[#706D66]'
                 }`}
               >
                 {tab.icon}
@@ -108,8 +108,8 @@ export function BottomNav() {
                   onClick={() => handleMoreItemClick(item.path)}
                   className={`flex flex-col items-center gap-2 p-4 rounded-2xl transition-all duration-150 min-h-[80px] ${
                     isActive
-                      ? 'bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/10 text-[#E5D3B3] border border-[#D4AF37]/20 shadow-lg shadow-[#D4AF37]/10'
-                      : 'bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white active:scale-95'
+                      ? 'bg-gradient-to-br from-[#C9A24D]/20 to-[#C9A24D]/10 text-[#E2C46B] border border-[#D4AF37]/20 shadow-lg shadow-[#D4AF37]/10'
+                      : 'bg-[rgba(255,255,255,0.02)] text-[#A7A39A] hover:bg-[#1D1B17] hover:text-[#F4F1E8] active:scale-95'
                   }`}
                 >
                   {item.icon}

@@ -178,8 +178,8 @@ export function MemberProfile() {
       {/* Header Profile Info */}
       <div className="mt-6 flex flex-col items-center text-center">
         <Avatar name={member.full_name} src={member.photo_url || undefined} size="lg" className="w-24 h-24 mb-4 text-2xl" />
-        <h1 className="text-2xl font-bold text-white">{member.full_name}</h1>
-        <p className="text-sm text-zinc-400 mt-1">{member.member_id}</p>
+        <h1 className="text-2xl font-bold text-[#F4F1E8]">{member.full_name}</h1>
+        <p className="text-sm text-[#A7A39A] mt-1">{member.member_id}</p>
         <div className="mt-3">
           {getStatusBadge()}
         </div>
@@ -192,12 +192,12 @@ export function MemberProfile() {
           className="flex-1"
           onClick={() => window.open(`tel:${member.phone}`)}
         >
-          <Phone className="w-5 h-5 mb-1 text-zinc-400" />
+          <Phone className="w-5 h-5 mb-1 text-[#A7A39A]" />
           <span className="text-xs">Call</span>
         </Button>
         <Button 
           variant="secondary" 
-          className="flex-1 text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10"
+          className="flex-1 text-[#4D6B5A] hover:text-emerald-300 hover:bg-[#4D6B5A]/20"
           onClick={() => {
             const msg = encodeURIComponent(`Hi ${member.full_name}, this is from Froster Gym.`);
             window.open(`https://wa.me/${member.phone.replace(/[^0-9]/g, '')}?text=${msg}`, '_blank');
@@ -208,7 +208,7 @@ export function MemberProfile() {
         </Button>
         <Button 
           variant="secondary" 
-          className="flex-1 text-[#E5D3B3] hover:text-cyan-300 hover:bg-[#D4AF37]/10"
+          className="flex-1 text-[#E2C46B] hover:text-cyan-300 hover:bg-[#C9A24D]/10"
           onClick={() => navigate(`/members/${member.id}/renew`)}
         >
           <RefreshCw className="w-5 h-5 mb-1" />
@@ -216,14 +216,14 @@ export function MemberProfile() {
         </Button>
         <Button 
           variant="secondary" 
-          className="flex-1 text-amber-400 hover:text-amber-300 hover:bg-amber-500/10"
+          className="flex-1 text-[#8E7135] hover:text-amber-300 hover:bg-[#8E7135]/20"
         >
           <CreditCard className="w-5 h-5 mb-1" />
           <span className="text-xs">Payment</span>
         </Button>
         <Button 
           variant="secondary" 
-          className="flex-1 text-[#E5D3B3] hover:text-blue-300 hover:bg-[#D4AF37]/10"
+          className="flex-1 text-[#E2C46B] hover:text-blue-300 hover:bg-[#C9A24D]/10"
           onClick={() => setIsFreezeModalOpen(true)}
           disabled={!membership || membership.status !== 'active'}
         >
@@ -236,75 +236,75 @@ export function MemberProfile() {
         
         {/* Current Membership */}
         {membership ? (
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
-            <div className="px-4 py-3 border-b border-zinc-800 bg-zinc-900/50 flex justify-between items-center">
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider flex items-center">
-                <Dumbbell className="w-4 h-4 mr-2 text-[#D4AF37]" />
+          <div className="bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
+            <div className="px-4 py-3 border-b border-[rgba(255,255,255,0.08)] bg-[#11110F] flex justify-between items-center">
+              <h3 className="text-sm font-semibold text-[#F4F1E8] uppercase tracking-wider flex items-center">
+                <Dumbbell className="w-4 h-4 mr-2 text-[#C9A24D]" />
                 Current Plan
               </h3>
               {membership.due_amount > 0 && (
-                <span className="text-xs font-semibold text-amber-400 bg-amber-500/10 px-2 py-1 rounded-full">
+                <span className="text-xs font-semibold text-[#8E7135] bg-[#8E7135]/20 px-2 py-1 rounded-full">
                   ₹{membership.due_amount} Due
                 </span>
               )}
             </div>
             <div className="p-4 grid grid-cols-2 gap-4">
               <div>
-                <p className="text-xs text-zinc-500">Plan</p>
-                <p className="text-sm font-medium text-white">{membership.plan_id ? 'Standard Plan' : 'Custom Plan'}</p>
+                <p className="text-xs text-[#706D66]">Plan</p>
+                <p className="text-sm font-medium text-[#F4F1E8]">{membership.plan_id ? 'Standard Plan' : 'Custom Plan'}</p>
               </div>
               <div>
-                <p className="text-xs text-zinc-500">Amount</p>
-                <p className="text-sm font-medium text-white">₹{membership.final_amount}</p>
+                <p className="text-xs text-[#706D66]">Amount</p>
+                <p className="text-sm font-medium text-[#F4F1E8]">₹{membership.final_amount}</p>
               </div>
               <div>
-                <p className="text-xs text-zinc-500">Start Date</p>
-                <p className="text-sm font-medium text-white">{new Date(membership.start_date).toLocaleDateString()}</p>
+                <p className="text-xs text-[#706D66]">Start Date</p>
+                <p className="text-sm font-medium text-[#F4F1E8]">{new Date(membership.start_date).toLocaleDateString()}</p>
               </div>
               <div>
-                <p className="text-xs text-zinc-500">Expiry Date</p>
-                <p className="text-sm font-medium text-white">{new Date(membership.end_date).toLocaleDateString()}</p>
+                <p className="text-xs text-[#706D66]">Expiry Date</p>
+                <p className="text-sm font-medium text-[#F4F1E8]">{new Date(membership.end_date).toLocaleDateString()}</p>
               </div>
             </div>
           </div>
         ) : (
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center">
-            <p className="text-sm text-zinc-400 mb-4">No active membership plan</p>
+          <div className="bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 text-center">
+            <p className="text-sm text-[#A7A39A] mb-4">No active membership plan</p>
             <Button size="sm" onClick={() => navigate(`/members/${member.id}/renew`)}>Assign Plan</Button>
           </div>
         )}
 
         {/* Personal Details */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
-          <div className="px-4 py-3 border-b border-zinc-800 bg-zinc-900/50">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider">Personal Info</h3>
+        <div className="bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
+          <div className="px-4 py-3 border-b border-[rgba(255,255,255,0.08)] bg-[#11110F]">
+            <h3 className="text-sm font-semibold text-[#F4F1E8] uppercase tracking-wider">Personal Info</h3>
           </div>
           <div className="p-4 space-y-4">
             <div className="flex justify-between items-center">
-              <span className="text-sm text-zinc-500">Phone</span>
+              <span className="text-sm text-[#706D66]">Phone</span>
               <span className="text-sm text-zinc-200">{member.phone}</span>
             </div>
             {member.email && (
               <div className="flex justify-between items-center">
-                <span className="text-sm text-zinc-500">Email</span>
+                <span className="text-sm text-[#706D66]">Email</span>
                 <span className="text-sm text-zinc-200">{member.email}</span>
               </div>
             )}
             {member.date_of_birth && (
               <div className="flex justify-between items-center">
-                <span className="text-sm text-zinc-500">Date of Birth</span>
+                <span className="text-sm text-[#706D66]">Date of Birth</span>
                 <span className="text-sm text-zinc-200">{new Date(member.date_of_birth).toLocaleDateString()}</span>
               </div>
             )}
             {member.gender && (
               <div className="flex justify-between items-center">
-                <span className="text-sm text-zinc-500">Gender</span>
+                <span className="text-sm text-[#706D66]">Gender</span>
                 <span className="text-sm text-zinc-200 capitalize">{member.gender}</span>
               </div>
             )}
             {member.address && (
               <div className="flex flex-col gap-1">
-                <span className="text-sm text-zinc-500">Address</span>
+                <span className="text-sm text-[#706D66]">Address</span>
                 <span className="text-sm text-zinc-200">{member.address}</span>
               </div>
             )}
@@ -312,28 +312,28 @@ export function MemberProfile() {
         </div>
 
         {/* Payment History preview */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
-          <button className="w-full px-4 py-3 border-b border-zinc-800 bg-zinc-900/50 flex justify-between items-center hover:bg-zinc-800/50 transition-colors">
-            <h3 className="text-sm font-semibold text-white uppercase tracking-wider flex items-center">
-              <History className="w-4 h-4 mr-2 text-zinc-400" />
+        <div className="bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden">
+          <button className="w-full px-4 py-3 border-b border-[rgba(255,255,255,0.08)] bg-[#11110F] flex justify-between items-center hover:bg-[#171613]/50 transition-colors">
+            <h3 className="text-sm font-semibold text-[#F4F1E8] uppercase tracking-wider flex items-center">
+              <History className="w-4 h-4 mr-2 text-[#A7A39A]" />
               Payment History
             </h3>
-            <ChevronRight className="w-4 h-4 text-zinc-500" />
+            <ChevronRight className="w-4 h-4 text-[#706D66]" />
           </button>
           
           {payments.length === 0 ? (
-            <div className="p-4 text-center text-sm text-zinc-500">No payments recorded</div>
+            <div className="p-4 text-center text-sm text-[#706D66]">No payments recorded</div>
           ) : (
             <div className="divide-y divide-zinc-800/50">
               {payments.slice(0, 3).map((payment) => (
                 <div key={payment.id} className="p-4 flex justify-between items-center">
                   <div>
-                    <p className="text-sm font-medium text-white">₹{payment.amount}</p>
-                    <p className="text-xs text-zinc-500 uppercase">{payment.payment_method}</p>
+                    <p className="text-sm font-medium text-[#F4F1E8]">₹{payment.amount}</p>
+                    <p className="text-xs text-[#706D66] uppercase">{payment.payment_method}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-zinc-400">{new Date(payment.payment_date).toLocaleDateString()}</p>
-                    <span className="text-[10px] font-semibold text-emerald-400 uppercase">{payment.status}</span>
+                    <p className="text-xs text-[#A7A39A]">{new Date(payment.payment_date).toLocaleDateString()}</p>
+                    <span className="text-[10px] font-semibold text-[#4D6B5A] uppercase">{payment.status}</span>
                   </div>
                 </div>
               ))}
@@ -353,41 +353,41 @@ export function MemberProfile() {
       
       {/* Freeze Modal */}
       {isFreezeModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-zinc-950 border border-zinc-800 rounded-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
-            <div className="flex justify-between items-center p-4 border-b border-zinc-800">
-              <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                <Snowflake className="w-5 h-5 text-[#E5D3B3]" />
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0B0B0A]/60 backdrop-blur-sm">
+          <div className="bg-[#0B0B0A] border border-[rgba(255,255,255,0.08)] rounded-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
+            <div className="flex justify-between items-center p-4 border-b border-[rgba(255,255,255,0.08)]">
+              <h2 className="text-lg font-bold text-[#F4F1E8] flex items-center gap-2">
+                <Snowflake className="w-5 h-5 text-[#E2C46B]" />
                 Freeze Membership
               </h2>
-              <button onClick={() => setIsFreezeModalOpen(false)} className="text-zinc-500 hover:text-white">
+              <button onClick={() => setIsFreezeModalOpen(false)} className="text-[#706D66] hover:text-[#F4F1E8]">
                 <X className="w-5 h-5" />
               </button>
             </div>
             
             <div className="p-4 space-y-4">
               <div className="space-y-1.5">
-                <label className="text-sm font-medium text-zinc-400">Start Date</label>
+                <label className="text-sm font-medium text-[#A7A39A]">Start Date</label>
                 <input 
                   type="date"
-                  className="w-full h-11 bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:ring-2 focus:ring-[#D4AF37]/50 outline-none"
+                  className="w-full h-11 bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl px-4 text-[#F4F1E8] focus:ring-2 focus:ring-[#D4AF37]/50 outline-none"
                   value={freezeStartDate}
                   onChange={e => setFreezeStartDate(e.target.value)}
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-sm font-medium text-zinc-400">End Date</label>
+                <label className="text-sm font-medium text-[#A7A39A]">End Date</label>
                 <input 
                   type="date"
-                  className="w-full h-11 bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:ring-2 focus:ring-[#D4AF37]/50 outline-none"
+                  className="w-full h-11 bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl px-4 text-[#F4F1E8] focus:ring-2 focus:ring-[#D4AF37]/50 outline-none"
                   value={freezeEndDate}
                   onChange={e => setFreezeEndDate(e.target.value)}
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-sm font-medium text-zinc-400">Reason</label>
+                <label className="text-sm font-medium text-[#A7A39A]">Reason</label>
                 <textarea 
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-white focus:ring-2 focus:ring-[#D4AF37]/50 outline-none resize-none"
+                  className="w-full bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl p-3 text-[#F4F1E8] focus:ring-2 focus:ring-[#D4AF37]/50 outline-none resize-none"
                   rows={3}
                   placeholder="Reason for freezing..."
                   value={freezeReason}
@@ -396,10 +396,10 @@ export function MemberProfile() {
               </div>
             </div>
             
-            <div className="p-4 border-t border-zinc-800 flex gap-3">
+            <div className="p-4 border-t border-[rgba(255,255,255,0.08)] flex gap-3">
               <Button variant="secondary" className="flex-1" onClick={() => setIsFreezeModalOpen(false)}>Cancel</Button>
               <Button 
-                className="flex-1 bg-[#D4AF37] hover:bg-[#B8972E] border-none" 
+                className="flex-1 bg-[#C9A24D] hover:bg-[#8E7135] border-none" 
                 loading={isFreezing}
                 onClick={handleFreeze}
               >

@@ -138,14 +138,14 @@ export function MembersList() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-3">
-            <h1 className="text-2xl font-bold text-white">Members</h1>
+            <h1 className="text-2xl font-bold text-[#F4F1E8]">Members</h1>
             {!loading && (
-              <Badge variant="default" className="bg-zinc-900 text-slate-300 border border-white/10">
+              <Badge variant="default" className="bg-[#11110F] text-slate-300 border border-[rgba(255,255,255,0.08)]">
                 {total} total
               </Badge>
             )}
           </div>
-          <p className="text-slate-400 text-sm mt-1">Manage your gym members</p>
+          <p className="text-[#A7A39A] text-sm mt-1">Manage your gym members</p>
         </div>
         <Button onClick={() => navigate('/app/members/add')} className="hidden sm:flex">
           <Plus className="w-5 h-5 mr-2" />
@@ -161,14 +161,14 @@ export function MembersList() {
               placeholder="Search by name, phone, or ID..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              icon={<Search className="w-5 h-5 text-slate-400" />}
+              icon={<Search className="w-5 h-5 text-[#A7A39A]" />}
             />
           </div>
           <div className="sm:w-48 shrink-0">
             <select 
               value={sort}
               onChange={(e) => setSort(e.target.value as MemberSort)}
-              className="w-full h-11 px-3 py-2 bg-zinc-900/80 backdrop-blur-xl border border-white/5 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+              className="w-full h-11 px-3 py-2 bg-[#11110F] backdrop-blur-xl border border-[rgba(255,255,255,0.04)] rounded-lg text-[#F4F1E8] text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
             >
               {SORTS.map(s => (
                 <option key={s.value} value={s.value}>{s.label}</option>
@@ -185,9 +185,9 @@ export function MembersList() {
               className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 border ${
                 filter === f.value 
                   ? f.value === 'active' 
-                    ? 'bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] text-white border-transparent shadow-lg shadow-[#D4AF37]/20'
-                    : 'bg-white/10 text-white border-white/20'
-                  : 'bg-transparent text-slate-400 border-white/5 hover:bg-white/5 hover:text-slate-300'
+                    ? 'bg-[#C9A24D] text-[#0B0B0A] border-transparent shadow-[0_2px_10px_rgba(201,162,77,0.2)]'
+                    : 'bg-[#1D1B17] text-[#F4F1E8] border-[rgba(255,255,255,0.08)]'
+                  : 'bg-transparent text-[#A7A39A] border-[rgba(255,255,255,0.04)] hover:bg-[#11110F] hover:text-[#F4F1E8]'
               }`}
             >
               {f.label}
@@ -200,21 +200,21 @@ export function MembersList() {
       {loading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(8)].map((_, i) => (
-            <Card key={i} className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 animate-pulse">
+            <Card key={i} className="p-4 bg-[#11110F] backdrop-blur-xl border-[rgba(255,255,255,0.04)] animate-pulse">
               <div className="flex items-start gap-3 mb-4">
-                <div className="w-12 h-12 rounded-full bg-white/5" />
+                <div className="w-12 h-12 rounded-full bg-[rgba(255,255,255,0.02)]" />
                 <div className="flex-1 space-y-2 py-1">
-                  <div className="h-4 bg-white/5 rounded w-3/4" />
-                  <div className="h-3 bg-white/5 rounded w-1/2" />
+                  <div className="h-4 bg-[rgba(255,255,255,0.02)] rounded w-3/4" />
+                  <div className="h-3 bg-[rgba(255,255,255,0.02)] rounded w-1/2" />
                 </div>
               </div>
               <div className="space-y-3 mt-6">
-                <div className="h-3 bg-white/5 rounded w-full" />
-                <div className="h-3 bg-white/5 rounded w-2/3" />
+                <div className="h-3 bg-[rgba(255,255,255,0.02)] rounded w-full" />
+                <div className="h-3 bg-[rgba(255,255,255,0.02)] rounded w-2/3" />
               </div>
-              <div className="flex gap-2 mt-6 pt-4 border-t border-white/5">
-                <div className="h-11 bg-white/5 rounded flex-1" />
-                <div className="h-11 bg-white/5 rounded flex-1" />
+              <div className="flex gap-2 mt-6 pt-4 border-t border-[rgba(255,255,255,0.04)]">
+                <div className="h-11 bg-[rgba(255,255,255,0.02)] rounded flex-1" />
+                <div className="h-11 bg-[rgba(255,255,255,0.02)] rounded flex-1" />
               </div>
             </Card>
           ))}
@@ -222,7 +222,7 @@ export function MembersList() {
       ) : members.length === 0 ? (
         /* Empty State */
         <EmptyState 
-          icon={<Search className="w-12 h-12 text-slate-500" />}
+          icon={<Search className="w-12 h-12 text-[#706D66]" />}
           title="No members found"
           description="Try adjusting your search or filters to find what you're looking for."
         />
@@ -234,17 +234,17 @@ export function MembersList() {
             return (
               <Card 
                 key={member.id} 
-                className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all cursor-pointer group flex flex-col min-h-[220px]"
+                className="p-4 bg-[#11110F] backdrop-blur-xl border-[rgba(255,255,255,0.04)] hover:border-[rgba(255,255,255,0.08)] transition-all cursor-pointer group flex flex-col min-h-[220px]"
                 onClick={() => navigate(`/members/${member.id}`)}
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
                     <Avatar name={member.full_name} src={member.photo_url || undefined} size="md" />
                     <div>
-                      <h3 className="text-base font-bold text-white group-hover:text-[#E5D3B3] transition-colors line-clamp-1">
+                      <h3 className="text-base font-bold text-[#F4F1E8] group-hover:text-[#E2C46B] transition-colors line-clamp-1">
                         {member.full_name}
                       </h3>
-                      <p className="text-xs text-slate-400 font-medium">{member.member_id}</p>
+                      <p className="text-xs text-[#A7A39A] font-medium">{member.member_id}</p>
                     </div>
                   </div>
                   <Badge variant={getStatusBadgeVariant(member.status)} className="capitalize">
@@ -254,35 +254,35 @@ export function MembersList() {
                 </div>
 
                 <div className="space-y-2 mb-4 flex-1 mt-2">
-                  <div className="flex items-center text-sm text-slate-400">
-                    <Phone className="w-4 h-4 mr-2 text-slate-500" />
+                  <div className="flex items-center text-sm text-[#A7A39A]">
+                    <Phone className="w-4 h-4 mr-2 text-[#706D66]" />
                     {member.phone}
                   </div>
                   
                   {member.current_membership ? (
                     <div className="flex items-center justify-between text-sm">
                       <span className={`font-medium ${
-                        expiry.color === 'red' ? 'text-red-400' : 
-                        expiry.color === 'amber' ? 'text-amber-400' : 'text-emerald-400'
+                        expiry.color === 'red' ? 'text-[#8B4B4B]' : 
+                        expiry.color === 'amber' ? 'text-[#8E7135]' : 'text-[#4D6B5A]'
                       }`}>
                         {expiry.text}
                       </span>
                       {member.current_membership.due_amount > 0 && (
-                        <span className="text-amber-400 font-semibold bg-amber-400/10 px-2 py-0.5 rounded text-xs">
+                        <span className="text-[#8E7135] font-semibold bg-amber-400/10 px-2 py-0.5 rounded text-xs">
                           {formatCurrency(member.current_membership.due_amount)} Due
                         </span>
                       )}
                     </div>
                   ) : (
-                    <div className="text-sm text-slate-500 italic">No active membership</div>
+                    <div className="text-sm text-[#706D66] italic">No active membership</div>
                   )}
                 </div>
 
-                <div className="flex gap-2 mt-auto pt-4 border-t border-white/5">
+                <div className="flex gap-2 mt-auto pt-4 border-t border-[rgba(255,255,255,0.04)]">
                   <Button 
                     variant="secondary" 
                     size="sm" 
-                    className="flex-1 min-h-[44px] bg-white/5 hover:bg-white/10 text-white border-none"
+                    className="flex-1 min-h-[44px] bg-[rgba(255,255,255,0.02)] hover:bg-[#1D1B17] text-[#F4F1E8] border-none"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(`tel:${member.phone}`);
@@ -294,7 +294,7 @@ export function MembersList() {
                   <Button 
                     variant="secondary" 
                     size="sm" 
-                    className="flex-1 min-h-[44px] bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border-none"
+                    className="flex-1 min-h-[44px] bg-[#4D6B5A]/20 hover:bg-emerald-500/20 text-[#4D6B5A] border-none"
                     onClick={(e) => {
                       e.stopPropagation();
                       // @ts-ignore
@@ -316,7 +316,7 @@ export function MembersList() {
       {/* Mobile FAB */}
       <div className="fixed bottom-6 right-4 sm:hidden z-40">
         <Button 
-          className="w-14 h-14 rounded-full shadow-xl shadow-[#D4AF37]/30 flex items-center justify-center p-0 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] hover:from-[#E5D3B3] hover:to-[#E5D3B3]"
+          className="w-14 h-14 rounded-full shadow-lg shadow-black/20 shadow-[#D4AF37]/30 flex items-center justify-center p-0 bg-gradient-to-r from-[#C9A24D] to-[#C9A24D] hover:from-[#E5D3B3] hover:to-[#E5D3B3]"
           onClick={() => navigate('/app/members/add')}
         >
           <Plus className="w-6 h-6" />

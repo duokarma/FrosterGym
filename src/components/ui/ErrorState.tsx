@@ -14,11 +14,11 @@ export function ErrorState({
 }: ErrorStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
-      <div className="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-400 mb-4">
+      <div className="w-14 h-14 rounded-2xl bg-[#8B4B4B]/20 flex items-center justify-center text-[#8B4B4B] mb-4">
         <AlertTriangle className="w-7 h-7" />
       </div>
       <h3 className="text-base font-semibold text-zinc-300 mb-1">{title}</h3>
-      <p className="text-sm text-zinc-500 max-w-xs">{message}</p>
+      <p className="text-sm text-[#706D66] max-w-xs">{message}</p>
       {onRetry && (
         <div className="mt-4">
           <Button variant="secondary" size="sm" onClick={onRetry}>

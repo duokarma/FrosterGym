@@ -22,15 +22,15 @@ export function useToast() {
 }
 
 const icons = {
-  success: <CheckCircle2 className="w-5 h-5 text-emerald-400" />,
-  error: <AlertCircle className="w-5 h-5 text-red-400" />,
-  info: <Info className="w-5 h-5 text-[#E5D3B3]" />,
-  warning: <AlertTriangle className="w-5 h-5 text-amber-400" />,
+  success: <CheckCircle2 className="w-5 h-5 text-[#4D6B5A]" />,
+  error: <AlertCircle className="w-5 h-5 text-[#8B4B4B]" />,
+  info: <Info className="w-5 h-5 text-[#E2C46B]" />,
+  warning: <AlertTriangle className="w-5 h-5 text-[#8E7135]" />,
 };
 
 const bgClasses = {
-  success: 'border-emerald-500/20',
-  error: 'border-red-500/20',
+  success: 'border-[#4D6B5A]/30',
+  error: 'border-[#8B4B4B]/30',
   info: 'border-[#D4AF37]/20',
   warning: 'border-amber-500/20',
 };
@@ -57,13 +57,13 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
         {toasts.map((t) => (
           <div
             key={t.id}
-            className={`flex items-center gap-3 bg-zinc-900 border ${bgClasses[t.type]} rounded-xl px-4 py-3 shadow-lg animate-in slide-in-from-top fade-in duration-300`}
+            className={`flex items-center gap-3 bg-[#11110F] border ${bgClasses[t.type]} rounded-xl px-4 py-3 shadow-lg animate-in slide-in-from-top fade-in duration-300`}
           >
             {icons[t.type]}
             <p className="text-sm text-zinc-200 flex-1">{t.message}</p>
             <button
               onClick={() => removeToast(t.id)}
-              className="text-zinc-500 hover:text-zinc-300 shrink-0"
+              className="text-[#706D66] hover:text-zinc-300 shrink-0"
             >
               <X className="w-4 h-4" />
             </button>

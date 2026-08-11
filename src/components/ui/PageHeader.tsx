@@ -18,14 +18,14 @@ export function PageHeader({ title, subtitle, showBack, actions }: PageHeaderPro
         {showBack && (
           <button
             onClick={() => navigate(-1)}
-            className="w-10 h-10 rounded-xl flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors -ml-2"
+            className="w-10 h-10 rounded-xl flex items-center justify-center text-[#A7A39A] hover:text-[#F4F1E8] hover:bg-[#171613] transition-colors -ml-2"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
         )}
         <div>
-          <h1 className="text-xl font-bold text-white tracking-tight">{title}</h1>
-          {subtitle && <p className="text-sm text-zinc-500 mt-0.5">{subtitle}</p>}
+          <h1 className="text-xl font-bold text-[#F4F1E8] tracking-tight">{title}</h1>
+          {subtitle && <p className="text-sm text-[#706D66] mt-0.5">{subtitle}</p>}
         </div>
       </div>
       {actions && <div className="flex items-center gap-2">{actions}</div>}

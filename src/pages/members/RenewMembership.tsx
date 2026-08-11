@@ -140,9 +140,9 @@ export function RenewMembership() {
         <Card className="flex items-center gap-4">
           <Avatar name={member.full_name} src={member.photo_url} size="lg" />
           <div>
-            <h3 className="font-semibold text-white text-lg">{member.full_name}</h3>
-            <p className="text-sm text-slate-400">
-              Current Status: <span className={member.current_membership?.status === 'active' ? 'text-emerald-400' : 'text-amber-400'}>{member.current_membership?.status || 'No active plan'}</span>
+            <h3 className="font-semibold text-[#F4F1E8] text-lg">{member.full_name}</h3>
+            <p className="text-sm text-[#A7A39A]">
+              Current Status: <span className={member.current_membership?.status === 'active' ? 'text-[#4D6B5A]' : 'text-[#8E7135]'}>{member.current_membership?.status || 'No active plan'}</span>
             </p>
           </div>
         </Card>
@@ -153,14 +153,14 @@ export function RenewMembership() {
         {/* Plan Selection */}
         <Card className="space-y-4">
           <div className="flex items-center gap-2 mb-2">
-            <RefreshCw className="w-5 h-5 text-[#E5D3B3]" />
-            <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider">Select Plan</h2>
+            <RefreshCw className="w-5 h-5 text-[#E2C46B]" />
+            <h2 className="text-sm font-semibold text-[#E2C46B] uppercase tracking-wider">Select Plan</h2>
           </div>
           
           <div className="space-y-1.5">
             <label className="block text-sm font-medium text-slate-300">Plan</label>
             <select 
-              className="w-full h-[44px] bg-[#0a0a0a] border border-white/10 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+              className="w-full h-[44px] bg-[#0B0B0A] border border-[rgba(255,255,255,0.08)] rounded-xl px-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
               value={planId}
               onChange={e => setPlanId(e.target.value)}
               required
@@ -187,8 +187,8 @@ export function RenewMembership() {
         {/* Pricing & Discount */}
         <Card className="space-y-4">
           <div className="flex items-center gap-2 mb-2">
-            <CreditCard className="w-5 h-5 text-[#E5D3B3]" />
-            <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider">Payment Details</h2>
+            <CreditCard className="w-5 h-5 text-[#E2C46B]" />
+            <h2 className="text-sm font-semibold text-[#E2C46B] uppercase tracking-wider">Payment Details</h2>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -197,14 +197,14 @@ export function RenewMembership() {
               <div className="relative">
                 <input 
                   type="number" 
-                  className="w-full h-[44px] bg-[#0a0a0a] border border-white/10 rounded-xl pl-4 pr-12 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
+                  className="w-full h-[44px] bg-[#0B0B0A] border border-[rgba(255,255,255,0.08)] rounded-xl pl-4 pr-12 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
                   value={discountValue}
                   onChange={e => setDiscountValue(Number(e.target.value))}
                   min={0}
                 />
                 <button 
                   type="button"
-                  className="absolute right-2 top-1.5 bottom-1.5 px-2 bg-white/5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-colors"
+                  className="absolute right-2 top-1.5 bottom-1.5 px-2 bg-[rgba(255,255,255,0.02)] rounded-lg text-xs font-semibold text-slate-300 hover:text-[#F4F1E8] transition-colors"
                   onClick={() => setDiscountType(t => t === 'fixed' ? 'percentage' : 'fixed')}
                 >
                   {discountType === 'fixed' ? '₹' : '%'}
@@ -223,22 +223,22 @@ export function RenewMembership() {
           </div>
 
           {/* Payment Summary Box */}
-          <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-4 space-y-2 mt-4">
-            <div className="flex justify-between text-sm text-slate-400">
+          <div className="bg-[#0B0B0A] border border-[rgba(255,255,255,0.04)] rounded-2xl p-4 space-y-2 mt-4">
+            <div className="flex justify-between text-sm text-[#A7A39A]">
               <span>Plan Amount</span>
               <span>₹{planAmount}</span>
             </div>
             {discountAmount > 0 && (
-              <div className="flex justify-between text-sm text-emerald-400">
+              <div className="flex justify-between text-sm text-[#4D6B5A]">
                 <span>Discount</span>
                 <span>-₹{discountAmount}</span>
               </div>
             )}
-            <div className="flex justify-between text-base font-semibold text-white pt-2 border-t border-white/10">
+            <div className="flex justify-between text-base font-semibold text-[#F4F1E8] pt-2 border-t border-[rgba(255,255,255,0.08)]">
               <span>Final Amount</span>
               <span>₹{finalAmount}</span>
             </div>
-            <div className="flex justify-between text-sm font-medium text-amber-400 pt-1">
+            <div className="flex justify-between text-sm font-medium text-[#8E7135] pt-1">
               <span>Due Amount</span>
               <span>₹{dueAmount}</span>
             </div>
@@ -254,8 +254,8 @@ export function RenewMembership() {
                   onClick={() => setPaymentMethod(method)}
                   className={`px-4 py-2 rounded-xl text-sm font-medium capitalize flex-1 border transition-colors ${
                     paymentMethod === method 
-                    ? 'bg-[#D4AF37]/20 border-[#D4AF37]/50 text-[#E5D3B3]' 
-                    : 'bg-[#0a0a0a] border-white/10 text-slate-400 hover:bg-white/5'
+                    ? 'bg-[#C9A24D]/20 border-[#D4AF37]/50 text-[#E2C46B]' 
+                    : 'bg-[#0B0B0A] border-[rgba(255,255,255,0.08)] text-[#A7A39A] hover:bg-[rgba(255,255,255,0.02)]'
                   }`}
                 >
                   {method}

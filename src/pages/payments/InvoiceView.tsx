@@ -13,23 +13,23 @@ export function InvoiceView() {
       <div className="bg-white text-zinc-900 rounded-2xl p-6 sm:p-8 mt-6">
         <div className="flex justify-between items-start border-b border-zinc-200 pb-6 mb-6">
           <div>
-            <h1 className="text-2xl font-black text-[#B8972E] uppercase tracking-tighter">Froster Gym</h1>
-            <p className="text-sm text-zinc-500 mt-1">123 Fitness Street, Mumbai</p>
+            <h1 className="text-2xl font-black text-[#8E7135] uppercase tracking-tighter">Froster Gym</h1>
+            <p className="text-sm text-[#706D66] mt-1">123 Fitness Street, Mumbai</p>
           </div>
           <div className="text-right">
             <h2 className="text-lg font-bold">INVOICE</h2>
-            <p className="text-sm text-zinc-500">#INV-{id?.padStart(4, '0') || '0001'}</p>
+            <p className="text-sm text-[#706D66]">#INV-{id?.padStart(4, '0') || '0001'}</p>
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-8 mb-8">
           <div>
-            <p className="text-xs text-zinc-500 font-semibold uppercase">Billed To</p>
+            <p className="text-xs text-[#706D66] font-semibold uppercase">Billed To</p>
             <p className="text-sm font-bold mt-1">Rahul Sharma</p>
             <p className="text-sm text-zinc-600">+91 9876543210</p>
           </div>
           <div className="text-right">
-            <p className="text-xs text-zinc-500 font-semibold uppercase">Date</p>
+            <p className="text-xs text-[#706D66] font-semibold uppercase">Date</p>
             <p className="text-sm font-bold mt-1">{new Date().toLocaleDateString()}</p>
           </div>
         </div>
@@ -59,15 +59,15 @@ export function InvoiceView() {
           <div className="w-1/2 space-y-2">
             <div className="flex justify-between font-bold text-lg pt-4 border-t border-zinc-200">
               <span>Total Paid</span>
-              <span className="text-[#B8972E]">₹2,500</span>
+              <span className="text-[#8E7135]">₹2,500</span>
             </div>
-            <p className="text-xs text-zinc-500 text-right mt-1">Paid via UPI</p>
+            <p className="text-xs text-[#706D66] text-right mt-1">Paid via UPI</p>
           </div>
         </div>
       </div>
 
       <div className="flex gap-4 mt-6">
-        <Button variant="secondary" className="flex-1 text-white">
+        <Button variant="secondary" className="flex-1 text-[#F4F1E8]">
           <Printer className="w-5 h-5 mr-2" />
           Print
         </Button>

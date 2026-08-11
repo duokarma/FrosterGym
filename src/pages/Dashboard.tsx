@@ -68,10 +68,10 @@ export function Dashboard() {
   if (loading || !stats) {
     return (
       <div className="pb-6 space-y-4 animate-pulse">
-        <div className="h-12 bg-white/5 rounded-2xl w-2/3" />
+        <div className="h-12 bg-[rgba(255,255,255,0.02)] rounded-2xl w-2/3" />
         <div className="grid grid-cols-2 gap-3">
           {[...Array(6)].map((_, i) => (
-            <div key={i} className="h-32 bg-white/5 rounded-3xl" />
+            <div key={i} className="h-32 bg-[rgba(255,255,255,0.02)] rounded-3xl" />
           ))}
         </div>
       </div>
@@ -79,21 +79,21 @@ export function Dashboard() {
   }
 
   const quickActions = [
-    { label: 'Add Member', icon: <UserPlus className="w-5 h-5" />, path: '/app/members/add', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
-    { label: 'Payment', icon: <IndianRupee className="w-5 h-5" />, path: '/app/payments', color: 'text-emerald-400 bg-emerald-500/10' },
-    { label: 'Attendance', icon: <CalendarCheck className="w-5 h-5" />, path: '/app/attendance', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
-    { label: 'Expense', icon: <Receipt className="w-5 h-5" />, path: '/app/expenses/add', color: 'text-red-400 bg-red-500/10' },
-    { label: 'Enquiry', icon: <Search className="w-5 h-5" />, path: '/app/enquiries/add', color: 'text-amber-400 bg-amber-500/10' },
-    { label: 'Renew', icon: <Zap className="w-5 h-5" />, path: '/app/members', color: 'text-purple-400 bg-purple-500/10' },
+    { label: 'Add Member', icon: <UserPlus className="w-5 h-5" />, path: '/app/members/add', color: 'text-[#E2C46B] bg-[#C9A24D]/10' },
+    { label: 'Payment', icon: <IndianRupee className="w-5 h-5" />, path: '/app/payments', color: 'text-[#4D6B5A] bg-[#4D6B5A]/20' },
+    { label: 'Attendance', icon: <CalendarCheck className="w-5 h-5" />, path: '/app/attendance', color: 'text-[#E2C46B] bg-[#C9A24D]/10' },
+    { label: 'Expense', icon: <Receipt className="w-5 h-5" />, path: '/app/expenses/add', color: 'text-[#8B4B4B] bg-[#8B4B4B]/20' },
+    { label: 'Enquiry', icon: <Search className="w-5 h-5" />, path: '/app/enquiries/add', color: 'text-[#8E7135] bg-[#8E7135]/20' },
+    { label: 'Renew', icon: <Zap className="w-5 h-5" />, path: '/app/members', color: 'text-[#5A6B7C] bg-[#5A6B7C]/20' },
   ];
 
   const statCards = [
-    { label: "Today's Members", value: stats.todaysAttendance, icon: <Users className="w-5 h-5" />, bg: 'bg-[#D4AF37]/10 text-[#E5D3B3]' },
-    { label: "Today's Collection", value: `₹${stats.todaysCollection.toLocaleString('en-IN')}`, icon: <IndianRupee className="w-5 h-5" />, bg: 'bg-emerald-500/10 text-emerald-400' },
-    { label: 'Active Members', value: stats.activeMembers, icon: <UserCheck className="w-5 h-5" />, bg: 'bg-[#D4AF37]/10 text-[#E5D3B3]' },
-    { label: 'Expiring Soon', value: stats.expiringSoon, icon: <Clock className="w-5 h-5" />, bg: 'bg-amber-500/10 text-amber-400' },
-    { label: 'Pending Dues', value: `₹${stats.pendingDues.toLocaleString('en-IN')}`, icon: <CreditCard className="w-5 h-5" />, bg: 'bg-red-500/10 text-red-400' },
-    { label: 'Birthdays Today', value: stats.birthdaysToday, icon: <Cake className="w-5 h-5" />, bg: 'bg-purple-500/10 text-purple-400' },
+    { label: "Today's Members", value: stats.todaysAttendance, icon: <Users className="w-5 h-5" />, bg: 'bg-[#C9A24D]/10 text-[#E2C46B]' },
+    { label: "Today's Collection", value: `₹${stats.todaysCollection.toLocaleString('en-IN')}`, icon: <IndianRupee className="w-5 h-5" />, bg: 'bg-[#4D6B5A]/20 text-[#4D6B5A]' },
+    { label: 'Active Members', value: stats.activeMembers, icon: <UserCheck className="w-5 h-5" />, bg: 'bg-[#C9A24D]/10 text-[#E2C46B]' },
+    { label: 'Expiring Soon', value: stats.expiringSoon, icon: <Clock className="w-5 h-5" />, bg: 'bg-[#8E7135]/20 text-[#8E7135]' },
+    { label: 'Pending Dues', value: `₹${stats.pendingDues.toLocaleString('en-IN')}`, icon: <CreditCard className="w-5 h-5" />, bg: 'bg-[#8B4B4B]/20 text-[#8B4B4B]' },
+    { label: 'Birthdays Today', value: stats.birthdaysToday, icon: <Cake className="w-5 h-5" />, bg: 'bg-[#5A6B7C]/20 text-[#5A6B7C]' },
   ];
 
   const alertBuckets = {
@@ -106,10 +106,10 @@ export function Dashboard() {
     <div className="pb-6 animate-in fade-in duration-300">
       {/* ─── Greeting ─── */}
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-white tracking-tight">
+        <h1 className="text-2xl font-bold text-[#F4F1E8] tracking-tight">
           {greeting()}, {profile?.full_name?.split(' ')[0] || 'there'} 👋
         </h1>
-        <p className="text-sm text-slate-500 mt-0.5">
+        <p className="text-sm text-[#706D66] mt-0.5">
           {gym?.name || 'Your Gym'} — {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'short' })}
         </p>
       </div>
@@ -126,7 +126,7 @@ export function Dashboard() {
               <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${action.color} group-hover:scale-110 transition-transform duration-200`}>
                 {action.icon}
               </div>
-              <span className="text-[11px] font-medium text-slate-400 group-hover:text-white transition-colors">{action.label}</span>
+              <span className="text-[11px] font-medium text-[#A7A39A] group-hover:text-[#F4F1E8] transition-colors">{action.label}</span>
             </button>
           ))}
         </div>
@@ -137,17 +137,17 @@ export function Dashboard() {
         <Card className="mb-4 !p-4 cursor-pointer hover:border-amber-500/30 transition-colors" onClick={() => navigate('/app/members?filter=expiring_7')}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center">
-                <TrendingDown className="w-5 h-5 text-amber-400" />
+              <div className="w-10 h-10 rounded-xl bg-[#8E7135]/20 flex items-center justify-center">
+                <TrendingDown className="w-5 h-5 text-[#8E7135]" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-amber-400">Revenue At Risk</p>
-                <p className="text-xs text-slate-500">{stats.expiringSoon} members expiring soon</p>
+                <p className="text-sm font-semibold text-[#8E7135]">Revenue At Risk</p>
+                <p className="text-xs text-[#706D66]">{stats.expiringSoon} members expiring soon</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold text-white">₹{stats.revenueAtRisk.toLocaleString('en-IN')}</span>
-              <ChevronRight className="w-4 h-4 text-slate-500" />
+              <span className="text-lg font-bold text-[#F4F1E8]">₹{stats.revenueAtRisk.toLocaleString('en-IN')}</span>
+              <ChevronRight className="w-4 h-4 text-[#706D66]" />
             </div>
           </div>
         </Card>
@@ -163,16 +163,16 @@ export function Dashboard() {
       {/* ─── More Stats Row ─── */}
       <div className="grid grid-cols-3 gap-3 mb-6">
         <Card className="!p-3 text-center">
-          <p className="text-2xl font-bold text-white">{stats.totalMembers}</p>
-          <p className="text-[10px] font-medium text-slate-500 uppercase tracking-wider mt-1">Total</p>
+          <p className="text-2xl font-bold text-[#F4F1E8]">{stats.totalMembers}</p>
+          <p className="text-[10px] font-medium text-[#706D66] uppercase tracking-wider mt-1">Total</p>
         </Card>
         <Card className="!p-3 text-center">
-          <p className="text-2xl font-bold text-white">₹{(stats.monthlyCollection / 1000).toFixed(0)}K</p>
-          <p className="text-[10px] font-medium text-slate-500 uppercase tracking-wider mt-1">Monthly Rev</p>
+          <p className="text-2xl font-bold text-[#F4F1E8]">₹{(stats.monthlyCollection / 1000).toFixed(0)}K</p>
+          <p className="text-[10px] font-medium text-[#706D66] uppercase tracking-wider mt-1">Monthly Rev</p>
         </Card>
         <Card className="!p-3 text-center">
-          <p className="text-2xl font-bold text-white">₹{(stats.monthlyExpenses / 1000).toFixed(0)}K</p>
-          <p className="text-[10px] font-medium text-slate-500 uppercase tracking-wider mt-1">Expenses</p>
+          <p className="text-2xl font-bold text-[#F4F1E8]">₹{(stats.monthlyExpenses / 1000).toFixed(0)}K</p>
+          <p className="text-[10px] font-medium text-[#706D66] uppercase tracking-wider mt-1">Expenses</p>
         </Card>
       </div>
 
@@ -180,10 +180,10 @@ export function Dashboard() {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 text-amber-400" />
-            <h2 className="text-base font-semibold text-white">Expiry Alerts</h2>
+            <AlertCircle className="w-4 h-4 text-[#8E7135]" />
+            <h2 className="text-base font-semibold text-[#F4F1E8]">Expiry Alerts</h2>
           </div>
-          <button onClick={() => navigate('/app/members?filter=expiring_7')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
+          <button onClick={() => navigate('/app/members?filter=expiring_7')} className="text-xs text-[#E2C46B] hover:underline">View all</button>
         </div>
 
         {expiryAlerts.length === 0 ? (
@@ -210,9 +210,9 @@ export function Dashboard() {
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-bold text-white">{items.length}</span>
-                      <span className="text-xs text-slate-500">members</span>
-                      <ChevronRight className="w-4 h-4 text-slate-500" />
+                      <span className="text-sm font-bold text-[#F4F1E8]">{items.length}</span>
+                      <span className="text-xs text-[#706D66]">members</span>
+                      <ChevronRight className="w-4 h-4 text-[#706D66]" />
                     </div>
                   </div>
                 </Card>
@@ -226,8 +226,8 @@ export function Dashboard() {
       {birthdays.length > 0 && (
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
-            <Cake className="w-4 h-4 text-purple-400" />
-            <h2 className="text-base font-semibold text-white">Birthdays Today 🎂</h2>
+            <Cake className="w-4 h-4 text-[#5A6B7C]" />
+            <h2 className="text-base font-semibold text-[#F4F1E8]">Birthdays Today 🎂</h2>
           </div>
           <div className="space-y-2">
             {birthdays.map(b => (
@@ -236,18 +236,18 @@ export function Dashboard() {
                   <div className="flex items-center gap-3">
                     <Avatar name={b.full_name} src={b.photo_url || undefined} size="md" />
                     <div>
-                      <p className="text-sm font-semibold text-white">{b.full_name}</p>
-                      <p className="text-xs text-slate-500">Turns {b.age} today</p>
+                      <p className="text-sm font-semibold text-[#F4F1E8]">{b.full_name}</p>
+                      <p className="text-xs text-[#706D66]">Turns {b.age} today</p>
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <button onClick={() => window.open(`tel:${b.phone}`)} className="w-9 h-9 rounded-xl bg-[#D4AF37]/10 text-[#E5D3B3] flex items-center justify-center hover:bg-[#D4AF37]/20 transition-colors">
+                    <button onClick={() => window.open(`tel:${b.phone}`)} className="w-9 h-9 rounded-xl bg-[#C9A24D]/10 text-[#E2C46B] flex items-center justify-center hover:bg-[#C9A24D]/20 transition-colors">
                       <Phone className="w-4 h-4" />
                     </button>
                     <button onClick={() => {
                       const msg = encodeURIComponent(`Happy Birthday ${b.full_name}! 🎂🎉 Wishing you a wonderful year ahead! - From ${gym?.name || 'Froster Gym'}`);
                       window.open(`https://wa.me/${b.phone.replace(/[^0-9]/g, '')}?text=${msg}`, '_blank');
-                    }} className="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center hover:bg-emerald-500/20 transition-colors">
+                    }} className="w-9 h-9 rounded-xl bg-[#4D6B5A]/20 text-[#4D6B5A] flex items-center justify-center hover:bg-emerald-500/20 transition-colors">
                       <MessageCircle className="w-4 h-4" />
                     </button>
                   </div>
@@ -262,10 +262,10 @@ export function Dashboard() {
       <div className="mb-6">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            <CreditCard className="w-4 h-4 text-red-400" />
-            <h2 className="text-base font-semibold text-white">Payment Due</h2>
+            <CreditCard className="w-4 h-4 text-[#8B4B4B]" />
+            <h2 className="text-base font-semibold text-[#F4F1E8]">Payment Due</h2>
           </div>
-          <button onClick={() => navigate('/app/members?filter=due')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
+          <button onClick={() => navigate('/app/members?filter=due')} className="text-xs text-[#E2C46B] hover:underline">View all</button>
         </div>
         {paymentsDue.length === 0 ? (
           <Card>
@@ -279,13 +279,13 @@ export function Dashboard() {
                   <div className="flex items-center gap-3">
                     <Avatar name={m.full_name} src={m.photo_url || undefined} size="sm" />
                     <div>
-                      <p className="text-sm font-semibold text-white">{m.full_name}</p>
-                      <p className="text-xs text-slate-500">{m.member_id} • {m.plan_name}</p>
+                      <p className="text-sm font-semibold text-[#F4F1E8]">{m.full_name}</p>
+                      <p className="text-xs text-[#706D66]">{m.member_id} • {m.plan_name}</p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-bold text-red-400">₹{m.due_amount.toLocaleString('en-IN')}</p>
-                    <p className="text-[10px] text-slate-500">due</p>
+                    <p className="text-sm font-bold text-[#8B4B4B]">₹{m.due_amount.toLocaleString('en-IN')}</p>
+                    <p className="text-[10px] text-[#706D66]">due</p>
                   </div>
                 </div>
               </Card>
@@ -297,18 +297,18 @@ export function Dashboard() {
       {/* ─── Recent Activity ─── */}
       <div className="mb-4">
         <div className="flex items-center gap-2 mb-3">
-          <Activity className="w-4 h-4 text-[#E5D3B3]" />
-          <h2 className="text-base font-semibold text-white">Recent Activity</h2>
+          <Activity className="w-4 h-4 text-[#E2C46B]" />
+          <h2 className="text-base font-semibold text-[#F4F1E8]">Recent Activity</h2>
         </div>
         {activity.length === 0 ? (
           <Card>
             <EmptyState icon={<Activity className="w-6 h-6" />} title="No recent activity" description="Your gym activity will show up here" />
           </Card>
         ) : (
-          <Card className="!p-0 divide-y divide-white/5">
+          <Card className="!p-0 divide-y divide-[rgba(255,255,255,0.08)]">
             {activity.map(item => (
               <div key={item.id} className="px-4 py-3 flex items-center gap-3">
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 ${item.icon_color} shrink-0`}>
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center bg-[rgba(255,255,255,0.02)] ${item.icon_color} shrink-0`}>
                   {item.type === 'payment_received' && <IndianRupee className="w-4 h-4" />}
                   {item.type === 'member_added' && <UserPlus className="w-4 h-4" />}
                   {item.type === 'membership_renewed' && <Zap className="w-4 h-4" />}
@@ -317,8 +317,8 @@ export function Dashboard() {
                   {item.type === 'enquiry_added' && <Search className="w-4 h-4" />}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-white truncate">{item.description}</p>
-                  <p className="text-[10px] text-slate-500">{item.time_ago}</p>
+                  <p className="text-sm text-[#F4F1E8] truncate">{item.description}</p>
+                  <p className="text-[10px] text-[#706D66]">{item.time_ago}</p>
                 </div>
               </div>
             ))}
@@ -329,7 +329,7 @@ export function Dashboard() {
       {/* ─── Mobile FAB ─── */}
       <div className="fixed bottom-24 right-4 sm:hidden z-40">
         <Button
-          className="w-14 h-14 rounded-full shadow-xl shadow-[#D4AF37]/30 flex items-center justify-center !p-0"
+          className="w-14 h-14 rounded-full shadow-[0_8px_32px_rgba(201,162,77,0.3)] flex items-center justify-center !p-0"
           onClick={() => navigate('/app/members/add')}
         >
           <Plus className="w-6 h-6" />

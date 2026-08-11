@@ -17,14 +17,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label
             htmlFor={inputId}
-            className="block text-sm font-medium text-zinc-400 mb-1.5"
+            className="block text-sm font-medium text-[#A7A39A] mb-1.5"
           >
             {label}
           </label>
         )}
         <div className="relative">
           {icon && (
-            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#706D66]">
               {icon}
             </div>
           )}
@@ -32,12 +32,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             id={inputId}
             className={`
-              w-full h-12 rounded-xl bg-zinc-800 border text-white text-sm
-              placeholder:text-zinc-500
+              w-full h-12 rounded-xl bg-[#11110F] border text-[#F4F1E8] text-sm
+              placeholder:text-[#706D66]
               transition-colors duration-150
-              focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:border-[#D4AF37]
+              focus:outline-none focus:ring-2 focus:ring-[#C9A24D]/40 focus:border-[#C9A24D]
               disabled:opacity-50 disabled:cursor-not-allowed
-              ${error ? 'border-red-500/50 focus:ring-red-500/40 focus:border-red-500' : 'border-zinc-700 hover:border-zinc-600'}
+              ${error ? 'border-[#8B4B4B]/50 focus:ring-[#8B4B4B]/40 focus:border-[#8B4B4B]' : 'border-[rgba(255,255,255,0.10)] hover:border-[rgba(255,255,255,0.20)]'}
               ${icon ? 'pl-10' : 'pl-4'}
               ${rightIcon ? 'pr-10' : 'pr-4'}
               ${className}
@@ -45,13 +45,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             {...props}
           />
           {rightIcon && (
-            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#706D66]">
               {rightIcon}
             </div>
           )}
         </div>
-        {error && <p className="mt-1.5 text-sm text-red-400">{error}</p>}
-        {helper && !error && <p className="mt-1.5 text-sm text-zinc-500">{helper}</p>}
+        {error && <p className="mt-1.5 text-sm text-[#8B4B4B]">{error}</p>}
+        {helper && !error && <p className="mt-1.5 text-sm text-[#706D66]">{helper}</p>}
       </div>
     );
   }

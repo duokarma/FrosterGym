@@ -87,8 +87,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         onClick={() => handleNav(item.path)}
         className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-medium transition-all duration-150 min-h-[44px] ${
           isActive
-            ? 'bg-zinc-800/30 text-white border border-zinc-700/50 rounded-xl'
-            : 'text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl border border-transparent'
+            ? 'bg-[#C9A24D]/10 text-[#F4F1E8] border-l-2 border-[#C9A24D] rounded-r-xl rounded-l-sm'
+            : 'text-[#A7A39A] hover:text-[#F4F1E8] hover:bg-[#C9A24D]/5 rounded-xl border border-transparent'
         }`}
       >
         {item.icon}
@@ -101,8 +101,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     const visibleItems = items.filter(item => canView(item.permission));
     if (visibleItems.length === 0) return null;
     return (
-      <div className="pt-3 mt-3 border-t border-white/5">
-        <p className="px-3 py-1.5 text-xs font-semibold text-slate-500 uppercase tracking-wider">{title}</p>
+      <div className="pt-3 mt-3 border-t border-[rgba(255,255,255,0.04)]">
+        <p className="px-3 py-1.5 text-xs font-semibold text-[#706D66] uppercase tracking-wider">{title}</p>
         {visibleItems.map(item => <NavLink key={item.path} item={item} />)}
       </div>
     );
@@ -111,27 +111,27 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const sidebarContent = (
     <div className="flex flex-col h-full">
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-white/5">
+      <div className="flex items-center justify-between p-4 border-b border-[rgba(255,255,255,0.08)]">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#E5D3B3] to-[#D4AF37] flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 overflow-hidden">
+          <div className="w-9 h-9 rounded-xl bg-[#11110F] border border-[rgba(255,255,255,0.08)] flex items-center justify-center overflow-hidden">
             <img src="/FrosterGym/froaster-logo.png" alt="Logo" className="w-6 h-6 object-contain" />
           </div>
-          <span className="text-base font-bold text-white tracking-tight">Froaster Gym</span>
+          <span className="text-base font-bold text-[#F4F1E8] tracking-tight">Froaster Gym</span>
         </div>
         <button
           onClick={onClose}
-          className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/5 transition-colors lg:hidden"
+          className="w-8 h-8 rounded-lg flex items-center justify-center text-[#A7A39A] hover:text-[#F4F1E8] hover:bg-[#1D1B17] transition-colors lg:hidden"
         >
           <X className="w-5 h-5" />
         </button>
       </div>
 
       {/* User Info */}
-      <div className="p-4 border-b border-white/5">
+      <div className="p-4 border-b border-[rgba(255,255,255,0.08)]">
         <div className="flex items-center gap-3">
           <Avatar src={profile?.avatar_url} name={profile?.full_name || 'User'} size="md" />
           <div className="min-w-0">
-            <p className="text-sm font-semibold text-white truncate">{profile?.full_name}</p>
+            <p className="text-sm font-semibold text-[#F4F1E8] truncate">{profile?.full_name}</p>
             <Badge variant={isOwner ? 'info' : 'default'}>{isOwner ? 'Owner' : 'Staff'}</Badge>
           </div>
         </div>
@@ -146,10 +146,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       </nav>
 
       {/* Logout */}
-      <div className="p-3 border-t border-white/5">
+      <div className="p-3 border-t border-[rgba(255,255,255,0.08)]">
         <button
           onClick={handleSignOut}
-          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-400 hover:text-red-400 hover:bg-red-500/10 transition-all duration-150 min-h-[44px]"
+          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-[#706D66] hover:text-[#F4F1E8] hover:bg-[#1D1B17] transition-all duration-150 min-h-[44px]"
         >
           <LogOut className="w-5 h-5" />
           <span>Sign Out</span>
@@ -161,10 +161,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden" onClick={onClose} />
+        <div className="fixed inset-0 z-40 bg-[#0B0B0A]/60 backdrop-blur-sm lg:hidden" onClick={onClose} />
       )}
       <aside
-        className={`fixed top-0 left-0 z-50 h-screen w-72 bg-[#0a0a0a] border-r border-zinc-800/50 transition-transform duration-300 ease-out lg:translate-x-0 lg:z-30 shadow-2xl ${
+        className={`fixed top-0 left-0 z-50 h-screen w-72 bg-[#090908] border-r border-[rgba(255,255,255,0.08)] transition-transform duration-300 ease-out lg:translate-x-0 lg:z-30 shadow-[4px_0_24px_rgba(0,0,0,0.4)] ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

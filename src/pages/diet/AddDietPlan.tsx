@@ -77,30 +77,30 @@ export function AddDietPlan() {
             onChange={(e) => setFormData(prev => ({ ...prev, calories: e.target.value }))}
           />
           
-          <div className="space-y-4 pt-4 border-t border-zinc-800">
-            <h2 className="text-sm font-semibold text-emerald-400 uppercase">Meals</h2>
+          <div className="space-y-4 pt-4 border-t border-[rgba(255,255,255,0.08)]">
+            <h2 className="text-sm font-semibold text-[#4D6B5A] uppercase">Meals</h2>
             <div className="space-y-2">
-              <label className="block text-sm text-zinc-400">Breakfast</label>
+              <label className="block text-sm text-[#A7A39A]">Breakfast</label>
               <textarea 
-                className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-emerald-500/50 outline-none" 
+                className="w-full bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl p-3 text-sm text-[#F4F1E8] focus:ring-2 focus:ring-emerald-500/50 outline-none" 
                 rows={2}
                 value={formData.breakfast}
                 onChange={(e) => setFormData(prev => ({ ...prev, breakfast: e.target.value }))}
               />
             </div>
             <div className="space-y-2">
-              <label className="block text-sm text-zinc-400">Lunch</label>
+              <label className="block text-sm text-[#A7A39A]">Lunch</label>
               <textarea 
-                className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-emerald-500/50 outline-none" 
+                className="w-full bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl p-3 text-sm text-[#F4F1E8] focus:ring-2 focus:ring-emerald-500/50 outline-none" 
                 rows={2}
                 value={formData.lunch}
                 onChange={(e) => setFormData(prev => ({ ...prev, lunch: e.target.value }))}
               />
             </div>
             <div className="space-y-2">
-              <label className="block text-sm text-zinc-400">Dinner</label>
+              <label className="block text-sm text-[#A7A39A]">Dinner</label>
               <textarea 
-                className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-sm text-white focus:ring-2 focus:ring-emerald-500/50 outline-none" 
+                className="w-full bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl p-3 text-sm text-[#F4F1E8] focus:ring-2 focus:ring-emerald-500/50 outline-none" 
                 rows={2}
                 value={formData.dinner}
                 onChange={(e) => setFormData(prev => ({ ...prev, dinner: e.target.value }))}

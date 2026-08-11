@@ -7,10 +7,10 @@ import { useToast } from '../../components/ui/Toast';
 type AudienceType = 'all' | 'expiring' | 'pending' | 'inactive';
 
 const audiences = [
-  { id: 'all', label: 'All Active', count: 150, icon: Users, color: 'text-[#E5D3B3]', bg: 'bg-[#D4AF37]/10', border: 'border-[#D4AF37]/20', activeBorder: 'border-[#D4AF37]' },
-  { id: 'expiring', label: 'Expiring Soon', count: 45, icon: Clock, color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20', activeBorder: 'border-amber-500' },
+  { id: 'all', label: 'All Active', count: 150, icon: Users, color: 'text-[#E2C46B]', bg: 'bg-[#C9A24D]/10', border: 'border-[#D4AF37]/20', activeBorder: 'border-[#D4AF37]' },
+  { id: 'expiring', label: 'Expiring Soon', count: 45, icon: Clock, color: 'text-[#8E7135]', bg: 'bg-[#8E7135]/20', border: 'border-amber-500/20', activeBorder: 'border-amber-500' },
   { id: 'pending', label: 'Pending Dues', count: 12, icon: AlertCircle, color: 'text-rose-400', bg: 'bg-rose-500/10', border: 'border-rose-500/20', activeBorder: 'border-rose-500' },
-  { id: 'inactive', label: 'Inactive/Past', count: 320, icon: UserMinus, color: 'text-zinc-400', bg: 'bg-zinc-800', border: 'border-zinc-700', activeBorder: 'border-zinc-400' },
+  { id: 'inactive', label: 'Inactive/Past', count: 320, icon: UserMinus, color: 'text-[#A7A39A]', bg: 'bg-[#171613]', border: 'border-[rgba(255,255,255,0.12)]', activeBorder: 'border-zinc-400' },
 ];
 
 const variables = [
@@ -58,7 +58,7 @@ export function WhatsAppCampaign() {
     <div className="pb-24 animate-in fade-in duration-300">
       <PageHeader title="WhatsApp Campaign" />
 
-      <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-4 mb-8 flex gap-3 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+      <div className="bg-[#4D6B5A]/20 border border-[#4D6B5A]/30 rounded-2xl p-4 mb-8 flex gap-3 text-[#4D6B5A] shadow-[0_0_15px_rgba(16,185,129,0.1)]">
         <Sparkles className="w-5 h-5 flex-shrink-0 mt-0.5" />
         <div className="space-y-1">
           <p className="text-sm font-semibold text-emerald-300">Boost Engagement with WhatsApp</p>
@@ -82,19 +82,19 @@ export function WhatsAppCampaign() {
                     key={aud.id}
                     onClick={() => setSelectedAudience(aud.id as AudienceType)}
                     className={`relative p-4 rounded-xl border transition-all duration-200 text-left flex flex-col gap-2 overflow-hidden ${
-                      isSelected ? aud.bg + ' ' + aud.activeBorder + ' shadow-lg' : 'bg-zinc-900 border-zinc-800 hover:border-zinc-700 hover:bg-zinc-800/50'
+                      isSelected ? aud.bg + ' ' + aud.activeBorder + ' shadow-lg' : 'bg-[#11110F] border-[rgba(255,255,255,0.08)] hover:border-[rgba(255,255,255,0.12)] hover:bg-[#171613]/50'
                     }`}
                   >
                     {isSelected && (
                       <div className={`absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-transparent to-current opacity-10 rounded-bl-full`} style={{ color: 'inherit' }} />
                     )}
                     <div className="flex items-center gap-2">
-                      <Icon className={`w-4 h-4 ${isSelected ? aud.color : 'text-zinc-500'}`} />
-                      <span className={`font-semibold ${isSelected ? 'text-zinc-100' : 'text-zinc-400'}`}>
+                      <Icon className={`w-4 h-4 ${isSelected ? aud.color : 'text-[#706D66]'}`} />
+                      <span className={`font-semibold ${isSelected ? 'text-[#F4F1E8]' : 'text-[#A7A39A]'}`}>
                         {aud.label}
                       </span>
                     </div>
-                    <div className="text-2xl font-bold text-white ml-6">
+                    <div className="text-2xl font-bold text-[#F4F1E8] ml-6">
                       {aud.count}
                     </div>
                   </button>
@@ -107,21 +107,21 @@ export function WhatsAppCampaign() {
           <section className="space-y-3">
             <h2 className="text-sm font-medium text-zinc-300 tracking-wide uppercase">2. Compose Message</h2>
             
-            <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden focus-within:border-emerald-500/50 focus-within:ring-1 focus-within:ring-emerald-500/50 transition-all">
-              <div className="p-3 border-b border-zinc-800 bg-zinc-950/50 flex flex-wrap gap-2 items-center">
-                <span className="text-xs text-zinc-500 mr-2 uppercase font-medium">Variables:</span>
+            <div className="bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl overflow-hidden focus-within:border-emerald-500/50 focus-within:ring-1 focus-within:ring-emerald-500/50 transition-all">
+              <div className="p-3 border-b border-[rgba(255,255,255,0.08)] bg-[#0B0B0A]/50 flex flex-wrap gap-2 items-center">
+                <span className="text-xs text-[#706D66] mr-2 uppercase font-medium">Variables:</span>
                 {variables.map(v => (
                   <button
                     key={v.value}
                     onClick={() => insertVariable(v.value)}
-                    className="text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-300 px-2.5 py-1 rounded-md transition-colors border border-zinc-700"
+                    className="text-xs font-medium bg-[#171613] hover:bg-zinc-700 text-zinc-300 px-2.5 py-1 rounded-md transition-colors border border-[rgba(255,255,255,0.12)]"
                   >
                     {v.label}
                   </button>
                 ))}
               </div>
               <textarea 
-                className="w-full bg-transparent p-4 text-white resize-y min-h-[160px] focus:outline-none placeholder-zinc-600"
+                className="w-full bg-transparent p-4 text-[#F4F1E8] resize-y min-h-[160px] focus:outline-none placeholder-zinc-600"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Type your promotional message or reminder here..."
@@ -135,15 +135,15 @@ export function WhatsAppCampaign() {
           <section className="space-y-3 sticky top-6">
             <h2 className="text-sm font-medium text-zinc-300 tracking-wide uppercase">3. Preview & Send</h2>
             
-            <div className="bg-[#0b141a] rounded-2xl overflow-hidden border border-zinc-800/50 shadow-xl">
+            <div className="bg-[#0b141a] rounded-2xl overflow-hidden border border-[rgba(255,255,255,0.08)]/50 shadow-lg shadow-black/20">
               {/* WhatsApp Header mock */}
               <div className="bg-[#202c33] px-4 py-3 flex items-center gap-3">
                 <div className="w-10 h-10 bg-zinc-700 rounded-full flex items-center justify-center overflow-hidden">
-                  <UserMinus className="w-5 h-5 text-zinc-400" />
+                  <UserMinus className="w-5 h-5 text-[#A7A39A]" />
                 </div>
                 <div>
-                  <div className="text-white font-medium text-sm">John Doe</div>
-                  <div className="text-zinc-400 text-xs">online</div>
+                  <div className="text-[#F4F1E8] font-medium text-sm">John Doe</div>
+                  <div className="text-[#A7A39A] text-xs">online</div>
                 </div>
               </div>
 
@@ -162,14 +162,14 @@ export function WhatsAppCampaign() {
             <Button 
               fullWidth 
               size="lg" 
-              className="bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-900/50 border-emerald-500 py-6 group mt-4 transition-all"
+              className="bg-emerald-600 hover:bg-emerald-500 text-[#F4F1E8] shadow-lg shadow-emerald-900/50 border-emerald-500 py-6 group mt-4 transition-all"
               onClick={handleSend}
             >
               <ExternalLink className="w-5 h-5 mr-2 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
               <span className="font-semibold text-base">Send via WhatsApp Web</span>
             </Button>
             
-            <p className="text-xs text-zinc-500 text-center mt-3 flex items-center justify-center gap-1">
+            <p className="text-xs text-[#706D66] text-center mt-3 flex items-center justify-center gap-1">
               <MessageCircle className="w-3 h-3" />
               Opens WhatsApp Web with the pre-filled message
             </p>

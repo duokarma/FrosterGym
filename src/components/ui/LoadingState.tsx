@@ -8,14 +8,14 @@ interface LoadingStateProps {
 export function LoadingState({ message = 'Loading...', fullScreen = false }: LoadingStateProps) {
   const content = (
     <div className="flex flex-col items-center justify-center gap-3">
-      <Loader2 className="w-8 h-8 text-[#D4AF37] animate-spin" />
-      <p className="text-sm text-zinc-400">{message}</p>
+      <Loader2 className="w-8 h-8 text-[#C9A24D] animate-spin" />
+      <p className="text-sm text-[#A7A39A]">{message}</p>
     </div>
   );
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-zinc-950 flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-[#0B0B0A] flex items-center justify-center z-50">
         {content}
       </div>
     );

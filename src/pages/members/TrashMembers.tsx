@@ -80,36 +80,36 @@ export function TrashMembers() {
       {loading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(4)].map((_, i) => (
-            <Card key={i} className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 animate-pulse h-[160px]" />
+            <Card key={i} className="p-4 bg-[#11110F] backdrop-blur-xl border-[rgba(255,255,255,0.04)] animate-pulse h-[160px]" />
           ))}
         </div>
       ) : error ? (
-        <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500">
+        <div className="p-4 bg-[#8B4B4B]/20 border border-[#8B4B4B]/30 rounded-xl text-[#8B4B4B]">
           {error}
         </div>
       ) : members.length === 0 ? (
         <EmptyState
-          icon={<Trash2 className="w-12 h-12 text-slate-500" />}
+          icon={<Trash2 className="w-12 h-12 text-[#706D66]" />}
           title="Trash is empty"
           description="No deleted members found."
         />
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {members.map(member => (
-            <Card key={member.id} className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 flex flex-col min-h-[160px]">
+            <Card key={member.id} className="p-4 bg-[#11110F] backdrop-blur-xl border-[rgba(255,255,255,0.04)] flex flex-col min-h-[160px]">
               <div className="flex-1">
-                <h3 className="text-base font-bold text-white mb-1 line-clamp-1">{member.full_name}</h3>
-                <p className="text-sm text-slate-400 mb-2">{member.phone}</p>
-                <div className="text-xs text-slate-500 flex items-center gap-1.5 mt-3">
+                <h3 className="text-base font-bold text-[#F4F1E8] mb-1 line-clamp-1">{member.full_name}</h3>
+                <p className="text-sm text-[#A7A39A] mb-2">{member.phone}</p>
+                <div className="text-xs text-[#706D66] flex items-center gap-1.5 mt-3">
                   <AlertTriangle className="w-3.5 h-3.5" />
                   Deleted: {member.deleted_at ? new Date(member.deleted_at).toLocaleDateString() : 'Unknown'}
                 </div>
               </div>
-              <div className="flex gap-2 mt-4 pt-4 border-t border-white/5">
+              <div className="flex gap-2 mt-4 pt-4 border-t border-[rgba(255,255,255,0.04)]">
                 <Button
                   variant="secondary"
                   size="sm"
-                  className="flex-1 bg-white/5 hover:bg-white/10 text-white border-none"
+                  className="flex-1 bg-[rgba(255,255,255,0.02)] hover:bg-[#1D1B17] text-[#F4F1E8] border-none"
                   onClick={() => handleRestore(member.id)}
                 >
                   <RotateCcw className="w-4 h-4 mr-1.5" />
@@ -118,7 +118,7 @@ export function TrashMembers() {
                 <Button
                   variant="secondary"
                   size="sm"
-                  className="flex-1 bg-red-500/10 hover:bg-red-500/20 text-red-400 border-none"
+                  className="flex-1 bg-[#8B4B4B]/20 hover:bg-[#8B4B4B]/20 text-[#8B4B4B] border-none"
                   onClick={() => handlePermanentDelete(member.id)}
                 >
                   <Trash2 className="w-4 h-4 mr-1.5" />

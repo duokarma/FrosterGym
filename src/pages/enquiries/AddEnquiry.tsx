@@ -57,8 +57,8 @@ export function AddEnquiry() {
       <form onSubmit={handleSubmit} className="mt-6 max-w-2xl mx-auto space-y-6">
         <Card className="p-6 space-y-6">
           <div className="flex items-center gap-2 mb-4">
-            <User className="w-5 h-5 text-[#D4AF37]" />
-            <h2 className="text-lg font-semibold text-white">Prospect Details</h2>
+            <User className="w-5 h-5 text-[#C9A24D]" />
+            <h2 className="text-lg font-semibold text-[#F4F1E8]">Prospect Details</h2>
           </div>
           
           <div className="grid sm:grid-cols-2 gap-4">
@@ -87,7 +87,7 @@ export function AddEnquiry() {
             <div className="space-y-1.5">
               <label className="block text-sm font-medium text-zinc-300">Source</label>
               <select 
-                className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+                className="w-full h-[44px] bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl px-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                 value={formData.source}
                 onChange={e => setFormData({...formData, source: e.target.value})}
               >
@@ -105,7 +105,7 @@ export function AddEnquiry() {
         <Card className="p-6 space-y-6">
           <div className="flex items-center gap-2 mb-4">
             <Target className="w-5 h-5 text-indigo-500" />
-            <h2 className="text-lg font-semibold text-white">Interest & Requirements</h2>
+            <h2 className="text-lg font-semibold text-[#F4F1E8]">Interest & Requirements</h2>
           </div>
           
           <div className="grid sm:grid-cols-2 gap-4">
@@ -124,16 +124,16 @@ export function AddEnquiry() {
               onChange={e => setFormData({...formData, duration: e.target.value})}
             />
             
-            <div className="flex items-center gap-2 mt-2 p-3 bg-zinc-900/50 border border-zinc-800 rounded-xl cursor-pointer hover:bg-zinc-800/50 transition-colors" onClick={() => setFormData({...formData, training_required: !formData.training_required})}>
+            <div className="flex items-center gap-2 mt-2 p-3 bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl cursor-pointer hover:bg-[#171613]/50 transition-colors" onClick={() => setFormData({...formData, training_required: !formData.training_required})}>
               <div className={`w-5 h-5 rounded flex items-center justify-center border ${formData.training_required ? 'bg-indigo-500 border-indigo-500' : 'border-zinc-600'}`}>
-                {formData.training_required && <Check className="w-3 h-3 text-white" />}
+                {formData.training_required && <Check className="w-3 h-3 text-[#F4F1E8]" />}
               </div>
               <span className="text-sm font-medium text-zinc-300">Requires Personal Training</span>
             </div>
 
-            <div className="flex items-center gap-2 mt-2 p-3 bg-zinc-900/50 border border-zinc-800 rounded-xl cursor-pointer hover:bg-zinc-800/50 transition-colors" onClick={() => setFormData({...formData, diet_required: !formData.diet_required})}>
+            <div className="flex items-center gap-2 mt-2 p-3 bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl cursor-pointer hover:bg-[#171613]/50 transition-colors" onClick={() => setFormData({...formData, diet_required: !formData.diet_required})}>
               <div className={`w-5 h-5 rounded flex items-center justify-center border ${formData.diet_required ? 'bg-emerald-500 border-emerald-500' : 'border-zinc-600'}`}>
-                {formData.diet_required && <Check className="w-3 h-3 text-white" />}
+                {formData.diet_required && <Check className="w-3 h-3 text-[#F4F1E8]" />}
               </div>
               <span className="text-sm font-medium text-zinc-300">Requires Diet Plan</span>
             </div>
@@ -143,7 +143,7 @@ export function AddEnquiry() {
             <label className="block text-sm font-medium text-zinc-300">Additional Notes / Message</label>
             <textarea
               rows={3}
-              className="w-full bg-zinc-900/50 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 resize-none"
+              className="w-full bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl p-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-indigo-500/50 resize-none"
               placeholder="Any specific goals, medical conditions, or requests..."
               value={formData.message}
               onChange={e => setFormData({...formData, message: e.target.value})}

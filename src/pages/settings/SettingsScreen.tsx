@@ -54,15 +54,15 @@ export const SettingsScreen: React.FC = () => {
         {/* Navigation Sidebar */}
         <div className="md:col-span-1 space-y-2">
           <Card className="p-2">
-            <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-800 text-white font-medium transition-colors">
+            <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg bg-gray-800 text-[#F4F1E8] font-medium transition-colors">
               <Building2 className="w-5 h-5 text-indigo-400" />
               Gym Profile
             </button>
-            <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800/50 text-gray-400 hover:text-white transition-colors">
+            <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800/50 text-[#A7A39A] hover:text-[#F4F1E8] transition-colors">
               <Percent className="w-5 h-5" />
               Billing & Taxes
             </button>
-            <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800/50 text-gray-400 hover:text-white transition-colors">
+            <button className="w-full flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-gray-800/50 text-[#A7A39A] hover:text-[#F4F1E8] transition-colors">
               <Building className="w-5 h-5" />
               Branches
             </button>
@@ -75,8 +75,8 @@ export const SettingsScreen: React.FC = () => {
           {/* Gym Profile Section */}
           <Card>
             <div className="p-6 border-b border-gray-800">
-              <h2 className="text-xl font-semibold text-white">Gym Profile</h2>
-              <p className="text-sm text-gray-400 mt-1">Basic information about your business</p>
+              <h2 className="text-xl font-semibold text-[#F4F1E8]">Gym Profile</h2>
+              <p className="text-sm text-[#A7A39A] mt-1">Basic information about your business</p>
             </div>
             
             <div className="p-6 space-y-6">
@@ -85,7 +85,7 @@ export const SettingsScreen: React.FC = () => {
                 <label className="text-sm font-medium text-gray-300">Gym Logo</label>
                 <div className="flex items-center gap-4">
                   <div className="w-20 h-20 rounded-xl bg-gray-800 border-2 border-dashed border-gray-700 flex items-center justify-center">
-                    <Building2 className="w-8 h-8 text-gray-500" />
+                    <Building2 className="w-8 h-8 text-[#706D66]" />
                   </div>
                   <Button variant="secondary" icon={<UploadCloud className="w-4 h-4" />}>
                     Upload Logo
@@ -126,8 +126,8 @@ export const SettingsScreen: React.FC = () => {
           {/* Billing & Taxes Section */}
           <Card>
             <div className="p-6 border-b border-gray-800">
-              <h2 className="text-xl font-semibold text-white">Billing & Taxes</h2>
-              <p className="text-sm text-gray-400 mt-1">Configure your invoice and tax settings</p>
+              <h2 className="text-xl font-semibold text-[#F4F1E8]">Billing & Taxes</h2>
+              <p className="text-sm text-[#A7A39A] mt-1">Configure your invoice and tax settings</p>
             </div>
             <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
               <Input 
@@ -156,8 +156,8 @@ export const SettingsScreen: React.FC = () => {
           <Card>
             <div className="p-6 border-b border-gray-800 flex items-center justify-between">
               <div>
-                <h2 className="text-xl font-semibold text-white">Branches</h2>
-                <p className="text-sm text-gray-400 mt-1">Manage multiple gym locations</p>
+                <h2 className="text-xl font-semibold text-[#F4F1E8]">Branches</h2>
+                <p className="text-sm text-[#A7A39A] mt-1">Manage multiple gym locations</p>
               </div>
               <Button variant="secondary" icon={<Plus className="w-4 h-4" />}>
                 Add Branch
@@ -170,8 +170,8 @@ export const SettingsScreen: React.FC = () => {
                     <Building className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-white font-medium">Main Branch (HQ)</h3>
-                    <p className="text-sm text-gray-400">{address}</p>
+                    <h3 className="text-[#F4F1E8] font-medium">Main Branch (HQ)</h3>
+                    <p className="text-sm text-[#A7A39A]">{address}</p>
                   </div>
                 </div>
                 <Badge variant="success">Active</Badge>

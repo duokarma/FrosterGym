@@ -68,7 +68,7 @@ export function RecordPayment() {
   };
 
   if (loading) {
-    return <div className="p-8 text-center text-zinc-500">Loading form...</div>;
+    return <div className="p-8 text-center text-[#706D66]">Loading form...</div>;
   }
 
   return (
@@ -79,15 +79,15 @@ export function RecordPayment() {
         <Card className="p-6 space-y-6">
           <div className="flex items-center gap-2 mb-4">
             <DollarSign className="w-5 h-5 text-emerald-500" />
-            <h2 className="text-lg font-semibold text-white">Payment Details</h2>
+            <h2 className="text-lg font-semibold text-[#F4F1E8]">Payment Details</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="space-y-1.5 sm:col-span-2">
               <label className="block text-sm font-medium text-zinc-300">Member *</label>
               <div className="relative">
-                <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
+                <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A7A39A]" />
                 <select 
-                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+                  className="w-full h-[44px] bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl pl-10 pr-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                   value={formData.member_id}
                   onChange={e => setFormData({...formData, member_id: e.target.value})}
                   required
@@ -122,9 +122,9 @@ export function RecordPayment() {
             <div className="space-y-1.5 sm:col-span-2">
               <label className="block text-sm font-medium text-zinc-300">Payment Method</label>
               <div className="relative">
-                <CreditCard className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
+                <CreditCard className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#A7A39A]" />
                 <select 
-                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
+                  className="w-full h-[44px] bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-xl pl-10 pr-4 text-[#F4F1E8] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                   value={formData.payment_method}
                   onChange={e => setFormData({...formData, payment_method: e.target.value})}
                 >

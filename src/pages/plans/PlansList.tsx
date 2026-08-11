@@ -20,8 +20,8 @@ export function PlansList() {
     <div className="pb-24 animate-in fade-in duration-300">
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-white">Membership Plans</h1>
-          <p className="text-zinc-400 text-sm">Manage your gym's pricing packages</p>
+          <h1 className="text-2xl font-bold text-[#F4F1E8]">Membership Plans</h1>
+          <p className="text-[#A7A39A] text-sm">Manage your gym's pricing packages</p>
         </div>
         <Button onClick={() => navigate('/app/memberships/add')}>
           <Plus className="w-5 h-5 mr-2" />
@@ -34,21 +34,21 @@ export function PlansList() {
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {plans.map(plan => (
-            <div key={plan.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-[#D4AF37]/50 transition-colors">
+            <div key={plan.id} className="bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-2xl p-5 hover:border-[#D4AF37]/50 transition-colors">
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-lg font-semibold text-white">{plan.name}</h3>
+                <h3 className="text-lg font-semibold text-[#F4F1E8]">{plan.name}</h3>
                 <Badge variant={plan.status === 'active' ? 'success' : 'default'}>
                   {plan.status}
                 </Badge>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
-                  <span className="text-zinc-500">Duration</span>
+                  <span className="text-[#706D66]">Duration</span>
                   <span className="text-zinc-200 font-medium">{plan.duration}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-zinc-500">Price</span>
-                  <span className="text-emerald-400 font-semibold">₹{plan.price}</span>
+                  <span className="text-[#706D66]">Price</span>
+                  <span className="text-[#4D6B5A] font-semibold">₹{plan.price}</span>
                 </div>
               </div>
               <div className="mt-5 flex gap-2">
