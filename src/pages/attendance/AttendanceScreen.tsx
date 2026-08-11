@@ -19,7 +19,7 @@ export function AttendanceScreen() {
 
   return (
     <div className="pb-24 animate-in fade-in duration-300 flex flex-col items-center pt-8">
-      <div className="w-20 h-20 bg-cyan-500/10 text-cyan-400 rounded-full flex items-center justify-center mb-6">
+      <div className="w-20 h-20 bg-[#D4AF37]/10 text-[#E5D3B3] rounded-full flex items-center justify-center mb-6">
         <ScanLine className="w-10 h-10" />
       </div>
       

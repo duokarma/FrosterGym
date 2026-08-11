@@ -14,7 +14,7 @@ export function ReportsDashboard() {
           <p className="text-2xl font-bold text-white mt-1">₹1,25,000</p>
         </div>
         <div className="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl">
-          <Users className="w-6 h-6 text-cyan-400 mb-2" />
+          <Users className="w-6 h-6 text-[#E5D3B3] mb-2" />
           <h3 className="text-zinc-400 text-xs font-semibold uppercase tracking-wider">Active Members</h3>
           <p className="text-2xl font-bold text-white mt-1">150</p>
         </div>

@@ -160,7 +160,7 @@ export function AddMember() {
             <div className="w-24 h-24 rounded-full bg-zinc-900/50 backdrop-blur-xl border-2 border-dashed border-zinc-700 flex items-center justify-center">
               <Camera className="w-8 h-8 text-zinc-600" />
             </div>
-            <button type="button" className="absolute bottom-0 right-0 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center border-2 border-zinc-950 text-white shadow-lg">
+            <button type="button" className="absolute bottom-0 right-0 w-8 h-8 bg-[#D4AF37] rounded-full flex items-center justify-center border-2 border-zinc-950 text-white shadow-lg">
               <Plus className="w-4 h-4" />
             </button>
           </div>
@@ -168,7 +168,7 @@ export function AddMember() {
 
         {/* Section 1: Personal Details */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Personal Details</h2>
+          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Personal Details</h2>
           
           <Input 
             label="Full Name" 
@@ -191,7 +191,7 @@ export function AddMember() {
             <div className="space-y-1.5">
               <label className="block text-sm font-medium text-zinc-300">Gender</label>
               <select 
-                className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+                className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                 value={gender}
                 onChange={e => setGender(e.target.value)}
               >
@@ -218,7 +218,7 @@ export function AddMember() {
                   <Droplet className="w-5 h-5 text-zinc-500" />
                 </div>
                 <select 
-                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                   value={bloodGroup}
                   onChange={e => setBloodGroup(e.target.value)}
                 >
@@ -239,7 +239,7 @@ export function AddMember() {
 
         {/* Section 2: Contact Details */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Contact Details</h2>
+          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Contact Details</h2>
           
           <Input 
             label="Phone Number" 
@@ -271,7 +271,7 @@ export function AddMember() {
         
         {/* Section 3: Extra Info */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Other Info</h2>
+          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Other Info</h2>
           <div className="grid grid-cols-2 gap-4">
              <Input 
                 label="Fitness Goal" 
@@ -292,12 +292,12 @@ export function AddMember() {
 
         {/* Section 4: Membership & Payment */}
         <Card className="space-y-4">
-          <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Membership & Payment</h2>
+          <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider mb-2">Membership & Payment</h2>
           
           <div className="space-y-1.5">
             <label className="block text-sm font-medium text-zinc-300">Select Plan</label>
             <select 
-              className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+              className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
               value={planId}
               onChange={e => setPlanId(e.target.value)}
             >
@@ -324,7 +324,7 @@ export function AddMember() {
                   <div className="relative">
                     <input 
                       type="number" 
-                      className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-4 pr-12 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                      className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-4 pr-12 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
                       value={discountValue}
                       onChange={e => setDiscountValue(Number(e.target.value))}
                       min={0}
@@ -381,7 +381,7 @@ export function AddMember() {
                       onClick={() => setPaymentMethod(method)}
                       className={`px-4 py-2 rounded-xl text-sm font-medium capitalize flex-1 border transition-all ${
                         paymentMethod === method 
-                        ? 'bg-cyan-500/10 border-cyan-500/50 text-cyan-400 shadow-sm shadow-cyan-500/20' 
+                        ? 'bg-[#D4AF37]/10 border-[#D4AF37]/50 text-[#E5D3B3] shadow-sm shadow-[#D4AF37]/20' 
                         : 'bg-zinc-900/50 border-zinc-800 text-zinc-400 hover:bg-zinc-800'
                       }`}
                     >
@@ -396,7 +396,7 @@ export function AddMember() {
 
         {/* Floating Action Button for Save */}
         <div className="fixed bottom-20 left-0 right-0 px-4 pt-4 pb-safe bg-gradient-to-t from-zinc-950 via-zinc-950/90 to-transparent z-40 lg:static lg:bg-none lg:px-0 lg:p-0 lg:pt-4">
-          <Button type="submit" fullWidth size="lg" loading={loading} className="shadow-lg shadow-cyan-500/20">
+          <Button type="submit" fullWidth size="lg" loading={loading} className="shadow-lg shadow-[#D4AF37]/20">
             <Check className="w-5 h-5 mr-2" />
             Save Member
           </Button>

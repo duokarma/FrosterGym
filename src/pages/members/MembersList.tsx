@@ -140,7 +140,7 @@ export function MembersList() {
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-bold text-white">Members</h1>
             {!loading && (
-              <Badge variant="default" className="bg-[#131b2f] text-slate-300 border border-white/10">
+              <Badge variant="default" className="bg-zinc-900 text-slate-300 border border-white/10">
                 {total} total
               </Badge>
             )}
@@ -168,7 +168,7 @@ export function MembersList() {
             <select 
               value={sort}
               onChange={(e) => setSort(e.target.value as MemberSort)}
-              className="w-full h-11 px-3 py-2 bg-[#131b2f]/80 backdrop-blur-xl border border-white/5 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+              className="w-full h-11 px-3 py-2 bg-zinc-900/80 backdrop-blur-xl border border-white/5 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
             >
               {SORTS.map(s => (
                 <option key={s.value} value={s.value}>{s.label}</option>
@@ -185,7 +185,7 @@ export function MembersList() {
               className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 border ${
                 filter === f.value 
                   ? f.value === 'active' 
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-transparent shadow-lg shadow-cyan-500/20'
+                    ? 'bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] text-white border-transparent shadow-lg shadow-[#D4AF37]/20'
                     : 'bg-white/10 text-white border-white/20'
                   : 'bg-transparent text-slate-400 border-white/5 hover:bg-white/5 hover:text-slate-300'
               }`}
@@ -200,7 +200,7 @@ export function MembersList() {
       {loading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(8)].map((_, i) => (
-            <Card key={i} className="p-4 bg-[#131b2f]/80 backdrop-blur-xl border-white/5 animate-pulse">
+            <Card key={i} className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 animate-pulse">
               <div className="flex items-start gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full bg-white/5" />
                 <div className="flex-1 space-y-2 py-1">
@@ -234,14 +234,14 @@ export function MembersList() {
             return (
               <Card 
                 key={member.id} 
-                className="p-4 bg-[#131b2f]/80 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all cursor-pointer group flex flex-col min-h-[220px]"
+                className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all cursor-pointer group flex flex-col min-h-[220px]"
                 onClick={() => navigate(`/members/${member.id}`)}
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
                     <Avatar name={member.full_name} src={member.photo_url || undefined} size="md" />
                     <div>
-                      <h3 className="text-base font-bold text-white group-hover:text-cyan-400 transition-colors line-clamp-1">
+                      <h3 className="text-base font-bold text-white group-hover:text-[#E5D3B3] transition-colors line-clamp-1">
                         {member.full_name}
                       </h3>
                       <p className="text-xs text-slate-400 font-medium">{member.member_id}</p>
@@ -316,7 +316,7 @@ export function MembersList() {
       {/* Mobile FAB */}
       <div className="fixed bottom-6 right-4 sm:hidden z-40">
         <Button 
-          className="w-14 h-14 rounded-full shadow-xl shadow-cyan-500/30 flex items-center justify-center p-0 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400"
+          className="w-14 h-14 rounded-full shadow-xl shadow-[#D4AF37]/30 flex items-center justify-center p-0 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] hover:from-[#E5D3B3] hover:to-[#E5D3B3]"
           onClick={() => navigate('/members/add')}
         >
           <Plus className="w-6 h-6" />

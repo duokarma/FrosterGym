@@ -87,7 +87,7 @@ export function EditMember() {
       <form onSubmit={handleSubmit} className="mt-6 space-y-6">
         <Card className="p-6 space-y-6">
           <div className="flex items-center gap-2 mb-4">
-            <User className="w-5 h-5 text-cyan-500" />
+            <User className="w-5 h-5 text-[#D4AF37]" />
             <h2 className="text-lg font-semibold text-white">Personal Details</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -101,7 +101,7 @@ export function EditMember() {
             <div className="space-y-1.5">
               <label className="block text-sm font-medium text-zinc-300">Gender</label>
               <select 
-                className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+                className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                 value={formData.gender}
                 onChange={e => setFormData({...formData, gender: e.target.value as any})}
               >

@@ -192,8 +192,8 @@ export async function fetchRecentActivity(gymId: string, limit = 10): Promise<Ac
     const now = new Date();
     return [
       { id: '1', type: 'payment_received', title: 'Payment Received', description: 'Rahul Sharma paid ₹3,000 for Monthly plan', icon_color: 'text-emerald-400', time_ago: '10 min ago', created_at: new Date(now.getTime() - 600000).toISOString() },
-      { id: '2', type: 'member_added', title: 'New Member', description: 'Karan Malhotra joined the gym', icon_color: 'text-cyan-400', time_ago: '25 min ago', created_at: new Date(now.getTime() - 1500000).toISOString() },
-      { id: '3', type: 'membership_renewed', title: 'Membership Renewed', description: 'Priya Patel renewed for 3 months', icon_color: 'text-blue-400', time_ago: '1 hr ago', created_at: new Date(now.getTime() - 3600000).toISOString() },
+      { id: '2', type: 'member_added', title: 'New Member', description: 'Karan Malhotra joined the gym', icon_color: 'text-[#E5D3B3]', time_ago: '25 min ago', created_at: new Date(now.getTime() - 1500000).toISOString() },
+      { id: '3', type: 'membership_renewed', title: 'Membership Renewed', description: 'Priya Patel renewed for 3 months', icon_color: 'text-[#E5D3B3]', time_ago: '1 hr ago', created_at: new Date(now.getTime() - 3600000).toISOString() },
       { id: '4', type: 'attendance', title: 'Attendance', description: '8 members checked in today', icon_color: 'text-purple-400', time_ago: '2 hrs ago', created_at: new Date(now.getTime() - 7200000).toISOString() },
       { id: '5', type: 'expense_added', title: 'Expense Logged', description: 'Electricity bill ₹8,000', icon_color: 'text-red-400', time_ago: '3 hrs ago', created_at: new Date(now.getTime() - 10800000).toISOString() },
       { id: '6', type: 'enquiry_added', title: 'New Enquiry', description: 'Walk-in enquiry from Rohit Mehra', icon_color: 'text-amber-400', time_ago: '5 hrs ago', created_at: new Date(now.getTime() - 18000000).toISOString() },
@@ -207,7 +207,7 @@ export async function fetchRecentActivity(gymId: string, limit = 10): Promise<Ac
       type: log.action,
       title: log.action.replace(/_/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase()),
       description: log.details?.description || log.action,
-      icon_color: 'text-cyan-400',
+      icon_color: 'text-[#E5D3B3]',
       time_ago: getTimeAgo(new Date(log.created_at)),
       created_at: log.created_at,
     }));

@@ -83,7 +83,7 @@ export function AddExpense() {
         <div className="space-y-1.5">
           <label className="block text-sm font-medium text-zinc-300">Category</label>
           <select 
-            className="w-full h-[44px] bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+            className="w-full h-[44px] bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required

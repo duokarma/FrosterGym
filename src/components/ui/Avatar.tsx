@@ -31,7 +31,7 @@ export function Avatar({ src, name, size = 'md', className = '' }: AvatarProps) 
 
   return (
     <div
-      className={`${sizeClasses[size]} rounded-full bg-cyan-500/15 text-cyan-400 font-semibold flex items-center justify-center ${className}`}
+      className={`${sizeClasses[size]} rounded-full bg-[#D4AF37]/15 text-[#E5D3B3] font-semibold flex items-center justify-center ${className}`}
     >
       {initials}
     </div>

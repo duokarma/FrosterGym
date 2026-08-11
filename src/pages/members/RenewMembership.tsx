@@ -153,14 +153,14 @@ export function RenewMembership() {
         {/* Plan Selection */}
         <Card className="space-y-4">
           <div className="flex items-center gap-2 mb-2">
-            <RefreshCw className="w-5 h-5 text-cyan-400" />
-            <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Select Plan</h2>
+            <RefreshCw className="w-5 h-5 text-[#E5D3B3]" />
+            <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider">Select Plan</h2>
           </div>
           
           <div className="space-y-1.5">
             <label className="block text-sm font-medium text-slate-300">Plan</label>
             <select 
-              className="w-full h-[44px] bg-[#0a0f1c] border border-white/10 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+              className="w-full h-[44px] bg-[#0a0a0a] border border-white/10 rounded-xl px-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
               value={planId}
               onChange={e => setPlanId(e.target.value)}
               required
@@ -187,8 +187,8 @@ export function RenewMembership() {
         {/* Pricing & Discount */}
         <Card className="space-y-4">
           <div className="flex items-center gap-2 mb-2">
-            <CreditCard className="w-5 h-5 text-cyan-400" />
-            <h2 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">Payment Details</h2>
+            <CreditCard className="w-5 h-5 text-[#E5D3B3]" />
+            <h2 className="text-sm font-semibold text-[#E5D3B3] uppercase tracking-wider">Payment Details</h2>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -197,7 +197,7 @@ export function RenewMembership() {
               <div className="relative">
                 <input 
                   type="number" 
-                  className="w-full h-[44px] bg-[#0a0f1c] border border-white/10 rounded-xl pl-4 pr-12 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                  className="w-full h-[44px] bg-[#0a0a0a] border border-white/10 rounded-xl pl-4 pr-12 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
                   value={discountValue}
                   onChange={e => setDiscountValue(Number(e.target.value))}
                   min={0}
@@ -223,7 +223,7 @@ export function RenewMembership() {
           </div>
 
           {/* Payment Summary Box */}
-          <div className="bg-[#0a0f1c] border border-white/5 rounded-2xl p-4 space-y-2 mt-4">
+          <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-4 space-y-2 mt-4">
             <div className="flex justify-between text-sm text-slate-400">
               <span>Plan Amount</span>
               <span>₹{planAmount}</span>
@@ -254,8 +254,8 @@ export function RenewMembership() {
                   onClick={() => setPaymentMethod(method)}
                   className={`px-4 py-2 rounded-xl text-sm font-medium capitalize flex-1 border transition-colors ${
                     paymentMethod === method 
-                    ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400' 
-                    : 'bg-[#0a0f1c] border-white/10 text-slate-400 hover:bg-white/5'
+                    ? 'bg-[#D4AF37]/20 border-[#D4AF37]/50 text-[#E5D3B3]' 
+                    : 'bg-[#0a0a0a] border-white/10 text-slate-400 hover:bg-white/5'
                   }`}
                 >
                   {method}
@@ -267,7 +267,7 @@ export function RenewMembership() {
 
         {/* Floating Action Button for Save */}
         <div className="fixed bottom-20 left-0 right-0 px-4 pt-4 pb-safe bg-gradient-to-t from-[#0a0f1c] via-[#0a0f1c] to-transparent z-40 lg:static lg:bg-none lg:px-0 lg:p-0 lg:pt-4">
-          <Button type="submit" fullWidth size="lg" loading={saving} className="shadow-lg shadow-cyan-500/20 font-bold">
+          <Button type="submit" fullWidth size="lg" loading={saving} className="shadow-lg shadow-[#D4AF37]/20 font-bold">
             <RefreshCw className="w-5 h-5 mr-2" />
             Process Renewal
           </Button>

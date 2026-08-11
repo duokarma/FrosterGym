@@ -10,7 +10,7 @@ export function TopBar({ onMenuToggle }: TopBarProps) {
   const { profile, gym } = useAuth();
 
   return (
-    <header className="sticky top-0 z-30 bg-[#0a0f1c]/70 backdrop-blur-xl border-b border-white/5 shadow-sm">
+    <header className="sticky top-0 z-30 bg-[#0a0a0a]/70 backdrop-blur-xl border-b border-white/5 shadow-sm">
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center gap-3">
           <button

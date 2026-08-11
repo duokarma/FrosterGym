@@ -7,7 +7,7 @@ import { useToast } from '../../components/ui/Toast';
 type AudienceType = 'all' | 'expiring' | 'pending' | 'inactive';
 
 const audiences = [
-  { id: 'all', label: 'All Active', count: 150, icon: Users, color: 'text-cyan-400', bg: 'bg-cyan-500/10', border: 'border-cyan-500/20', activeBorder: 'border-cyan-500' },
+  { id: 'all', label: 'All Active', count: 150, icon: Users, color: 'text-[#E5D3B3]', bg: 'bg-[#D4AF37]/10', border: 'border-[#D4AF37]/20', activeBorder: 'border-[#D4AF37]' },
   { id: 'expiring', label: 'Expiring Soon', count: 45, icon: Clock, color: 'text-amber-400', bg: 'bg-amber-500/10', border: 'border-amber-500/20', activeBorder: 'border-amber-500' },
   { id: 'pending', label: 'Pending Dues', count: 12, icon: AlertCircle, color: 'text-rose-400', bg: 'bg-rose-500/10', border: 'border-rose-500/20', activeBorder: 'border-rose-500' },
   { id: 'inactive', label: 'Inactive/Past', count: 320, icon: UserMinus, color: 'text-zinc-400', bg: 'bg-zinc-800', border: 'border-zinc-700', activeBorder: 'border-zinc-400' },

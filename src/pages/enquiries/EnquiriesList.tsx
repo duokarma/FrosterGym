@@ -84,7 +84,7 @@ export function EnquiriesList() {
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-bold text-white">Enquiries</h1>
             {!loading && (
-              <Badge variant="default" className="bg-[#131b2f] text-slate-300 border border-white/10">
+              <Badge variant="default" className="bg-zinc-900 text-slate-300 border border-white/10">
                 {enquiries.length} total
               </Badge>
             )}
@@ -113,7 +113,7 @@ export function EnquiriesList() {
       {loading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(6)].map((_, i) => (
-            <Card key={i} className="p-4 bg-[#131b2f]/80 backdrop-blur-xl border-white/5 animate-pulse min-h-[220px]">
+            <Card key={i} className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 animate-pulse min-h-[220px]">
               <div className="flex items-start gap-3 mb-4">
                 <div className="w-12 h-12 rounded-full bg-white/5" />
                 <div className="flex-1 space-y-2 py-1">
@@ -142,7 +142,7 @@ export function EnquiriesList() {
             return (
               <Card 
                 key={enquiry.id} 
-                className="p-4 bg-[#131b2f]/80 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all group flex flex-col min-h-[220px]"
+                className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 hover:border-white/10 transition-all group flex flex-col min-h-[220px]"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
@@ -188,7 +188,7 @@ export function EnquiriesList() {
                     <Button 
                       variant="primary" 
                       size="sm" 
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 border-none shadow-lg shadow-cyan-500/20"
+                      className="flex-1 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] hover:from-[#E5D3B3] hover:to-[#E5D3B3] border-none shadow-lg shadow-[#D4AF37]/20"
                       onClick={() => handleConvert(enquiry.id)}
                     >
                       <UserCheck className="w-4 h-4 mr-1.5" />
@@ -205,7 +205,7 @@ export function EnquiriesList() {
       {/* Mobile FAB */}
       <div className="fixed bottom-6 right-4 sm:hidden z-40">
         <Button 
-          className="w-14 h-14 rounded-full shadow-xl shadow-cyan-500/30 flex items-center justify-center p-0 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400"
+          className="w-14 h-14 rounded-full shadow-xl shadow-[#D4AF37]/30 flex items-center justify-center p-0 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] hover:from-[#E5D3B3] hover:to-[#E5D3B3]"
           onClick={() => navigate('/enquiries/add')}
         >
           <Plus className="w-6 h-6" />

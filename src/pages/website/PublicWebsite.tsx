@@ -434,7 +434,7 @@ export function PublicWebsite() {
       </section>
 
       {/* 9. Premium Footer */}
-      <footer className="bg-[#050505] pt-24 relative overflow-hidden border-t border-white/5">
+      <footer className="bg-[#000000] pt-24 relative overflow-hidden border-t border-white/5">
         {/* Subtle grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
 

@@ -13,7 +13,7 @@ export function InvoiceView() {
       <div className="bg-white text-zinc-900 rounded-2xl p-6 sm:p-8 mt-6">
         <div className="flex justify-between items-start border-b border-zinc-200 pb-6 mb-6">
           <div>
-            <h1 className="text-2xl font-black text-cyan-600 uppercase tracking-tighter">Froster Gym</h1>
+            <h1 className="text-2xl font-black text-[#B8972E] uppercase tracking-tighter">Froster Gym</h1>
             <p className="text-sm text-zinc-500 mt-1">123 Fitness Street, Mumbai</p>
           </div>
           <div className="text-right">
@@ -59,7 +59,7 @@ export function InvoiceView() {
           <div className="w-1/2 space-y-2">
             <div className="flex justify-between font-bold text-lg pt-4 border-t border-zinc-200">
               <span>Total Paid</span>
-              <span className="text-cyan-600">₹2,500</span>
+              <span className="text-[#B8972E]">₹2,500</span>
             </div>
             <p className="text-xs text-zinc-500 text-right mt-1">Paid via UPI</p>
           </div>

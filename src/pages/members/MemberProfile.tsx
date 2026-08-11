@@ -208,7 +208,7 @@ export function MemberProfile() {
         </Button>
         <Button 
           variant="secondary" 
-          className="flex-1 text-cyan-400 hover:text-cyan-300 hover:bg-cyan-500/10"
+          className="flex-1 text-[#E5D3B3] hover:text-cyan-300 hover:bg-[#D4AF37]/10"
           onClick={() => navigate(`/members/${member.id}/renew`)}
         >
           <RefreshCw className="w-5 h-5 mb-1" />
@@ -223,7 +223,7 @@ export function MemberProfile() {
         </Button>
         <Button 
           variant="secondary" 
-          className="flex-1 text-blue-400 hover:text-blue-300 hover:bg-blue-500/10"
+          className="flex-1 text-[#E5D3B3] hover:text-blue-300 hover:bg-[#D4AF37]/10"
           onClick={() => setIsFreezeModalOpen(true)}
           disabled={!membership || membership.status !== 'active'}
         >
@@ -239,7 +239,7 @@ export function MemberProfile() {
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
             <div className="px-4 py-3 border-b border-zinc-800 bg-zinc-900/50 flex justify-between items-center">
               <h3 className="text-sm font-semibold text-white uppercase tracking-wider flex items-center">
-                <Dumbbell className="w-4 h-4 mr-2 text-cyan-500" />
+                <Dumbbell className="w-4 h-4 mr-2 text-[#D4AF37]" />
                 Current Plan
               </h3>
               {membership.due_amount > 0 && (
@@ -357,7 +357,7 @@ export function MemberProfile() {
           <div className="bg-zinc-950 border border-zinc-800 rounded-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
             <div className="flex justify-between items-center p-4 border-b border-zinc-800">
               <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                <Snowflake className="w-5 h-5 text-blue-400" />
+                <Snowflake className="w-5 h-5 text-[#E5D3B3]" />
                 Freeze Membership
               </h2>
               <button onClick={() => setIsFreezeModalOpen(false)} className="text-zinc-500 hover:text-white">
@@ -370,7 +370,7 @@ export function MemberProfile() {
                 <label className="text-sm font-medium text-zinc-400">Start Date</label>
                 <input 
                   type="date"
-                  className="w-full h-11 bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:ring-2 focus:ring-blue-500/50 outline-none"
+                  className="w-full h-11 bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:ring-2 focus:ring-[#D4AF37]/50 outline-none"
                   value={freezeStartDate}
                   onChange={e => setFreezeStartDate(e.target.value)}
                 />
@@ -379,7 +379,7 @@ export function MemberProfile() {
                 <label className="text-sm font-medium text-zinc-400">End Date</label>
                 <input 
                   type="date"
-                  className="w-full h-11 bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:ring-2 focus:ring-blue-500/50 outline-none"
+                  className="w-full h-11 bg-zinc-900 border border-zinc-800 rounded-xl px-4 text-white focus:ring-2 focus:ring-[#D4AF37]/50 outline-none"
                   value={freezeEndDate}
                   onChange={e => setFreezeEndDate(e.target.value)}
                 />
@@ -387,7 +387,7 @@ export function MemberProfile() {
               <div className="space-y-1.5">
                 <label className="text-sm font-medium text-zinc-400">Reason</label>
                 <textarea 
-                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-white focus:ring-2 focus:ring-blue-500/50 outline-none resize-none"
+                  className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-3 text-white focus:ring-2 focus:ring-[#D4AF37]/50 outline-none resize-none"
                   rows={3}
                   placeholder="Reason for freezing..."
                   value={freezeReason}
@@ -399,7 +399,7 @@ export function MemberProfile() {
             <div className="p-4 border-t border-zinc-800 flex gap-3">
               <Button variant="secondary" className="flex-1" onClick={() => setIsFreezeModalOpen(false)}>Cancel</Button>
               <Button 
-                className="flex-1 bg-blue-500 hover:bg-blue-600 border-none" 
+                className="flex-1 bg-[#D4AF37] hover:bg-[#B8972E] border-none" 
                 loading={isFreezing}
                 onClick={handleFreeze}
               >

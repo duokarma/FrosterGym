@@ -9,7 +9,7 @@ const variantClasses = {
   success: 'bg-emerald-500/10 text-emerald-400',
   warning: 'bg-amber-500/10 text-amber-400',
   danger: 'bg-red-500/10 text-red-400',
-  info: 'bg-cyan-500/10 text-cyan-400',
+  info: 'bg-[#D4AF37]/10 text-[#E5D3B3]',
 };
 
 export function Badge({ children, variant = 'default', className = '' }: BadgeProps) {

@@ -8,7 +8,7 @@ interface LoadingStateProps {
 export function LoadingState({ message = 'Loading...', fullScreen = false }: LoadingStateProps) {
   const content = (
     <div className="flex flex-col items-center justify-center gap-3">
-      <Loader2 className="w-8 h-8 text-cyan-500 animate-spin" />
+      <Loader2 className="w-8 h-8 text-[#D4AF37] animate-spin" />
       <p className="text-sm text-zinc-400">{message}</p>
     </div>
   );

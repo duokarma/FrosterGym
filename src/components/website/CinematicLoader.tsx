@@ -218,7 +218,7 @@ export default function CinematicLoader({ onComplete }: { onComplete: () => void
       return () => clearTimeout(timer);
     }, []);
     return (
-      <div className={`fixed inset-0 z-[100] bg-[#050505] flex flex-col items-center justify-center transition-opacity duration-1000 ease-in-out ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`fixed inset-0 z-[100] bg-[#000000] flex flex-col items-center justify-center transition-opacity duration-1000 ease-in-out ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
         <img src="/logo.png" alt="Froaster Gym" className="h-20 object-contain invert brightness-200 mb-6 animate-pulse" />
         <div className="text-xl font-bebas tracking-widest text-[#eab308]">WHERE FAT MEETS ITS FATE</div>
       </div>

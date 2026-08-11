@@ -10,8 +10,8 @@ interface CardProps {
 export function Card({ children, className = '', variant = 'default', onClick }: CardProps) {
   const baseClasses = 'rounded-3xl transition-all duration-300 relative overflow-hidden';
   const variantClasses = {
-    default: 'bg-[#131b2f]/80 backdrop-blur-xl border border-white/5 p-5 shadow-2xl shadow-black/40',
-    stat: 'bg-gradient-to-br from-[#131b2f]/90 to-[#0a0f1c]/80 backdrop-blur-xl border border-white/5 p-5 shadow-2xl shadow-black/40 group hover:border-cyan-500/20',
+    default: 'bg-zinc-900/80 backdrop-blur-xl border border-white/5 p-5 shadow-2xl shadow-black/40',
+    stat: 'bg-gradient-to-br from-zinc-900/90 to-[#0a0a0a]/80 backdrop-blur-xl border border-white/5 p-5 shadow-2xl shadow-black/40 group hover:border-[#D4AF37]/20',
   };
 
   return (
@@ -34,7 +34,7 @@ interface StatCardProps {
   iconBg?: string;
 }
 
-export function StatCard({ label, value, icon, trend, iconBg = 'bg-cyan-500/10 text-cyan-400' }: StatCardProps) {
+export function StatCard({ label, value, icon, trend, iconBg = 'bg-[#D4AF37]/10 text-[#E5D3B3]' }: StatCardProps) {
   return (
     <Card variant="stat">
       <div className="flex items-start justify-between mb-3">

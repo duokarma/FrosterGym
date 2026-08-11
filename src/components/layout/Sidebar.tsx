@@ -83,10 +83,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     return (
       <button
         onClick={() => handleNav(item.path)}
-        className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 min-h-[44px] ${
+        className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm font-medium transition-all duration-150 min-h-[44px] ${
           isActive
-            ? 'bg-gradient-to-r from-cyan-500/20 to-transparent text-cyan-400 border-l-2 border-cyan-500 rounded-l-none'
-            : 'text-slate-400 hover:text-white hover:bg-white/5'
+            ? 'bg-zinc-800/30 text-white border border-zinc-700/50 rounded-xl'
+            : 'text-zinc-400 hover:text-white hover:bg-white/5 rounded-xl border border-transparent'
         }`}
       >
         {item.icon}
@@ -111,7 +111,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-white/5">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#E5D3B3] to-[#D4AF37] flex items-center justify-center shadow-lg shadow-[#D4AF37]/30">
             <Dumbbell className="w-5 h-5 text-white" />
           </div>
           <span className="text-base font-bold text-white tracking-tight">Froster Gym</span>
@@ -162,7 +162,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden" onClick={onClose} />
       )}
       <aside
-        className={`fixed top-0 left-0 z-50 h-screen w-72 bg-[#0d1326] border-r border-white/5 transition-transform duration-300 ease-out lg:translate-x-0 lg:z-30 shadow-2xl ${
+        className={`fixed top-0 left-0 z-50 h-screen w-72 bg-[#0a0a0a] border-r border-zinc-800/50 transition-transform duration-300 ease-out lg:translate-x-0 lg:z-30 shadow-2xl ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

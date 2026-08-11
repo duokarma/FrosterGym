@@ -87,7 +87,7 @@ export function RecordPayment() {
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                 <select 
-                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                   value={formData.member_id}
                   onChange={e => setFormData({...formData, member_id: e.target.value})}
                   required
@@ -124,7 +124,7 @@ export function RecordPayment() {
               <div className="relative">
                 <CreditCard className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                 <select 
-                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 appearance-none"
+                  className="w-full h-[44px] bg-zinc-900/50 border border-zinc-800 rounded-xl pl-10 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 appearance-none"
                   value={formData.payment_method}
                   onChange={e => setFormData({...formData, payment_method: e.target.value})}
                 >

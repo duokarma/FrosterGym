@@ -80,7 +80,7 @@ export function TrashMembers() {
       {loading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {[...Array(4)].map((_, i) => (
-            <Card key={i} className="p-4 bg-[#131b2f]/80 backdrop-blur-xl border-white/5 animate-pulse h-[160px]" />
+            <Card key={i} className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 animate-pulse h-[160px]" />
           ))}
         </div>
       ) : error ? (
@@ -96,7 +96,7 @@ export function TrashMembers() {
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {members.map(member => (
-            <Card key={member.id} className="p-4 bg-[#131b2f]/80 backdrop-blur-xl border-white/5 flex flex-col min-h-[160px]">
+            <Card key={member.id} className="p-4 bg-zinc-900/80 backdrop-blur-xl border-white/5 flex flex-col min-h-[160px]">
               <div className="flex-1">
                 <h3 className="text-base font-bold text-white mb-1 line-clamp-1">{member.full_name}</h3>
                 <p className="text-sm text-slate-400 mb-2">{member.phone}</p>

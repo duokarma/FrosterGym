@@ -34,7 +34,7 @@ export function PlansList() {
       ) : (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {plans.map(plan => (
-            <div key={plan.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-cyan-500/50 transition-colors">
+            <div key={plan.id} className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-[#D4AF37]/50 transition-colors">
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-lg font-semibold text-white">{plan.name}</h3>
                 <Badge variant={plan.status === 'active' ? 'success' : 'default'}>

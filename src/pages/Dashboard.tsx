@@ -79,18 +79,18 @@ export function Dashboard() {
   }
 
   const quickActions = [
-    { label: 'Add Member', icon: <UserPlus className="w-5 h-5" />, path: '/members/add', color: 'text-cyan-400 bg-cyan-500/10' },
+    { label: 'Add Member', icon: <UserPlus className="w-5 h-5" />, path: '/members/add', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
     { label: 'Payment', icon: <IndianRupee className="w-5 h-5" />, path: '/payments', color: 'text-emerald-400 bg-emerald-500/10' },
-    { label: 'Attendance', icon: <CalendarCheck className="w-5 h-5" />, path: '/attendance', color: 'text-blue-400 bg-blue-500/10' },
+    { label: 'Attendance', icon: <CalendarCheck className="w-5 h-5" />, path: '/attendance', color: 'text-[#E5D3B3] bg-[#D4AF37]/10' },
     { label: 'Expense', icon: <Receipt className="w-5 h-5" />, path: '/expenses/add', color: 'text-red-400 bg-red-500/10' },
     { label: 'Enquiry', icon: <Search className="w-5 h-5" />, path: '/enquiries/add', color: 'text-amber-400 bg-amber-500/10' },
     { label: 'Renew', icon: <Zap className="w-5 h-5" />, path: '/members', color: 'text-purple-400 bg-purple-500/10' },
   ];
 
   const statCards = [
-    { label: "Today's Members", value: stats.todaysAttendance, icon: <Users className="w-5 h-5" />, bg: 'bg-cyan-500/10 text-cyan-400' },
+    { label: "Today's Members", value: stats.todaysAttendance, icon: <Users className="w-5 h-5" />, bg: 'bg-[#D4AF37]/10 text-[#E5D3B3]' },
     { label: "Today's Collection", value: `₹${stats.todaysCollection.toLocaleString('en-IN')}`, icon: <IndianRupee className="w-5 h-5" />, bg: 'bg-emerald-500/10 text-emerald-400' },
-    { label: 'Active Members', value: stats.activeMembers, icon: <UserCheck className="w-5 h-5" />, bg: 'bg-blue-500/10 text-blue-400' },
+    { label: 'Active Members', value: stats.activeMembers, icon: <UserCheck className="w-5 h-5" />, bg: 'bg-[#D4AF37]/10 text-[#E5D3B3]' },
     { label: 'Expiring Soon', value: stats.expiringSoon, icon: <Clock className="w-5 h-5" />, bg: 'bg-amber-500/10 text-amber-400' },
     { label: 'Pending Dues', value: `₹${stats.pendingDues.toLocaleString('en-IN')}`, icon: <CreditCard className="w-5 h-5" />, bg: 'bg-red-500/10 text-red-400' },
     { label: 'Birthdays Today', value: stats.birthdaysToday, icon: <Cake className="w-5 h-5" />, bg: 'bg-purple-500/10 text-purple-400' },
@@ -183,7 +183,7 @@ export function Dashboard() {
             <AlertCircle className="w-4 h-4 text-amber-400" />
             <h2 className="text-base font-semibold text-white">Expiry Alerts</h2>
           </div>
-          <button onClick={() => navigate('/members?filter=expiring_7')} className="text-xs text-cyan-400 hover:underline">View all</button>
+          <button onClick={() => navigate('/members?filter=expiring_7')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
         </div>
 
         {expiryAlerts.length === 0 ? (
@@ -241,7 +241,7 @@ export function Dashboard() {
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <button onClick={() => window.open(`tel:${b.phone}`)} className="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center hover:bg-blue-500/20 transition-colors">
+                    <button onClick={() => window.open(`tel:${b.phone}`)} className="w-9 h-9 rounded-xl bg-[#D4AF37]/10 text-[#E5D3B3] flex items-center justify-center hover:bg-[#D4AF37]/20 transition-colors">
                       <Phone className="w-4 h-4" />
                     </button>
                     <button onClick={() => {
@@ -265,7 +265,7 @@ export function Dashboard() {
             <CreditCard className="w-4 h-4 text-red-400" />
             <h2 className="text-base font-semibold text-white">Payment Due</h2>
           </div>
-          <button onClick={() => navigate('/members?filter=due')} className="text-xs text-cyan-400 hover:underline">View all</button>
+          <button onClick={() => navigate('/members?filter=due')} className="text-xs text-[#E5D3B3] hover:underline">View all</button>
         </div>
         {paymentsDue.length === 0 ? (
           <Card>
@@ -297,7 +297,7 @@ export function Dashboard() {
       {/* ─── Recent Activity ─── */}
       <div className="mb-4">
         <div className="flex items-center gap-2 mb-3">
-          <Activity className="w-4 h-4 text-cyan-400" />
+          <Activity className="w-4 h-4 text-[#E5D3B3]" />
           <h2 className="text-base font-semibold text-white">Recent Activity</h2>
         </div>
         {activity.length === 0 ? (
@@ -329,7 +329,7 @@ export function Dashboard() {
       {/* ─── Mobile FAB ─── */}
       <div className="fixed bottom-24 right-4 sm:hidden z-40">
         <Button
-          className="w-14 h-14 rounded-full shadow-xl shadow-cyan-500/30 flex items-center justify-center !p-0"
+          className="w-14 h-14 rounded-full shadow-xl shadow-[#D4AF37]/30 flex items-center justify-center !p-0"
           onClick={() => navigate('/members/add')}
         >
           <Plus className="w-6 h-6" />

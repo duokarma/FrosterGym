@@ -35,7 +35,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               w-full h-12 rounded-xl bg-zinc-800 border text-white text-sm
               placeholder:text-zinc-500
               transition-colors duration-150
-              focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500
+              focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/40 focus:border-[#D4AF37]
               disabled:opacity-50 disabled:cursor-not-allowed
               ${error ? 'border-red-500/50 focus:ring-red-500/40 focus:border-red-500' : 'border-zinc-700 hover:border-zinc-600'}
               ${icon ? 'pl-10' : 'pl-4'}

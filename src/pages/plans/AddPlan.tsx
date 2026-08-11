@@ -31,7 +31,7 @@ export function AddPlan() {
           <div className="space-y-1.5">
             <label className="block text-sm font-medium text-zinc-300">Description (Optional)</label>
             <textarea 
-              className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+              className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-white focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50"
               rows={4}
               placeholder="Features included in this plan..."
             ></textarea>

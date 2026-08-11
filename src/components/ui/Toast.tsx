@@ -24,14 +24,14 @@ export function useToast() {
 const icons = {
   success: <CheckCircle2 className="w-5 h-5 text-emerald-400" />,
   error: <AlertCircle className="w-5 h-5 text-red-400" />,
-  info: <Info className="w-5 h-5 text-cyan-400" />,
+  info: <Info className="w-5 h-5 text-[#E5D3B3]" />,
   warning: <AlertTriangle className="w-5 h-5 text-amber-400" />,
 };
 
 const bgClasses = {
   success: 'border-emerald-500/20',
   error: 'border-red-500/20',
-  info: 'border-cyan-500/20',
+  info: 'border-[#D4AF37]/20',
   warning: 'border-amber-500/20',
 };
 
