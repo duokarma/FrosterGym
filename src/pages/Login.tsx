@@ -93,18 +93,7 @@ export function Login() {
             </div>
          </div>
 
-         <div className="border border-zinc-800/60 rounded-[2rem] p-8 relative bg-zinc-950/40 backdrop-blur-sm max-w-lg">
-            <Quote className="w-6 h-6 text-zinc-700 absolute top-6 left-6" />
-            <Quote className="w-6 h-6 text-zinc-700 absolute bottom-6 right-6 rotate-180" />
-            <div className="px-8 py-2">
-               <p className="text-zinc-200 text-lg font-medium leading-relaxed mb-4">
-                  Excellence is not an act, <br/>but a habit.
-               </p>
-               <p className="text-zinc-600 text-sm">
-                  — Aristotle
-               </p>
-            </div>
-         </div>
+
 
       </div>
 
@@ -120,8 +109,8 @@ export function Login() {
 
          <div className="bg-[#0a0a0a]/80 backdrop-blur-2xl border border-zinc-800/60 rounded-[2.5rem] p-8 md:p-12 w-full max-w-[460px] shadow-2xl">
             
-            <div className="w-16 h-16 bg-[#E5D3B3] rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(229,211,179,0.15)]">
-               <Dumbbell className="w-8 h-8 text-black" />
+            <div className="w-16 h-16 bg-[#E5D3B3] rounded-2xl mx-auto flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(229,211,179,0.15)] overflow-hidden">
+               <img src="/FrosterGym/froaster-logo.png" alt="Froaster Fitness" className="w-12 h-12 object-contain" />
             </div>
             
             <h2 className="text-2xl text-white font-bold text-center mb-1">
@@ -197,13 +186,12 @@ export function Login() {
 
       {/* Footer Bar */}
       <div className="absolute bottom-6 w-full flex justify-center z-20 px-6">
-         <div className="bg-zinc-950/80 backdrop-blur-md border border-zinc-800/80 rounded-full px-6 py-3 flex flex-wrap items-center justify-center gap-4 text-[11px] text-zinc-400">
-            <div className="flex items-center gap-2">
-               <Lock className="w-3 h-3 text-zinc-500" />
+         <div className="bg-[#0a0a0a]/90 backdrop-blur-md border border-zinc-800/80 rounded-full px-6 py-3.5 flex flex-wrap items-center justify-center gap-6 md:gap-12 text-[11px] font-medium tracking-wide">
+            <div className="flex items-center gap-2 text-zinc-400">
+               <Lock className="w-3.5 h-3.5 text-zinc-500" />
                © 2026 Froster Gym. All rights reserved.
             </div>
-            <div className="hidden sm:block w-px h-3 bg-zinc-700"></div>
-            <div className="font-medium text-zinc-300">
+            <div className="text-zinc-200">
                Powered by Duokarma
             </div>
          </div>
