@@ -421,7 +421,7 @@ export function PublicWebsite() {
                 title="Froaster Gym Location"
               />
               <a 
-                href="https://goo.gl/maps/YOUR_LINK_HERE" 
+                href="https://maps.google.com/?q=Froaster+Fitness,+Govindnagar,+Dahod,+Gujarat" 
                 target="_blank" 
                 rel="noreferrer"
                 className="absolute bottom-8 right-8 bg-[#ff5722] text-white text-xs font-bold uppercase tracking-widest py-4 px-8 shadow-2xl hover:bg-white hover:text-black transition-colors"

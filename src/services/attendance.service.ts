@@ -26,10 +26,7 @@ export const attendanceService = {
   async getTodaysAttendance(gymId: string) {
     if (isDemo()) {
       return {
-        data: [
-          { id: '1', memberId: 'm1', memberName: 'John Doe', date: new Date().toISOString().split('T')[0], timeIn: '08:00 AM' },
-          { id: '2', memberId: 'm2', memberName: 'Jane Smith', date: new Date().toISOString().split('T')[0], timeIn: '09:30 AM' },
-        ],
+        data: [],
         error: null,
       };
     }
@@ -45,10 +42,7 @@ export const attendanceService = {
   async getMemberAttendanceHistory(gymId: string, memberId: string) {
     if (isDemo()) {
       return {
-        data: [
-          { id: '1', memberId, memberName: 'Demo Member', date: '2023-10-01', timeIn: '07:00 AM' },
-          { id: '2', memberId, memberName: 'Demo Member', date: '2023-10-02', timeIn: '07:15 AM' },
-        ],
+        data: [],
         error: null,
       };
     }

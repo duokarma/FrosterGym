@@ -4,13 +4,11 @@ import type { Database } from './database.types';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-// Forced to false to use local storage / hardcoded login
-const isConfigured = false;
-export const supabaseConfigured = false;
+export const supabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
 
 export const supabase = createClient<Database>(
-  isConfigured ? supabaseUrl : 'https://placeholder.supabase.co',
-  isConfigured ? supabaseAnonKey : 'placeholder-key',
+  supabaseConfigured ? supabaseUrl : 'https://placeholder.supabase.co',
+  supabaseConfigured ? supabaseAnonKey : 'placeholder-key',
   {
     auth: {
       autoRefreshToken: true,

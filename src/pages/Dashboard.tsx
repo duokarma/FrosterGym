@@ -199,7 +199,7 @@ export function Dashboard() {
               const items = alertBuckets[bucket.key];
               if (items.length === 0) return null;
               return (
-                <Card key={bucket.key} className="!p-3 cursor-pointer" onClick={() => navigate(`/members?filter=expiring_${bucket.key === '1-3' ? '3' : bucket.key === '4-7' ? '7' : '15'}`)}>
+                <Card key={bucket.key} className="!p-3 cursor-pointer" onClick={() => navigate(`/app/members?filter=expiring_${bucket.key === '1-3' ? '3' : bucket.key === '4-7' ? '7' : '15'}`)}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <Badge variant={bucket.color}>{bucket.label}</Badge>
@@ -274,7 +274,7 @@ export function Dashboard() {
         ) : (
           <div className="space-y-2">
             {paymentsDue.slice(0, 5).map(m => (
-              <Card key={m.id} className="!p-3 cursor-pointer" onClick={() => navigate(`/members/${m.id}`)}>
+              <Card key={m.id} className="!p-3 cursor-pointer" onClick={() => navigate(`/app/members/${m.id}`)}>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Avatar name={m.full_name} src={m.photo_url || undefined} size="sm" />

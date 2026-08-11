@@ -74,7 +74,7 @@ export const getPaymentById = async (gymId: string, paymentId: string): Promise<
 };
 
 export const getTodaysCollection = async (gymId: string): Promise<number> => {
-  if (isDemo()) return 12500;
+  if (isDemo()) return 0;
   const today = new Date().toISOString().split('T')[0];
   const { data, error } = await db.from('payments').select('amount').eq('gym_id', gymId).eq('payment_date', today).eq('status', 'completed');
   if (error) return 0;
@@ -82,7 +82,7 @@ export const getTodaysCollection = async (gymId: string): Promise<number> => {
 };
 
 export const getMonthlyCollection = async (gymId: string): Promise<number> => {
-  if (isDemo()) return 185000;
+  if (isDemo()) return 0;
   const date = new Date();
   const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).toISOString().split('T')[0];
   const { data, error } = await db.from('payments').select('amount').eq('gym_id', gymId).gte('payment_date', firstDay).eq('status', 'completed');
@@ -91,7 +91,7 @@ export const getMonthlyCollection = async (gymId: string): Promise<number> => {
 };
 
 export const getPendingDues = async (gymId: string): Promise<number> => {
-  if (isDemo()) return 24500;
+  if (isDemo()) return 0;
   const { data, error } = await db.from('memberships').select('due_amount').eq('gym_id', gymId).gt('due_amount', 0);
   if (error) return 0;
   return (data as any[]).reduce((sum, m) => sum + (m.due_amount || 0), 0);

@@ -45,7 +45,7 @@ export function PaymentsList() {
                   <p className="text-sm font-bold text-[#4D6B5A]">+₹{payment.amount}</p>
                   <p className="text-[10px] text-emerald-500/70 uppercase tracking-wider">{payment.status}</p>
                 </div>
-                <Button variant="secondary" size="sm" onClick={() => navigate(`/payments/invoice/${payment.id}`)}>
+                <Button variant="secondary" size="sm" onClick={() => navigate(`/app/payments/invoice/${payment.id}`)}>
                   <Download className="w-4 h-4 mr-1" />
                   Receipt
                 </Button>

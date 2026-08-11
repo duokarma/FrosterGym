@@ -72,7 +72,7 @@ export function EditMember() {
       toast('error', 'Failed to update member');
     } else {
       toast('success', 'Member updated successfully');
-      navigate(`/members/${id}`);
+      navigate(`/app/members/${id}`);
     }
   };
 
@@ -82,7 +82,7 @@ export function EditMember() {
 
   return (
     <div className="pb-24 animate-in slide-in-from-right duration-300">
-      <PageHeader title="Edit Member" showBack onBack={() => navigate(`/members/${id}`)} />
+      <PageHeader title="Edit Member" showBack onBack={() => navigate(`/app/members/${id}`)} />
       
       <form onSubmit={handleSubmit} className="mt-6 space-y-6">
         <Card className="p-6 space-y-6">

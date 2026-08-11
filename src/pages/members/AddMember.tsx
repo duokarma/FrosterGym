@@ -134,7 +134,7 @@ export function AddMember() {
       }
 
       toast('success', 'Member added successfully!');
-      navigate(`/members/${member.id}`);
+      navigate(`/app/members/${member.id}`);
 
     } catch (err: any) {
       console.error(err);

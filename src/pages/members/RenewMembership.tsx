@@ -118,7 +118,7 @@ export function RenewMembership() {
       if (response.error) throw new Error(response.error);
 
       toast('success', 'Membership renewed successfully!');
-      navigate(`/members/${id}`);
+      navigate(`/app/members/${id}`);
 
     } catch (err: any) {
       console.error(err);

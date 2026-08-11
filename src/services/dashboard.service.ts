@@ -62,22 +62,22 @@ export interface PaymentDueMember {
 export async function fetchDashboardStats(gymId: string): Promise<DashboardStats> {
   if (isDemo()) {
     return {
-      totalMembers: 20,
-      activeMembers: 12,
-      inactiveMembers: 2,
-      expiredMembers: 3,
-      blockedMembers: 1,
-      frozenMembers: 1,
-      todaysAttendance: 8,
-      todaysCollection: 12500,
-      monthlyCollection: 185000,
-      monthlyExpenses: 62000,
-      pendingDues: 24500,
-      revenueAtRisk: 18400,
-      birthdaysToday: 2,
-      expiringSoon: 4,
-      activePT: 5,
-      ptDue: 3500,
+      totalMembers: 0,
+      activeMembers: 0,
+      inactiveMembers: 0,
+      expiredMembers: 0,
+      blockedMembers: 0,
+      frozenMembers: 0,
+      todaysAttendance: 0,
+      todaysCollection: 0,
+      monthlyCollection: 0,
+      monthlyExpenses: 0,
+      pendingDues: 0,
+      revenueAtRisk: 0,
+      birthdaysToday: 0,
+      expiringSoon: 0,
+      activePT: 0,
+      ptDue: 0,
     };
   }
 
@@ -158,17 +158,7 @@ export async function fetchExpiryAlerts(gymId: string): Promise<ExpiryAlert[]> {
 // ─── Birthdays ──────────────────────────
 export async function fetchBirthdaysToday(gymId: string): Promise<BirthdayMember[]> {
   if (isDemo()) {
-    const today = new Date();
-    return [
-      {
-        id: 'b1', full_name: 'Sneha Reddy', phone: '+91 9876543213', photo_url: null,
-        date_of_birth: `1995-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`, age: today.getFullYear() - 1995,
-      },
-      {
-        id: 'b2', full_name: 'Anjali Desai', phone: '+91 9876543219', photo_url: null,
-        date_of_birth: `1990-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`, age: today.getFullYear() - 1990,
-      },
-    ];
+    return [];
   }
 
   try {
@@ -189,15 +179,7 @@ export async function fetchBirthdaysToday(gymId: string): Promise<BirthdayMember
 // ─── Recent Activity ──────────────────────────
 export async function fetchRecentActivity(gymId: string, limit = 10): Promise<ActivityItem[]> {
   if (isDemo()) {
-    const now = new Date();
-    return [
-      { id: '1', type: 'payment_received', title: 'Payment Received', description: 'Rahul Sharma paid ₹3,000 for Monthly plan', icon_color: 'text-emerald-400', time_ago: '10 min ago', created_at: new Date(now.getTime() - 600000).toISOString() },
-      { id: '2', type: 'member_added', title: 'New Member', description: 'Karan Malhotra joined the gym', icon_color: 'text-[#E5D3B3]', time_ago: '25 min ago', created_at: new Date(now.getTime() - 1500000).toISOString() },
-      { id: '3', type: 'membership_renewed', title: 'Membership Renewed', description: 'Priya Patel renewed for 3 months', icon_color: 'text-[#E5D3B3]', time_ago: '1 hr ago', created_at: new Date(now.getTime() - 3600000).toISOString() },
-      { id: '4', type: 'attendance', title: 'Attendance', description: '8 members checked in today', icon_color: 'text-purple-400', time_ago: '2 hrs ago', created_at: new Date(now.getTime() - 7200000).toISOString() },
-      { id: '5', type: 'expense_added', title: 'Expense Logged', description: 'Electricity bill ₹8,000', icon_color: 'text-red-400', time_ago: '3 hrs ago', created_at: new Date(now.getTime() - 10800000).toISOString() },
-      { id: '6', type: 'enquiry_added', title: 'New Enquiry', description: 'Walk-in enquiry from Rohit Mehra', icon_color: 'text-amber-400', time_ago: '5 hrs ago', created_at: new Date(now.getTime() - 18000000).toISOString() },
-    ];
+    return [];
   }
 
   try {
@@ -219,11 +201,7 @@ export async function fetchRecentActivity(gymId: string, limit = 10): Promise<Ac
 // ─── Payments Due ──────────────────────────
 export async function fetchPaymentsDue(gymId: string): Promise<PaymentDueMember[]> {
   if (isDemo()) {
-    return [
-      { id: 'd1', full_name: 'Priya Patel', phone: '+91 9876543211', photo_url: null, member_id: 'FG-1002', due_amount: 1500, plan_name: '3 Months', expiry_date: new Date(Date.now() + 60 * 86400000).toISOString().split('T')[0] },
-      { id: 'd2', full_name: 'Manish Tiwari', phone: '+91 9876543222', photo_url: null, member_id: 'FG-1013', due_amount: 4000, plan_name: '6 Months', expiry_date: new Date(Date.now() + 120 * 86400000).toISOString().split('T')[0] },
-      { id: 'd3', full_name: 'Karan Malhotra', phone: '+91 9876543224', photo_url: null, member_id: 'FG-1015', due_amount: 7000, plan_name: '12 Months', expiry_date: new Date(Date.now() + 300 * 86400000).toISOString().split('T')[0] },
-    ];
+    return [];
   }
   
   try {

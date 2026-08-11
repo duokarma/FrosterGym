@@ -235,7 +235,7 @@ export function MembersList() {
               <Card 
                 key={member.id} 
                 className="p-4 bg-[#11110F] backdrop-blur-xl border-[rgba(255,255,255,0.04)] hover:border-[rgba(255,255,255,0.08)] transition-all cursor-pointer group flex flex-col min-h-[220px]"
-                onClick={() => navigate(`/members/${member.id}`)}
+                onClick={() => navigate(`/app/members/${member.id}`)}
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">

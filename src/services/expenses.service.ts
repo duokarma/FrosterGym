@@ -12,11 +12,7 @@ export interface Expense {
 export const fetchExpenses = async (gymId: string, filters?: any) => {
   if (isDemo()) {
     return {
-      data: [
-        { id: 'e1', category: 'Rent', amount: 5000, date: '2023-10-01', description: 'Monthly rent' },
-        { id: 'e2', category: 'Electricity', amount: 300, date: '2023-10-05', description: 'Electricity bill' },
-        { id: 'e3', category: 'Equipment Repair', amount: 150, date: '2023-10-10', description: 'Treadmill repair' },
-      ],
+      data: [],
       error: null,
     };
   }

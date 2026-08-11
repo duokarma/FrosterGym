@@ -13,10 +13,7 @@ export interface StaffMember {
 export const fetchStaff = async (gymId: string) => {
   if (isDemo()) {
     return {
-      data: [
-        { id: 's1', name: 'Mike Johnson', role: 'Trainer', phone: '1234567890', email: 'mike@example.com', permissions: ['view_members'] },
-        { id: 's2', name: 'Sarah Connor', role: 'Receptionist', phone: '0987654321', email: 'sarah@example.com', permissions: ['view_members', 'mark_attendance'] },
-      ],
+      data: [],
       error: null,
     };
   }

@@ -209,7 +209,7 @@ export function MemberProfile() {
         <Button 
           variant="secondary" 
           className="flex-1 text-[#E2C46B] hover:text-cyan-300 hover:bg-[#C9A24D]/10"
-          onClick={() => navigate(`/members/${member.id}/renew`)}
+          onClick={() => navigate(`/app/members/${member.id}/renew`)}
         >
           <RefreshCw className="w-5 h-5 mb-1" />
           <span className="text-xs">Renew</span>
@@ -270,7 +270,7 @@ export function MemberProfile() {
         ) : (
           <div className="bg-[#11110F] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 text-center">
             <p className="text-sm text-[#A7A39A] mb-4">No active membership plan</p>
-            <Button size="sm" onClick={() => navigate(`/members/${member.id}/renew`)}>Assign Plan</Button>
+            <Button size="sm" onClick={() => navigate(`/app/members/${member.id}/renew`)}>Assign Plan</Button>
           </div>
         )}
 
