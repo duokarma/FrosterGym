@@ -67,7 +67,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   };
 
   const handleNav = (path: string) => {
-    navigate(path);
+    navigate(path === '/' ? '/app' : `/app${path}`);
     onClose();
   };
 
@@ -78,7 +78,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const NavLink = ({ item }: { item: NavItem }) => {
     if (!canView(item.permission)) return null;
-    const isActive = item.path === '/' ? location.pathname === '/' : location.pathname.startsWith(item.path);
+    const isActive = item.path === '/' 
+      ? location.pathname === '/app' || location.pathname === '/app/' 
+      : location.pathname.startsWith(`/app${item.path}`);
 
     return (
       <button
@@ -111,10 +113,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-white/5">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#E5D3B3] to-[#D4AF37] flex items-center justify-center shadow-lg shadow-[#D4AF37]/30">
-            <Dumbbell className="w-5 h-5 text-white" />
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#E5D3B3] to-[#D4AF37] flex items-center justify-center shadow-lg shadow-[#D4AF37]/30 overflow-hidden">
+            <img src="/FrosterGym/froaster-logo.png" alt="Logo" className="w-6 h-6 object-contain" />
           </div>
-          <span className="text-base font-bold text-white tracking-tight">Froster Gym</span>
+          <span className="text-base font-bold text-white tracking-tight">Froaster Gym</span>
         </div>
         <button
           onClick={onClose}
