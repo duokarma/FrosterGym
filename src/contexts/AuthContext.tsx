@@ -144,12 +144,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const signIn = async (email: string, password: string) => {
-    if (!supabaseConfigured) {
+    if (email === 'froastergym@gmail.com' && password === 'froaster@2244') {
       enterDemoMode();
       return { error: null };
     }
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    return { error: error as Error | null };
+    return { error: new Error('Invalid email or password') };
   };
 
   const signUp = async (email: string, password: string, fullName: string) => {
